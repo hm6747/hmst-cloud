@@ -2,7 +2,7 @@ var pageNum = 0;
 var current = 1;
 var pageSize = 10;
 /*var path = "http://"+window.location.host+"/hmst-user-web";*/
-var path = "http://localhost:8095/";
+var path = "http://localhost:8771/";
 //列表展示
 function getTableList(url,data,showPage,successCallback,failCallback) {
     var pageData = {
