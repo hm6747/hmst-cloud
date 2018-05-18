@@ -1,10 +1,9 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<jsp:include page="/common/common_quote.jsp"/>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>角色管理</title>
+    <link rel="import" href="/static/common/common_quote.html">
 </head>
 
 <body class="gray-bg">
@@ -44,8 +43,8 @@
                             <span class="pull-right small text-muted">总共<span id="total"></span>个角色</span>
                             <li class="active"><a data-toggle="tab" href="#tab-1"><i class="fa fa-user"></i> 角色</a>
                             </li>
-                            <%--        <li class=""><a data-toggle="tab" href="#tab-2"><i class="fa fa-briefcase"></i> 部门</a>
-                                    </li>--%>
+                     <!--       <%&#45;&#45;        <li class=""><a data-toggle="tab" href="#tab-2"><i class="fa fa-briefcase"></i> 部门</a>
+                                    </li>&#45;&#45;%>-->
                         </ul>
                         <div class="tab-content">
                             <div id="tab-1" class="tab-pane active">
@@ -85,7 +84,9 @@
                         aria-hidden="true">&times;</span><span
                         class="sr-only">Close</span></button>
                 <h4 class="modal-title" id="addRoleTitle">添加角色</h4>
-                <%--     <small>这里可以显示副标题。--%>
+<!--
+                <&#45;&#45;     <small>这里可以显示副标题。&ndash;&gt;
+-->
             </div>
             <form method="get" class="form-horizontal" id="roleForm">
                 <div class="col-md-12 modal-body">
@@ -142,7 +143,9 @@
                         aria-hidden="true">&times;</span><span
                         class="sr-only">Close</span></button>
                 <h4 class="modal-title">角色授权</h4>
-                <%--     <small>这里可以显示副标题。--%>
+<!--
+                <%&#45;&#45;     <small>这里可以显示副标题。&#45;&#45;%>
+-->
             </div>
             <form method="get" class="form-horizontal" id="roleAclForm">
                 <input type="hidden" id="updateAclRoleId">
