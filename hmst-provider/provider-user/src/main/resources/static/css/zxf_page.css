@@ -1,0 +1,69 @@
+div.zxf_pagediv{
+	text-align: center;
+	color: #999999;
+	font-size: 12px;
+}
+div.zxf_pagediv a{
+	text-decoration: none;
+	
+}
+div.zxf_pagediv span,div.zxf_pagediv a{
+	display: inline-block;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+span.zxf_disabled{
+	height: 35px;
+	width: 65px;
+	line-height: 35px;
+	background: #f2f2f2;
+	margin: 0 5px;
+}
+.zxf_current{
+	background: #18a689;
+	color: #fff;
+	border: 1px solid #18a689;
+	padding: 6px 12px
+/*	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	margin: 0 5 px;*/
+}
+.zxf_zxfPagenum{
+	color: #999999;
+	background: #FFFFFF;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	border: 1px solid #dfdfdf;
+	margin: 0 5px;
+}
+.zxf_nextpage{
+/*	color: #d71f1b;*/
+	margin: 0 5px;
+/*	border: 1px solid #d71f1b;*/
+}
+.zxf_nextbtn,.zxf_prebtn{
+	color: #999999;
+	background: #FFFFFF;
+	width: 65px;
+	height: 35px;
+	line-height: 35px;
+	border: 1px solid #dfdfdf;
+}
+.zxf_zxfinput{
+	width: 35px;
+	height: 27px;
+	line-height: 25px;
+	text-align: center;
+	box-sizing: border-box;
+	border: 1px solid #dfdfdf;
+	margin: 0 12px;
+}
+.zxf_zxfokbtn{
+	margin-left: 5px;
+	width: 45px;
+	height: 28px;
+	line-height: 24px;
+	border: 1px solid #dfdfdf;
+}

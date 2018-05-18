@@ -1,0 +1,23 @@
+server:
+  port: ${hmstcloud.server.provider.user.port:8771}
+spring:
+  application:
+    name: @pom.artifactId@
+  profiles:
+    active: @profileActive@
+  resources:
+    static-locations: classpath:/resources
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://rm-wz98og42mf98p7vf1ao.mysql.rds.aliyuncs.com:3306/user?characterEncoding=utf-8&useSSL=true
+    username: root
+    password: Hm123456
+    druid:
+      initial-size: 10
+      min-idle: 10
+      max-active: 30
+      test-on-borrow: true
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      web-stat-filter:
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'

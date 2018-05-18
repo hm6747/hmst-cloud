@@ -1,0 +1,36 @@
+spring:
+  aop:
+    proxy-target-class: true
+    auto: true
+  mvc:
+    date-format: yyyy-MM-dd HH:mm:ss
+    view:
+      prefix: classpath:/views/
+      suffix: .jsp
+  thymeleaf:
+    check-template: false
+    cache: false
+    encoding: utf-8
+    mode: LEGACYHTML5
+    content-type: text/html
+    prefix: classpath:/views/
+    suffix: .html
+  jackson:
+    joda-date-time-format: yyyy-MM-dd HH:mm:ss
+    date-format: yyyy-MM-dd HH:mm:ss
+  cloud:
+    inetutils:
+      ignoredInterfaces:
+        - docker0
+        - veth.*
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://hm:123456@127.0.0.1:8761/eureka/
