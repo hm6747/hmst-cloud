@@ -2,7 +2,7 @@ var pageNum = 0;
 var current = 1;
 var pageSize = 10;
 /*var path = "http://"+window.location.host+"/hmst-user-web";*/
-var path = "http://localhost:8771/";
+var path = "http://47.98.170.17:80/";
 //列表展示
 function getTableList(url,data,showPage,successCallback,failCallback) {
     var pageData = {
@@ -15,6 +15,7 @@ function getTableList(url,data,showPage,successCallback,failCallback) {
     $.ajax({
         url: path+url,
         data: data,
+        dataType: 'json',
         success: function (result) {
             if(result.ret){
                 if(successCallback){
@@ -131,6 +132,7 @@ function submitAjaxForm(url,data,successCallback, failCallback) {
     $.ajax({
         url: path+url,
         data: data,
+        dataType: 'json',
         type: 'POST',
         success: function (result) {
             if (result.ret) {

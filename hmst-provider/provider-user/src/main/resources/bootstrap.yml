@@ -5,8 +5,11 @@ spring:
   mvc:
     date-format: yyyy-MM-dd HH:mm:ss
     view:
-      prefix: classpath:/views/
-      suffix: .jsp
+       prefix: classpath:/views/
+       suffix: .html
+    static-path-pattern: /static/**
+  resources:
+    static-locations: file:///D:/config/static/
   thymeleaf:
     check-template: false
     cache: false
@@ -24,7 +27,7 @@ spring:
         - docker0
         - veth.*
 mybatis:
-  mapper-locations: classpath*:mapper/*.xml
+  mapper-locations: file:/app/hmst-cloud/provider-user/config/mapper/*.xml
 pagehelper:
   helperDialect: mysql
   reasonable: true

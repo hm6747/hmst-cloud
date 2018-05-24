@@ -104,11 +104,11 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<dependency>
+	<!--	<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
-		</dependency>
+		</dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-aop</artifactId>
@@ -164,7 +164,7 @@
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
-			<plugin>
+		<!--	<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
@@ -184,9 +184,9 @@
 						<version>1.2.5.RELEASE</version>
 					</dependency>
 				</dependencies>
-			</plugin>
+			</plugin>-->
 			<!-- 添加docker-maven插件 -->
-			<plugin>
+<!--			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>0.4.13</version>
@@ -202,7 +202,8 @@
 						</resource>
 					</resources>
 				</configuration>
-			</plugin>
+			</plugin>-->
 		</plugins>
+		<defaultGoal>compile</defaultGoal>
 	</build>
 </project>

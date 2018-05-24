@@ -2,9 +2,9 @@ server:
   port: 8761
 spring:
   profiles:
-    active: @profileActive@
+    active: dev
   application:
-    name: @pom.artifactId@
+    name: hmst-eureka
 logging:
   level.root: info
   path: logs/

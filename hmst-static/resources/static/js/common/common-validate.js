@@ -1,6 +1,5 @@
 //以下为修改jQuery Validation插件兼容Bootstrap的方法，没有直接写在插件中是为了便于插件升级
 function commonValidate(ele,successBack,validateJson,rule) {
-    debugger;
     if(! validateJson){
          validateJson = {
             highlight: function (element) {
