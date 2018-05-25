@@ -39,6 +39,7 @@ function getRootPath() {
 
 //动态加载项目 JS文件
 dynamicLoading.js( "../static/js/jquery.min.js?v=2.1.4", "utf-8");
+dynamicLoading.js( "../static/js/mustache.js", "utf-8");
 dynamicLoading.js("../static/js/plugins/validate/jquery.validate.min.js", "utf-8");
 dynamicLoading.js("../static/common/common_base.js", "utf-8");
 dynamicLoading.js("../static/common/common-validate.js", "utf-8");
