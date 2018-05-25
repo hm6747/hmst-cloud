@@ -47,7 +47,20 @@ dynamicLoading.js("../static/js/bootstrap.min.js?v=3.3.6", "utf-8");
 dynamicLoading.js("../static/js/zxf_page.js", "utf-8");
 dynamicLoading.js("../static/js/vue.js", "utf-8");
 dynamicLoading.js("../static/js/plugins/nestable/jquery.nestable.js", "utf-8");
-dynamicLoading.js("../static/js/plugins/ztree/jquery.ztree.all.min.js", "utf-8");
+dynamicLoading.js("../static/js/plugins/metisMenu/jquery.metisMenu.js", "utf-8");
+dynamicLoading.js("../static/js/plugins/slimscroll/jquery.slimscroll.min.js", "utf-8");
+dynamicLoading.js("../static/js/plugins/layer/layer.min.js", "utf-8");
+//加解密 RSA
+dynamicLoading.js("../static/js/code/rsa.js", "utf-8");
+dynamicLoading.js("../static/js/code/rng.js", "utf-8");
+dynamicLoading.js("../static/js/code/prng4.js", "utf-8");
+dynamicLoading.js("../static/js/code/jsbn.js", "utf-8");
+dynamicLoading.js("../static/js/code/jsencrypt.min.js.js", "utf-8");
+//第三方插件
+dynamicLoading.js("../static/js/plugins/pace/pace.min.js", "utf-8");
+//导航栏js
+dynamicLoading.js("../static/js/hplus.js?v=4.1.0", "utf-8");
+dynamicLoading.js("../static/js/contabs.js", "utf-8");
 
 //动态加载项目 CSS文件
 dynamicLoading.css("../static/css/bootstrap.min.css?v=3.3.6");
