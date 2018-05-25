@@ -55,7 +55,7 @@ dynamicLoading.js("../static/js/code/rsa.js", "utf-8");
 dynamicLoading.js("../static/js/code/rng.js", "utf-8");
 dynamicLoading.js("../static/js/code/prng4.js", "utf-8");
 dynamicLoading.js("../static/js/code/jsbn.js", "utf-8");
-dynamicLoading.js("../static/js/code/jsencrypt.min.js.js", "utf-8");
+dynamicLoading.js("../static/js/code/jsencrypt.min.js", "utf-8");
 //第三方插件
 dynamicLoading.js("../static/js/plugins/pace/pace.min.js", "utf-8");
 //导航栏js
