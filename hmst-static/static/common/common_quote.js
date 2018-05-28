@@ -41,8 +41,9 @@ function getRootPath() {
 dynamicLoading.js( "../static/js/jquery.min.js?v=2.1.4", "utf-8");
 dynamicLoading.js( "../static/js/mustache.js", "utf-8");
 dynamicLoading.js("../static/js/plugins/validate/jquery.validate.min.js", "utf-8");
+dynamicLoading.js("../static/common/common_param.js", "utf-8");
 dynamicLoading.js("../static/common/common_base.js", "utf-8");
-dynamicLoading.js("../static/common/common-validate.js", "utf-8");
+dynamicLoading.js("../static/common/common_validate.js", "utf-8");
 dynamicLoading.js("../static/js/bootstrap.min.js?v=3.3.6", "utf-8");
 dynamicLoading.js("../static/js/zxf_page.js", "utf-8");
 dynamicLoading.js("../static/js/vue.js", "utf-8");

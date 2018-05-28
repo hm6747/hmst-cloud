@@ -1,10 +1,15 @@
 package com.syscloud.provider.config;
 
+import com.syscloud.base.config.SwaggerConfiguration;
 import com.syscloud.provider.interceptor.LoginInterceptor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+import javax.annotation.Resource;
 
 
 /**
@@ -12,17 +17,19 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  */
 
 @Configuration
-public class MvcConfig  extends WebMvcConfigurerAdapter {
-    @Autowired
+@Import(SwaggerConfiguration.class)
+public class MvcConfig extends WebMvcConfigurerAdapter {
+    @Resource
     LoginInterceptor loginInterceptor;
- /*   @Override
+ /*  @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/static*//*").addResourceLocations("classpath:/static/");
+       registry.addResourceHandler("*//**")
+               .addResourceLocations("classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/");
     }*/
 
-    @Override
+  @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(loginInterceptor).addPathPatterns("/**")
+        registry.addInterceptor(loginInterceptor).addPathPatterns("*//**")
                 .excludePathPatterns("/login.json")
                 .excludePathPatterns("/sign.json");
         super.addInterceptors(registry);

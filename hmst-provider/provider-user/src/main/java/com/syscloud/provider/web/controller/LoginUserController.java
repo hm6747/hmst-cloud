@@ -8,7 +8,11 @@ import com.syscloud.provider.service.LoginService;
 import com.syscloud.provider.service.SysUserService;
 import com.syscloud.utils.Base64Util;
 import com.syscloud.utils.RSAUtil;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -23,6 +27,8 @@ import java.util.Map;
  * Created by hm on 2017/12/25.
  */
 @Controller
+@Slf4j
+@Api(value = "Web - LoginUserController", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class LoginUserController {
     private static final String PROVITE_KEY = "PROVITE_KEY";
     @Autowired
@@ -43,6 +49,7 @@ public class LoginUserController {
 
     @RequestMapping("/sign.json")
     @ResponseBody
+    @ApiOperation(httpMethod = "GET", value = "签名接口")
     public JsonData Sign(HttpServletRequest request) throws Exception {
         Map<String, Object> keyMap  = RSAUtil.initKey();
         String publicKey = RSAUtil.getPublicKey(keyMap);
@@ -53,8 +60,10 @@ public class LoginUserController {
 
     @RequestMapping("/login.json")
     @ResponseBody
+    @ApiOperation(httpMethod = "GET", value = "登录接口")
     public JsonData Login(String username, String password, Integer type, String key, HttpServletRequest request) throws Exception {
         String privateKey = (String) request.getSession().getAttribute(PROVITE_KEY);
+        log.info(PROVITE_KEY,privateKey);
         password = new String(RSAUtil.decrypt(Base64Util.decryptBASE64(password), privateKey, false));
         LoginUser loginUser = loginService.LoginByUserNameAndPassword(username, password, type);
         SysUser user = sysUserService.findById(loginUser.getUserId());
