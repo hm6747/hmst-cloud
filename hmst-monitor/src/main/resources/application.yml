@@ -1,0 +1,42 @@
+server:
+  port: ${hmstcloud.server.monitor.port:8781}
+spring:
+  application:
+    name: hmst-monitor
+  profiles:
+    active: dev
+  boot:
+    admin:
+      client:
+        metadata:
+          user:
+            name: ${security.user.name}
+            password: ${security.user.password}
+      monitor:
+        period: 60000
+      discovery:
+        enabled: true
+      turbine:
+        clusters: default
+        location: turbine
+      routes:
+        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream,activiti
+management:
+  security:
+    enabled: false
+security:
+  user:
+    name: hm
+    password: 123456
+  basic:
+    enabled: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://hm:123456@127.0.0.1:8761/eureka/
+    instance:
+      instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
+logging:
+  level.root: info
+  path: logs/
+  file: ${spring.application.name}.log

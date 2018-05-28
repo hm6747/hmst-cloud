@@ -4,5 +4,6 @@
 var pageNum = 0;
 var current = 1;
 var pageSize = 10;
-/*var path = "http://47.98.170.17:80/";*/
-var path = "http://localhost:8771";
+var path = "http://47.98.170.17:80/";
+/*
+var path = "http://localhost:8771";*/

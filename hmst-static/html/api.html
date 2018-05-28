@@ -11,19 +11,13 @@
     <link rel="stylesheet" type="text/css"
           href="../static/js/plugins/swagger/layui/css/layui.css">
     <link rel="stylesheet" type="text/css" href="../static/js/plugins/swagger/css/global.css">
-    <link rel="stylesheet" type="text/css" href="../static/js/plugins/swagger/css/jquery.json-viewer.css">
+    <link rel="stylesheet" type="text/css" href="../static/js/plugins/swagger/css/json-viewer.css">
 </head>
 <body>
 <script id="template" type="text/template">
     <div class="layui-layout layui-layout-admin"
          style="border-bottom: solid 3px #1aa094;">
-        <div class="layui-header header ">
-            <div class="layui-main">
-                <div class="admin-login-box logo">
-                    <span>{{:info.title}}<small class="version">{{:info.version}}</small></span>
-                </div>
-            </div>
-        </div>
+
         <div class="layui-side layui-bg-black" id="admin-side">
             <div class="layui-side-scroll" id="admin-navbar-side"
                  lay-filter="side">
@@ -59,7 +53,9 @@
         {{if info.license}}
         <div class="layui-footer footer">
             <div class="layui-main">
-                <a href="{{:info.license.url}}" target="blank">{{:info.license.name}}</a></p>
+                <a href="{{:info.license.url}}" target="blank">{{:info.license.name}}</a>
+                <span>{{:info.title}}<small class="version">{{:info.version}}</small></span>
+                </p>
             </div>
         </div>
         {{/if}}
@@ -223,6 +219,6 @@
 <script src="../static/common/common_param.js"></script>
 <script src="../static/js/plugins/swagger/js/jquery.js"></script>
 <script src="../static/js/plugins/swagger/js/jsrender.min.js"></script>
-<script src="../static/js/plugins/swagger/js/jquery.json-viewer.js"></script>
+<script src="../static/js/plugins/swagger/js/json-viewer.js"></script>
 <script src="../static/js/plugins/swagger/js/docs.js"></script>
 </html>

@@ -17,7 +17,7 @@ function getContextPath() {
 
 $(function(){
     $.ajax({
-        url : path+"/v2/api-docs",
+        url : path+"/v2/api-docs.json",
 // 	        url : "http://petstore.swagger.io/v2/swagger.json",
         dataType : "json",
         type : "get",
@@ -74,13 +74,13 @@ function getResponseModelName(val){
 
 //测试按钮，获取数据
 function getData(operationId){
-   var path = contextPath + $("[m_operationId='"+operationId+"']").attr("path");
+   var pathName = contextPath + $("[m_operationId='"+operationId+"']").attr("path");
    //path 参数
    $("[p_operationId='"+operationId+"'][in='path']").each(function(index, domEle){
        var k = $(domEle).attr("name");
        var v = $(domEle).val();
        if(v){
-           path = path.replace("{"+k+"}",v);
+           pathName = pathName.replace("{"+k+"}",v);
        }
    });
    
@@ -106,11 +106,10 @@ function getData(operationId){
            return false;
        }
    }
-   
    //发送请求
    $.ajax({
 	   type: $("[m_operationId='"+operationId+"']").attr("method"),
-	   url: path,
+	   url: path+pathName.replace("/html",""),
 	   data: parameterJson,
 	   dataType: 'json',
 	   success: function(data){

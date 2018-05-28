@@ -20,6 +20,10 @@ pagehelper:
   reasonable: true
   supportMethodsArguments: true
   params: count=countSql
+management:
+  port: 8800
+  security:
+    enabled: false # spring-boot 1.5.2之后严格执行安全策略，所以需要配置这个为false ,否则很多点监控不到
 eureka:
   client:
     serviceUrl:

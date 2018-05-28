@@ -70,6 +70,15 @@
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session-data-redis</artifactId>
         </dependency>
+        <!-- spring boot admin config -->
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-server-ui</artifactId>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.rocketmq/rocketmq-client -->
      <!--   <dependency>
             <groupId>org.apache.rocketmq</groupId>
