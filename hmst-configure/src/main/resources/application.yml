@@ -1,0 +1,32 @@
+server:
+  port: 8762
+spring:
+  profiles:
+    active: dev
+  application:
+    name: hmst-configure
+  boot:
+    admin:
+      username: ${security.user.name:hm}
+      password: ${security.user.password:123456}
+info:
+  owner: 674703614@qq.com
+  version: @project.version@
+
+eureka:
+  client:
+    serviceUrl:
+       defaultZone: http://hm:123456@127.0.0.1:8761/eureka/
+    instance:
+      instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
+
+security: # 配置中心的用户名密码
+  basic:
+    enabled: ${security.basic.enabled:true}
+  user:
+    name: ${security.user.name:hm}
+    password: ${security.user.password:123456}
+logging:
+  level.root: info
+  path: logs/
+  file: ${spring.application.name}.log

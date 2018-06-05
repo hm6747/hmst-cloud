@@ -25,6 +25,8 @@
         <module>hmst-provider</module>
         <module>hmst-eureka</module>
         <module>hmst-monitor</module>
+        <module>hmst-configure</module>
+        <module>hmst-zipkin</module>
     </modules>
     <properties>
         <spring-cloud.version>Camden.SR6</spring-cloud.version>

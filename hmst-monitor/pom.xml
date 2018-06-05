@@ -96,7 +96,7 @@
                         <!-- 添加index则不从mainfest中读取classpath，而是从Index.list中读取 -->
                         <!-- <index>true</index> -->
                         <manifest>
-                            <mainClass>com.syscloud.provider.HmstCloudUserApplication</mainClass>
+                            <mainClass>com.syscloud.minitor.HmstCloudMonitorApplication</mainClass>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>../lib/</classpathPrefix>
                         </manifest>

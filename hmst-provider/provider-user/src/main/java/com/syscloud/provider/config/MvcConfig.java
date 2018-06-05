@@ -27,12 +27,12 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
                .addResourceLocations("classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/");
     }*/
 
-  @Override
+ /* @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(loginInterceptor).addPathPatterns("*//**")
+        registry.addInterceptor(loginInterceptor).addPathPatterns("*//**//**")
                 .excludePathPatterns("/login.json")
                 .excludePathPatterns("/sign.json");
         super.addInterceptors(registry);
-    }
+    }*/
 
 }
