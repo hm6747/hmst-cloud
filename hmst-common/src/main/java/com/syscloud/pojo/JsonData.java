@@ -16,9 +16,12 @@ public class JsonData implements Serializable{
     private String msg;
 
     private Object data;
-
     public JsonData(boolean ret) {
         this.ret = ret;
+    }
+
+    public JsonData() {
+
     }
 
     public static JsonData success(Object object, String msg) {
@@ -32,10 +35,6 @@ public class JsonData implements Serializable{
         JsonData jsonData = new JsonData(true);
         jsonData.data = object;
         return jsonData;
-    }
-
-    public static JsonData success() {
-        return new JsonData(true);
     }
 
     public static JsonData fail(String msg) {
