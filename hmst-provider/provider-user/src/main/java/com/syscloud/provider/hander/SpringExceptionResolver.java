@@ -23,7 +23,7 @@ public class SpringExceptionResolver {
         JsonData result;
         SystemData systemData = new SystemData();
         // 这里我们要求项目中所有请求json数据，都使用.json结尾
-        if (url.endsWith("/usr")) {
+        if (url.endsWith(".json")) {
             if (ex instanceof PermissionException || ex instanceof ParamException) {
                  result = JsonData.fail(ex.getMessage());
             } else {

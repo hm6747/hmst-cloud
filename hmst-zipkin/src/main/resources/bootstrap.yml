@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    config:
+      uri: http://admin:admin@http://47.98.170.17/:8762/
+      label: master
+      profile: ${spring.profiles.active}
+      ignoredInterfaces:
+        - docker0
+        - veth.*
+        - VM.*

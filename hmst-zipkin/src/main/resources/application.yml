@@ -1,0 +1,32 @@
+server:
+  port: 8782
+spring:
+  profiles:
+    active: dev
+  application:
+    name: hmst-zipkin
+zipkin:
+  collector:
+    rabbitmq:
+      addresses: 47.98.170.17:5672
+      password: 123456
+      username: hm
+      queue: zipkin
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://hm:123456@127.0.0.1:8761/eureka/
+#zipkin:
+ # storage:
+  #  type: elasticsearch
+   # elasticsearch:
+    #  hosts: 47.106.140.208:9200
+     # max-requests: 64
+      #index: zipkin
+      #index-shards: 5
+      #index-replicas: 1
+
+logging:
+  level.root: info
+  path: logs/
+  file: ${spring.application.name}.log

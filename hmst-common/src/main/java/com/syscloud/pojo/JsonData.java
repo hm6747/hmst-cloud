@@ -30,6 +30,10 @@ public class JsonData implements Serializable{
         jsonData.msg = msg;
         return jsonData;
     }
+    public static JsonData success() {
+        JsonData jsonData = new JsonData(true);
+        return jsonData;
+    }
 
     public static JsonData success(Object object) {
         JsonData jsonData = new JsonData(true);

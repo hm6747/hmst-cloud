@@ -5,9 +5,17 @@ spring:
     name: provider-user
   profiles:
     active: dev
+  rabbitmq:
+    host: 47.98.170.17
+    port: 5672
+    username: hm
+    password: 123456
+  zipkin:
+    rabbitmq:
+      queue: zipkin
   redis:
-    host: 120.79.53.121
-    port: 7000
+    host: 47.98.170.17
+    port: 6379
     password: Hm123456
     timeout: 2000
     pool:
@@ -16,7 +24,7 @@ spring:
       max-wait: -1
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://rm-wz98og42mf98p7vf1ao.mysql.rds.aliyuncs.com:3306/user?characterEncoding=utf-8&useSSL=true
+    url: jdbc:mysql://47.98.170.17:3306/user?characterEncoding=utf-8
     username: root
     password: Hm123456
     druid:

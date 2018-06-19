@@ -27,11 +27,4 @@
 *.gz
 *.sql
 *.log
-hmst-eureka/src/test/
-hmst-eureka/target/
-hmst-monitor/target/
-hmst-provider/provider-user/src/main/java/com/syscloud/provider/message/
-hmst-provider/provider-user/src/main/java/com/syscloud/provider/utils/
-hmst-provider/provider-user/src/test/
-hmst-provider/provider-user/target/
-hmst-zipkin/src/main/resources/
+
