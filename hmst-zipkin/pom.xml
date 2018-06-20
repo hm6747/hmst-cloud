@@ -42,5 +42,56 @@
             <version>2.3.1</version>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <archive>
+                        <!-- 添加index则不从mainfest中读取classpath，而是从Index.list中读取 -->
+                        <!-- <index>true</index> -->
+                        <manifest>
+                            <mainClass>com.syscloud.zipkin.HmstCloudZipkinApplication</mainClass>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>../lib/</classpathPrefix>
+                        </manifest>
+                        <manifestEntries>
+                            <Class-Path>./</Class-Path>
+                        </manifestEntries>
+                    </archive>
+                    <excludes>
+                        <exclude>mapper/**</exclude>
+                        <exclude>static/**</exclude>
+                        <exclude>templates/**</exclude>
+                        <exclude>*.txt</exclude>
+                        <exclude>*.xml</exclude>
+                        <exclude>*.yml</exclude>
+                        <!--                    <exclude>*.properties</exclude>-->
+                    </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <!-- not append assembly id in release file name -->
+                    <appendAssemblyId>false</appendAssemblyId>
+                    <descriptors>
+                        <descriptor>src/main/resources/package.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
+        </plugins>
+    </build>
 </project>

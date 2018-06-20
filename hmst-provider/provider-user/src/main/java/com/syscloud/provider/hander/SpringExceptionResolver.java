@@ -32,7 +32,7 @@ public class SpringExceptionResolver {
             }
         } else {
             log.error("unknow exception, url:" + url, ex);
-            result = systemData.create(2,defaultMsg);
+                result = systemData.create(2,defaultMsg);
         }
         return result;
     }

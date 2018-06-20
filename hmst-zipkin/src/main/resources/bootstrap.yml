@@ -1,4 +1,4 @@
-spring:
+ spring:
   cloud:
     config:
       uri: http://admin:admin@http://47.98.170.17/:8762/
