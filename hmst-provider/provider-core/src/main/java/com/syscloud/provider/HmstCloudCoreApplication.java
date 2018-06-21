@@ -6,7 +6,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * Created by hm on 2018/6/21 0021.
- * 服务编排系统
+ * 服务编排系统 核心服务系统
  */
 @EnableEurekaClient
 @SpringBootApplication
