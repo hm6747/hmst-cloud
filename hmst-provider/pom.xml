@@ -9,6 +9,7 @@
 	<version>1.0</version>
 	<modules>
 		<module>provider-user</module>
+		<module>provider-core</module>
 	</modules>
 
 
