@@ -1,5 +1,5 @@
 server:
-  port: ${hmstcloud.server.provider.user.port:8771}
+  port: ${hmstcloud.server.provider.user.port:8770}
 spring:
   application:
     name: provider-core
