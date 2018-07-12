@@ -5,37 +5,22 @@ spring:
     name: hmst-monitor
   profiles:
     active: dev
-  boot:
-    admin:
-      client:
-        metadata:
-          user:
-            name: ${security.user.name}
-            password: ${security.user.password}
-      monitor:
-        period: 60000
-      discovery:
-        enabled: true
-      turbine:
-        clusters: default
-        location: turbine
-      routes:
-        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream,activiti
-management:
-  security:
-    enabled: false
-security:
-  user:
-    name: hm
-    password: 123456
-  basic:
-    enabled: false
 eureka:
+  instance:
+        leaseRenewalIntervalInSeconds: 10
+        healthCheckUrlPath: /actuator/health
   client:
+    registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: http://hm:123456@127.0.0.1:8761/eureka/
-    instance:
-      instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
+      defaultZone: http://127.0.0.1:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
 logging:
   level.root: info
   path: logs/
