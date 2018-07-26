@@ -1,8 +1,10 @@
 package com.syscloud.provider.web.controller;
 
+import com.google.common.collect.Maps;
 import com.syscloud.pojo.JsonData;
 import com.syscloud.provider.model.param.AclParam;
 import com.syscloud.provider.model.query.PageQuery;
+import com.syscloud.provider.model.vo.SysRole;
 import com.syscloud.provider.service.SysAclService;
 import com.syscloud.provider.service.SysRoleService;
 import lombok.extern.slf4j.Slf4j;
@@ -11,6 +13,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
+import java.util.Map;
 
 @Slf4j
 @RequestMapping("/sys/acl")
@@ -42,7 +47,7 @@ public class SysAclController {
         return JsonData.success(sysAclService.getPageByAclModuleId(aclModuleId, pageQuery,keyword));
     }
 
-/*    @RequestMapping("acls.json")
+   @RequestMapping("acls.json")
     @ResponseBody
     public JsonData acls(@RequestParam("aclId") int aclId) {
         Map<String, Object> map = Maps.newHashMap();
@@ -50,5 +55,5 @@ public class SysAclController {
         map.put("roles", roleList);
         map.put("users", sysRoleService.getUserListByRoleList(roleList));
         return JsonData.success(map);
-    }*/
+    }
 }

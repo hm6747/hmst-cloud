@@ -10,7 +10,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/sys/aclModule")
@@ -22,10 +21,6 @@ public class SysAclModuleController {
     @Autowired
     private SysTreesService sysTreeService;
 
-    @RequestMapping("/acl.page")
-    public ModelAndView page() {
-        return new ModelAndView("acl");
-    }
 
     @RequestMapping("/save.json")
     @ResponseBody

@@ -1,6 +1,7 @@
 package com.syscloud.provider.service.impl;
 
 import com.google.common.base.Preconditions;
+import com.google.common.collect.Lists;
 import com.syscloud.exception.ParamException;
 import com.syscloud.provider.mapper.SysRoleAclMapper;
 import com.syscloud.provider.mapper.SysRoleMapper;
@@ -10,14 +11,17 @@ import com.syscloud.provider.model.param.RoleParam;
 import com.syscloud.provider.model.query.PageQuery;
 import com.syscloud.provider.model.query.PageResult;
 import com.syscloud.provider.model.vo.SysRole;
+import com.syscloud.provider.model.vo.SysUser;
 import com.syscloud.provider.service.SysLogService;
 import com.syscloud.provider.service.SysRoleService;
 import com.syscloud.utils.BeanValidator;
+import org.apache.commons.collections.CollectionUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class SysRoleServiceImpl implements SysRoleService {
@@ -82,7 +86,7 @@ public class SysRoleServiceImpl implements SysRoleService {
         return sysRoleMapper.countByNameAndId(name, id) > 0;
     }
 
-   /* public List<SysRole> getRoleListByUserId(int userId) {
+    public List<SysRole> getRoleListByUserId(int userId) {
         List<Integer> roleIdList = sysRoleUserMapper.getRoleIdListByUserId(userId);
         if (CollectionUtils.isEmpty(roleIdList)) {
             return Lists.newArrayList();
@@ -111,5 +115,5 @@ public class SysRoleServiceImpl implements SysRoleService {
             return Lists.newArrayList();
         }
         return sysUserMapper.getByIdList(userIdList);
-    }*/
+    }
 }

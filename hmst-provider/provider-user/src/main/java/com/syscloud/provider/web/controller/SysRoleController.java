@@ -13,7 +13,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -33,10 +32,6 @@ public class SysRoleController {
     @Resource
     private SysUserService sysUserService;
 
-    @RequestMapping("role.page")
-    public ModelAndView page() {
-        return new ModelAndView("role");
-    }
 
     @RequestMapping("/save.json")
     @ResponseBody
@@ -86,9 +81,9 @@ public class SysRoleController {
         sysRoleUserService.changeUserRoles(userId,roleIdList);
         return JsonData.success();
     }
-  /*
 
-    @RequestMapping("/changeUsers.json")
+
+    /*@RequestMapping("/changeUsers.json")
     @ResponseBody
     public JsonData changeUsers(@RequestParam("roleId") int roleId, @RequestParam(value = "userIds", required = false, defaultValue = "") String userIds) {
         List<Integer> userIdList = StringUtil.splitToListInt(userIds);

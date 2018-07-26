@@ -5,14 +5,21 @@ spring:
     name: hmst-monitor
   profiles:
     active: dev
+  security:
+    user:
+      name: "hm"
+      password: "123456"
 eureka:
   instance:
-        leaseRenewalIntervalInSeconds: 10
-        healthCheckUrlPath: /actuator/health
+    leaseRenewalIntervalInSeconds: 10
+    healthCheckUrlPath: /actuator/health
+    metadata-map:
+       user.name: "hm"
+       user.password: "123456"
   client:
     registryFetchIntervalSeconds: 5
-    serviceUrl:
-      defaultZone: http://127.0.0.1:8761/eureka/
+    service-url:
+      defaultZone: http://hm:123456@localhost:8761/eureka/
 management:
   endpoints:
     web:

@@ -7,7 +7,27 @@ spring:
         - VM.*
       preferredNetworks:
         - 192.168
+  security:
+    user:
+      name: "hm"
+      password: "123456"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+      health:
+        show-details: ALWAYS
 eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    metadata-map:
+          user.name: "hm"
+          user.password: "123456"
   client:
     registerWithEureka: false
     fetchRegistry: false
+    service-url:
+      defaultZone: http://hm:123456@localhost:8761/eureka/

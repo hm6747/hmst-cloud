@@ -28,3 +28,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://hm:123456@127.0.0.1:8761/eureka/
+  instance:
+    health-check-url-path: /actuator/health

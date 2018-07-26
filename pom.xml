@@ -28,6 +28,11 @@
         <module>hmst-configure</module>
         <module>hmst-zipkin</module>
         <module>hmst-up</module>
+        <module>hmst-gateway</module>
+        <module>hmst-bdsys</module>
+        <!--
+                <module>hmst-configure</module>
+        -->
     </modules>
     <properties>
         <spring-cloud.version>Camden.SR6</spring-cloud.version>
@@ -367,7 +372,12 @@
                 <artifactId>nekohtml</artifactId>
                 <version>1.9.22</version>
             </dependency>
-
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.14</version>
+                <scope>provided</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

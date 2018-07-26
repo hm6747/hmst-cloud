@@ -40,11 +40,6 @@ public class SysDeptController {
         return JsonData.success();
     }
 
-    @RequestMapping("/dept.page")
-    public String page(){
-        return  "dept";
-    }
-
     @RequestMapping("/tree.json")
     @ResponseBody
     public JsonData tree() {

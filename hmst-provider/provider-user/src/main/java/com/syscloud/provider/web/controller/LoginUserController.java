@@ -17,9 +17,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
 import java.util.Map;
 
 
@@ -35,17 +33,6 @@ public class LoginUserController {
     private LoginService loginService;
     @Autowired
     private SysUserService sysUserService;
-
-    @RequestMapping("/login.page")
-    public String loginPage() {
-        return "redirect:/pages/login.html";
-    }
-
-    @RequestMapping("/logout.page")
-    public String logout(HttpServletRequest request) throws IOException, ServletException {
-        request.getSession().removeAttribute("user");
-        return "redirect:/pages/login.html";
-    }
 
     @RequestMapping("/sign.json")
     @ResponseBody
