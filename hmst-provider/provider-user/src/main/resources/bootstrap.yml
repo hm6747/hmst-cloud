@@ -13,8 +13,8 @@ spring:
         - docker0
         - veth.*
 mybatis:
-  mapper-locations: classpath*:mapper/*.xml
-  #mapper-locations: file:/app/hmst-cloud/provider-user/config/mapper/*.xml
+#  mapper-locations: classpath*:mapper/*.xml
+  mapper-locations: file:/app/hmst-cloud/provider-user/config/mapper/*.xml
 pagehelper:
   helperDialect: mysql
   reasonable: true

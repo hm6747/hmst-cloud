@@ -51,7 +51,7 @@ public class HmstCloudMonitorApplication {
 			successHandler.setTargetUrlParameter("redirectTo");
 
 			http.authorizeRequests()
-					.antMatchers(adminContextPath + "/static/**").permitAll()
+					.antMatchers(adminContextPath + "/assets/**").permitAll()
 					.antMatchers(adminContextPath + "/login").permitAll()
 					.anyRequest().authenticated()
 					.and()

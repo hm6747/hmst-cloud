@@ -9,6 +9,32 @@ spring:
     user:
       name: "hm"
       password: "123456"
+  mail:
+    host: smtp.163.com
+    username: 13548668976@163.com
+    password: hm1986
+    protocol: smtp
+    test-connection: true
+    default-encoding: utf-8
+#    properties:
+#      mail:
+#        debug: true
+#        smtp:
+#          auth: true
+#          connectiontimeout: 5000
+#          timeout: 3000
+#          writetimeout: 5000
+#          socketFactory:
+#            class: javax.net.ssl.SSLSocketFactory
+#          starttls:
+#            enable: true
+#            required: true
+  boot:
+    admin:
+      notify:
+        mail:
+          to: 674703614@qq.com
+          from: 13548668976@163.com
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10

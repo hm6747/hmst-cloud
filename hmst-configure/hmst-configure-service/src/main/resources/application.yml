@@ -1,6 +1,6 @@
 spring:
   application:
-    name: apollo-configservice
+    name: hmst-configservice
   profiles:
     active: ${apollo_profile}
 

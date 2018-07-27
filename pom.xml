@@ -30,6 +30,7 @@
         <module>hmst-up</module>
         <module>hmst-gateway</module>
         <module>hmst-bdsys</module>
+        <module>hmst-auth</module>
         <!--
                 <module>hmst-configure</module>
         -->

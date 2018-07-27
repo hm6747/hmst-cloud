@@ -7,7 +7,7 @@ spring:
     name: hmst-zipkin
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://47.98.170.17:3306/zipkin?useSSL=false&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/zipkin?useSSL=false&characterEncoding=utf-8
     username: root
     password: Hm123456
     druid:
@@ -23,7 +23,7 @@ zipkin:
     type: mysql
   collector:
     rabbitmq:
-      addresses: 47.98.170.17:5672
+      addresses: localhost:5672
       password: 123456
       username: hm
       queue: zipkin

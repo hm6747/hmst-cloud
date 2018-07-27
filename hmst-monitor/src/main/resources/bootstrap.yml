@@ -1,7 +1,7 @@
 spring:
   cloud:
     config:
-      uri: http://admin:admin@paascloud-discovery:8080/
+      uri:
       label: master
       profile: ${spring.profiles.active:dev}
     inetutils:
