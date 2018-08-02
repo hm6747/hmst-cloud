@@ -13,6 +13,4 @@ public class HmstCloudZipkinApplication {
 		SpringApplication.run(HmstCloudZipkinApplication.class, args);
 	}
 
-
-
 }

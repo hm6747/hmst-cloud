@@ -1,23 +1,25 @@
 spring:
   application:
-    name: apollo-portal
+    name: hmst-configportal
   profiles:
-    active: ${apollo_profile} 
-  
+    active: ${apollo_profile}
+security:
+    basic:
+      enabled: true
+    user:
+      name: hm  # 认证用户名
+      password: 123456 # 认证密码
 server:
   port: 8070
-  
 logging:
   level:
     com.ctrip: INFO  
-
-  
 endpoints:
   health:
     sensitive: false
 management:
   security:
-    enabled: false
+    enabled: true
   health:
     status:
       order: DOWN, OUT_OF_SERVICE, UNKNOWN, UP 

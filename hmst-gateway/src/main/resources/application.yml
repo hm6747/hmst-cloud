@@ -13,7 +13,14 @@ eureka:
            defaultZone: http://localhost:8761/eureka/
                     # docker 部署开启
             #defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka/
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
 spring:
   application:
       name: hmst-gateway
@@ -22,6 +29,13 @@ spring:
       port:  5672
       username: hm
       password: 123456
+  redis:
+    host: 47.98.170.17
+    port: 6379
+    password: Hm123456
+    timeout: 2000
+  session:
+    store-type: redis
   cloud:
     gateway:
       locator:

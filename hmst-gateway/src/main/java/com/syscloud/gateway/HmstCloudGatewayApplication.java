@@ -1,13 +1,10 @@
 package com.syscloud.gateway;
 
 
+import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.context.annotation.Bean;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.filter.CorsFilter;
 
 /**
  * The class Paas cloud uac application.
@@ -16,6 +13,7 @@ import org.springframework.web.filter.CorsFilter;
  */
 @SpringBootApplication
 @EnableEurekaClient
+@EnableApolloConfig
 public class HmstCloudGatewayApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HmstCloudGatewayApplication.class, args);
@@ -25,7 +23,7 @@ public class HmstCloudGatewayApplication {
 	 * attention:简单跨域就是GET，HEAD和POST请求，但是POST请求的"Content-Type"只能是application/x-www-form-urlencoded, multipart/form-data 或 text/plain
 	 * 反之，就是非简单跨域，此跨域有一个预检机制，说直白点，就是会发两次请求，一次OPTIONS请求，一次真正的请求
 	 */
-	@Bean
+	/*@Bean
 	public CorsFilter corsFilter() {
 		final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		final CorsConfiguration config = new CorsConfiguration();
@@ -40,8 +38,8 @@ public class HmstCloudGatewayApplication {
 		config.addAllowedMethod("POST");
 		config.addAllowedMethod("DELETE");
 		config.addAllowedMethod("PATCH");
-		source.registerCorsConfiguration("*//**", config);
+		source.registerCorsConfiguration("*//**//**", config);
 		return new CorsFilter(source);
-	}
+	}*/
 
 }

@@ -16,8 +16,11 @@ import java.util.Properties;
 
 public class DefaultServerProvider implements ServerProvider {
   private static final Logger logger = LoggerFactory.getLogger(DefaultServerProvider.class);
-  private static final String SERVER_PROPERTIES_LINUX = "/opt/settings/server.properties";
-  private static final String SERVER_PROPERTIES_WINDOWS = "C:/opt/settings/server.properties";
+/*  private static final String SERVER_PROPERTIES_LINUX = "/opt/settings/server.properties";
+  private static final String SERVER_PROPERTIES_WINDOWS = "C:/opt/settings/server.properties";*/
+
+  private static final String SERVER_PROPERTIES_LINUX = "config-client.properties";
+  private static final String SERVER_PROPERTIES_WINDOWS = "config-client.properties";
 
   private String m_env;
   private String m_dc;
@@ -27,9 +30,14 @@ public class DefaultServerProvider implements ServerProvider {
   @Override
   public void initialize() {
     try {
-      String path = Utils.isOSWindows() ? SERVER_PROPERTIES_WINDOWS : SERVER_PROPERTIES_LINUX;
+/*      String path = Utils.isOSWindows() ? SERVER_PROPERTIES_WINDOWS : SERVER_PROPERTIES_LINUX;
 
+      File file = new File(path);*/
+
+      String fileName = Utils.isOSWindows() ? SERVER_PROPERTIES_WINDOWS : SERVER_PROPERTIES_LINUX;
+      String path = Thread.currentThread().getContextClassLoader().getResource(fileName).getPath();
       File file = new File(path);
+
       if (file.exists() && file.canRead()) {
         logger.info("Loading {}", file.getAbsolutePath());
         FileInputStream fis = new FileInputStream(file);
@@ -122,7 +130,7 @@ public class DefaultServerProvider implements ServerProvider {
     m_env = m_serverProperties.getProperty("env");
     if (!Utils.isBlank(m_env)) {
       m_env = m_env.trim();
-      logger.info("Environment is set to [{}] by property 'env' in server.properties.", m_env);
+      logger.info("Environment is set to [{}] by property 'env' in config-client.properties.", m_env);
       return;
     }
 
@@ -152,7 +160,7 @@ public class DefaultServerProvider implements ServerProvider {
     m_dc = m_serverProperties.getProperty("idc");
     if (!Utils.isBlank(m_dc)) {
       m_dc = m_dc.trim();
-      logger.info("Data Center is set to [{}] by property 'idc' in server.properties.", m_dc);
+      logger.info("Data Center is set to [{}] by property 'idc' in config-client.properties.", m_dc);
       return;
     }
 

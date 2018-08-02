@@ -82,8 +82,20 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+<!--        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>-->
     </dependencies>
-    <build>
+<!--    <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -98,5 +110,88 @@
             </plugin>
         </plugins>
         <finalName>apollo-configservice</finalName>
+    </build>-->
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <archive>
+                        <!-- 添加index则不从mainfest中读取classpath，而是从Index.list中读取 -->
+                        <!-- <index>true</index> -->
+                        <manifest>
+                            <mainClass>com.ctrip.framework.apollo.configservice.ConfigServiceApplication</mainClass>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>../lib/</classpathPrefix>
+                        </manifest>
+                        <manifestEntries>
+                            <Class-Path>./</Class-Path>
+                        </manifestEntries>
+                    </archive>
+                    <excludes>
+                        <exclude>mapper/**</exclude>
+                        <exclude>static/**</exclude>
+                        <exclude>templates/**</exclude>
+                        <exclude>*.txt</exclude>
+                        <exclude>*.xml</exclude>
+                        <exclude>*.yml</exclude>
+                        <!--                    <exclude>*.properties</exclude>-->
+                    </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <!-- not append assembly id in release file name -->
+                    <appendAssemblyId>false</appendAssemblyId>
+                    <descriptors>
+                        <descriptor>src/main/resources/package.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--  <plugin>
+                  <groupId>org.springframework.boot</groupId>
+                  <artifactId>spring-boot-maven-plugin</artifactId>
+                  <executions>
+                      <execution>
+                          <goals>
+                              <goal>repackage</goal>
+                              <goal>build-info</goal>
+                          </goals>
+                      </execution>
+                  </executions>
+              </plugin>
+              &lt;!&ndash; 添加docker-maven插件 &ndash;&gt;
+              <plugin>
+                  <groupId>com.spotify</groupId>
+                  <artifactId>docker-maven-plugin</artifactId>
+                  <version>0.4.13</version>
+                  <configuration>
+                      <imageName>${project.artifactId}:${project.version}</imageName>
+                      <baseImage>java</baseImage>
+                      <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
+                      <resources>
+                          <resource>
+                              <targetPath>/</targetPath>
+                              <directory>${project.build.directory}</directory>
+                              <include>${project.build.finalName}.jar</include>
+                          </resource>
+                      </resources>
+                  </configuration>
+              </plugin>-->
+        </plugins>
     </build>
 </project>
