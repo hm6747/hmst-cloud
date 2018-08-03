@@ -920,3 +920,61 @@ Caused by: java.net.SocketTimeoutException: Read timed out
 2018-08-03 16:11:44,715 [INFO] [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 1247] Running the evict task with compensationTime 0ms
 2018-08-03 16:12:44,717 [INFO] [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 1247] Running the evict task with compensationTime 0ms
 2018-08-03 16:13:44,728 [INFO] [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 1247] Running the evict task with compensationTime 9ms
+2018-08-03 16:14:44,729 [INFO] [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 1247] Running the evict task with compensationTime 0ms
+2018-08-03 16:15:44,729 [INFO] [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 1247] Running the evict task with compensationTime 0ms
+2018-08-03 16:16:15,909 [INFO] [http-nio-8761-exec-1] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 269] Registered instance HMST-CONFIGSERVICE/hmst-configservice:192.168.1.102:8783 with status UP (replication=false)
+2018-08-03 16:16:16,417 [INFO] [http-nio-8761-exec-3] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 269] Registered instance HMST-CONFIGSERVICE/hmst-configservice:192.168.1.102:8783 with status UP (replication=true)
+2018-08-03 16:16:44,730 [INFO] [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 1247] Running the evict task with compensationTime 0ms
+2018-08-03 16:17:44,730 [INFO] [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 1247] Running the evict task with compensationTime 0ms
+2018-08-03 16:18:44,730 [INFO] [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 1247] Running the evict task with compensationTime 0ms
+2018-08-03 16:18:44,731 [INFO] [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 614] Evicting 1 items (expired=1, evictionLimit=1)
+2018-08-03 16:18:44,732 [WARN] [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 626] DS: Registry: expired lease for HMST-CONFIGSERVICE/hmst-configservice:192.168.1.102:8080
+2018-08-03 16:18:44,736 [INFO] [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 333] Cancelled instance HMST-CONFIGSERVICE/hmst-configservice:192.168.1.102:8080 (replication=false)
+2018-08-03 16:19:44,218 [INFO] [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl [PeerAwareInstanceRegistryImpl.java : 541] Current renewal threshold is : 5
+2018-08-03 16:19:44,731 [INFO] [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 1247] Running the evict task with compensationTime 0ms
+2018-08-03 16:20:44,732 [INFO] [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 1247] Running the evict task with compensationTime 0ms
+2018-08-03 16:21:38,937 [ERROR] [TaskBatchingWorker-target_localhost-16] com.netflix.eureka.cluster.ReplicationTaskProcessor [ReplicationTaskProcessor.java : 96] It seems to be a socket read timeout exception, it will retry later. if it continues to happen and some eureka node occupied all the cpu time, you should set property 'eureka.server.peer-node-read-timeout-ms' to a bigger value
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.netflix.eureka.cluster.DynamicGZIPContentEncodingFilter.handle(DynamicGZIPContentEncodingFilter.java:48)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570)
+	at com.netflix.eureka.transport.JerseyReplicationClient.submitBatchUpdates(JerseyReplicationClient.java:116)
+	at com.netflix.eureka.cluster.ReplicationTaskProcessor.process(ReplicationTaskProcessor.java:80)
+	at com.netflix.eureka.util.batcher.TaskExecutors$BatchWorkerRunnable.run(TaskExecutors.java:187)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:278)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:286)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 10 common frames omitted
+2018-08-03 16:21:42,589 [INFO] [http-nio-8761-exec-10] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 269] Registered instance HMST-CONFIGUREADMIN/1GIB6TSCX00VUJ9:hmst-configureadmin:8090 with status UP (replication=false)
+2018-08-03 16:21:43,093 [INFO] [http-nio-8761-exec-1] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 269] Registered instance HMST-CONFIGUREADMIN/1GIB6TSCX00VUJ9:hmst-configureadmin:8090 with status UP (replication=true)
+2018-08-03 16:21:44,732 [INFO] [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 1247] Running the evict task with compensationTime 0ms
+2018-08-03 16:22:44,734 [INFO] [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 1247] Running the evict task with compensationTime 0ms
+2018-08-03 16:23:44,734 [INFO] [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 1247] Running the evict task with compensationTime 0ms
+2018-08-03 16:24:44,734 [INFO] [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 1247] Running the evict task with compensationTime 0ms
+2018-08-03 16:25:44,735 [INFO] [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 1247] Running the evict task with compensationTime 0ms
+2018-08-03 16:26:44,735 [INFO] [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 1247] Running the evict task with compensationTime 0ms
+2018-08-03 16:27:44,735 [INFO] [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry [AbstractInstanceRegistry.java : 1247] Running the evict task with compensationTime 0ms

@@ -5,7 +5,7 @@ spring:
     active: ${apollo_profile}
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/apolloportaldb?characterEncoding=utf-8
+    url: jdbc:mysql://47.98.170.17:3306/apolloportaldb?characterEncoding=utf-8
     username: root
     password: Hm123456
     druid:
@@ -18,7 +18,7 @@ security:
       name: hm  # 认证用户名
       password: 123456 # 认证密码
 server:
-  port: 8070
+  port: 8784
 logging:
   level:
     com.ctrip: INFO  

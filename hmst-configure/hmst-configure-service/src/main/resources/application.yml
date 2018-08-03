@@ -8,7 +8,7 @@ ctrip:
   appid: 100003171
   
 server:
-  port: 8080
+  port: 8783
   
 logging:
   level:

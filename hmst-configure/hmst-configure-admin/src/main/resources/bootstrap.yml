@@ -11,7 +11,7 @@ eureka:
 spring:
     datasource:
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/apolloconfigdb?characterEncoding=utf-8
+      url: jdbc:mysql://47.98.170.17:3306/apolloconfigdb?characterEncoding=utf-8
       username: root
       password: Hm123456
       druid:
