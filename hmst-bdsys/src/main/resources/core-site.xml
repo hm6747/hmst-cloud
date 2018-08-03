@@ -24,6 +24,6 @@
                 <!-- 指定hadoop运行时产生文件的存储目录 -->
                 <property>
                         <name>hadoop.tmp.dir</name>
-                        <value>/usr/local/app/hadoop-2.6.5/tmp</value>
+                        <value>/usr/local/App/hadoop-2.6.5/tmp</value>
     </property>
 </configuration>

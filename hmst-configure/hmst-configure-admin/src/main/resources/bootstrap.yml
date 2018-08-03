@@ -8,7 +8,15 @@ eureka:
     healthcheck:
       enabled: true
     eurekaServiceUrlPollIntervalSeconds: 60
-
+spring:
+    datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/apolloconfigdb?characterEncoding=utf-8
+      username: root
+      password: Hm123456
+      druid:
+        web-stat-filter:
+          exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
 endpoints:
   health:
     sensitive: false

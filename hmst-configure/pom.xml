@@ -321,108 +321,100 @@
                     <groupId>com.ctrip.3rdparty.tomcat.embed</groupId>
                     <artifactId>tomcat-embed-core</artifactId>
                 </dependency>
-            </dependencies>
-        </profile>
-
-        <profile>
-
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-starter-web</artifactId>
-                        <version>${spring-boot.version}</version>
-                        <exclusions>
-                            <exclusion>
-                                <groupId>org.apache.tomcat.embed</groupId>
-                                <artifactId>tomcat-embed-logging-juli</artifactId>
-                            </exclusion>
-                            <!-- use ctrip modified version instead -->
-                            <exclusion>
-                                <groupId>org.apache.tomcat.embed</groupId>
-                                <artifactId>tomcat-embed-core</artifactId>
-                            </exclusion>
-                        </exclusions>
-                    </dependency>
-                    <!-- eureka -->
-                    <dependency>
-                        <groupId>org.springframework.cloud</groupId>
-                        <artifactId>spring-cloud-starter-eureka</artifactId>
-                        <version>${spring-cloud.version}</version>
-                        <exclusions>
-                            <!-- already in java -->
-                            <exclusion>
-                                <groupId>stax</groupId>
-                                <artifactId>stax-api</artifactId>
-                            </exclusion>
-                            <exclusion>
-                                <groupId>javax.xml.stream</groupId>
-                                <artifactId>stax-api</artifactId>
-                            </exclusion>
-                            <!-- duplicated with spring-security-core -->
-                            <exclusion>
-                                <groupId>org.springframework.security</groupId>
-                                <artifactId>spring-security-crypto</artifactId>
-                            </exclusion>
-                            <!-- duplicated with xpp3:xpp3_min -->
-                            <exclusion>
-                                <groupId>xmlpull</groupId>
-                                <artifactId>xmlpull</artifactId>
-                            </exclusion>
-                            <!-- duplicated with netty-all -->
-                            <exclusion>
-                                <groupId>io.netty</groupId>
-                                <artifactId>netty-codec-http</artifactId>
-                            </exclusion>
-                            <exclusion>
-                                <groupId>io.netty</groupId>
-                                <artifactId>netty-buffer</artifactId>
-                            </exclusion>
-                            <exclusion>
-                                <groupId>io.netty</groupId>
-                                <artifactId>netty-common</artifactId>
-                            </exclusion>
-                            <exclusion>
-                                <groupId>io.netty</groupId>
-                                <artifactId>netty-transport-native-epoll</artifactId>
-                            </exclusion>
-                            <exclusion>
-                                <groupId>io.netty</groupId>
-                                <artifactId>netty-transport</artifactId>
-                            </exclusion>
-                            <!-- duplicated with commons-collections and commons-beanutils -->
-                            <exclusion>
-                                <groupId>commons-beanutils</groupId>
-                                <artifactId>commons-beanutils-core</artifactId>
-                            </exclusion>
-                            <!-- duplicated with spring-aop -->
-                            <exclusion>
-                                <groupId>aopalliance</groupId>
-                                <artifactId>aopalliance</artifactId>
-                            </exclusion>
-                        </exclusions>
-                    </dependency>
-                    <!-- end of eureka -->
-                </dependencies>
-            </dependencyManagement>
-            <dependencies>
                 <dependency>
-                    <groupId>com.dianping.cat</groupId>
-                    <artifactId>cat-client</artifactId>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-web</artifactId>
+                    <version>${spring-boot.version}</version>
+                    <exclusions>
+                        <exclusion>
+                            <groupId>org.apache.tomcat.embed</groupId>
+                            <artifactId>tomcat-embed-logging-juli</artifactId>
+                        </exclusion>
+                        <!-- use ctrip modified version instead -->
+                        <exclusion>
+                            <groupId>org.apache.tomcat.embed</groupId>
+                            <artifactId>tomcat-embed-core</artifactId>
+                        </exclusion>
+                    </exclusions>
+                </dependency>
+                <!-- eureka -->
+                <dependency>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-starter-eureka</artifactId>
+                    <version>${spring-cloud.version}</version>
+                    <exclusions>
+                        <!-- already in java -->
+                        <exclusion>
+                            <groupId>stax</groupId>
+                            <artifactId>stax-api</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>javax.xml.stream</groupId>
+                            <artifactId>stax-api</artifactId>
+                        </exclusion>
+                        <!-- duplicated with spring-security-core -->
+                        <exclusion>
+                            <groupId>org.springframework.security</groupId>
+                            <artifactId>spring-security-crypto</artifactId>
+                        </exclusion>
+                        <!-- duplicated with xpp3:xpp3_min -->
+                        <exclusion>
+                            <groupId>xmlpull</groupId>
+                            <artifactId>xmlpull</artifactId>
+                        </exclusion>
+                        <!-- duplicated with netty-all -->
+                        <exclusion>
+                            <groupId>io.netty</groupId>
+                            <artifactId>netty-codec-http</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>io.netty</groupId>
+                            <artifactId>netty-buffer</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>io.netty</groupId>
+                            <artifactId>netty-common</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>io.netty</groupId>
+                            <artifactId>netty-transport-native-epoll</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>io.netty</groupId>
+                            <artifactId>netty-transport</artifactId>
+                        </exclusion>
+                        <!-- duplicated with commons-collections and commons-beanutils -->
+                        <exclusion>
+                            <groupId>commons-beanutils</groupId>
+                            <artifactId>commons-beanutils-core</artifactId>
+                        </exclusion>
+                        <!-- duplicated with spring-aop -->
+                        <exclusion>
+                            <groupId>aopalliance</groupId>
+                            <artifactId>aopalliance</artifactId>
+                        </exclusion>
+                    </exclusions>
                 </dependency>
                 <dependency>
                     <groupId>com.ctrip.3rdparty.tomcat.embed</groupId>
                     <artifactId>tomcat-embed-core</artifactId>
                 </dependency>
-                <dependency>
+            </dependencies>
+
+                    <!-- end of eureka -->
+             <!--   <dependency>
+                    <groupId>com.dianping.cat</groupId>
+                    <artifactId>cat-client</artifactId>
+                </dependency>-->
+
+        <!--        <dependency>
                     <groupId>com.ctrip.framework.clogging</groupId>
                     <artifactId>clogging-agent</artifactId>
                 </dependency>
                 <dependency>
                     <groupId>com.ctrip.platform</groupId>
                     <artifactId>ctrip-dal-client</artifactId>
-                </dependency>
-            </dependencies>
+                </dependency>-->
         </profile>
     </profiles>
 </project>

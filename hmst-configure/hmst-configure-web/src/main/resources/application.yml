@@ -3,6 +3,14 @@ spring:
     name: hmst-configportal
   profiles:
     active: ${apollo_profile}
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/apolloportaldb?characterEncoding=utf-8
+    username: root
+    password: Hm123456
+    druid:
+      web-stat-filter:
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
 security:
     basic:
       enabled: true
