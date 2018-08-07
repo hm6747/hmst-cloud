@@ -17,11 +17,11 @@ public class MetaDomainConsts {
 
   private static Map<Env, Object> domains = new HashMap<>();
 
-  public static final String DEFAULT_META_URL = "http://localhost:8783/services/config";
+  public static final String DEFAULT_META_URL = "http://localhost:8783";
 
   static {
     Properties prop = new Properties();
-    prop = ResourceUtils.readConfigFile("apollo-env.properties", prop);
+    prop = ResourceUtils.readConfigFile("hmst-env.properties", prop);
     Properties env = System.getProperties();
     domains.put(Env.LOCAL,
         env.getProperty("local_meta", prop.getProperty("local.meta", DEFAULT_META_URL)));
