@@ -3,7 +3,7 @@ index_module.controller('IndexController', ['$scope', '$window', 'toastr', 'AppU
                                             IndexController]);
 
 function IndexController($scope, $window, toastr, AppUtil, AppService, UserService, FavoriteService) {
-
+    debugger
     $scope.userId = '';
 
     $scope.getUserCreatedApps = getUserCreatedApps;
