@@ -10,6 +10,7 @@
 	<modules>
 		<module>provider-user</module>
 		<module>provider-core</module>
+		<module>provider-code</module>
 	</modules>
 
 

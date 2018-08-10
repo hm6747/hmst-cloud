@@ -28,6 +28,10 @@ public class RandomSpout extends BaseRichSpout {
         super();
     }
 
+    public RandomSpout() {
+
+    }
+
     public void open(Map conf, TopologyContext context,
                      SpoutOutputCollector collector) {
         this.context = context;

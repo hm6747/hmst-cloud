@@ -15,7 +15,6 @@ public class ConfigServiceHealthIndicator implements HealthIndicator {
 
   @Override
   public Health health() {
-    System.out.println(Health.up().build());
     int errorCode = check();
     if (errorCode != 0) {
       return Health.down().withDetail("Error Code", errorCode).build();

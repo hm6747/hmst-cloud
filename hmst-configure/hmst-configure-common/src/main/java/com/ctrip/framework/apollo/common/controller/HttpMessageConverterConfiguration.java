@@ -2,7 +2,6 @@ package com.ctrip.framework.apollo.common.controller;
 
 import com.google.common.collect.Lists;
 import com.google.gson.GsonBuilder;
-
 import org.springframework.boot.autoconfigure.web.HttpMessageConverters;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,7 +25,7 @@ public class HttpMessageConverterConfiguration {
             new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ").create());
     final List<HttpMessageConverter<?>> converters = Lists.newArrayList(
             new ByteArrayHttpMessageConverter(), new StringHttpMessageConverter(),
-            new AllEncompassingFormHttpMessageConverter(), gsonHttpMessageConverter);
+            new AllEncompassingFormHttpMessageConverter(), null);
     return new HttpMessageConverters() {
       @Override
       public List<HttpMessageConverter<?>> getConverters() {
