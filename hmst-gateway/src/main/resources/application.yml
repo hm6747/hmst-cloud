@@ -49,7 +49,3 @@ spring:
               - Path=/userapi/**
               filters:
               - StripPrefix=1
-logging:
-  level.root: info
-  path: logs/
-  file: ${spring.application.name}.log
