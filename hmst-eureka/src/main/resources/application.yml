@@ -5,3 +5,5 @@ spring:
     active: dev
   application:
     name: hmst-eureka
+logging:
+  config: classpath:log-spring.xml

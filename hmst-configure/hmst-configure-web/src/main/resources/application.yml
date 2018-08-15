@@ -20,8 +20,7 @@ security:
 server:
   port: 8784
 logging:
-  level:
-    com.ctrip: INFO  
+  config: classpath:log-spring.xml
 endpoints:
   health:
     sensitive: false

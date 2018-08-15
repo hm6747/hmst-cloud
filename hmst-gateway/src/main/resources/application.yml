@@ -49,3 +49,5 @@ spring:
               - Path=/userapi/**
               filters:
               - StripPrefix=1
+logging:
+  config: classpath:log-spring.xml

@@ -32,5 +32,6 @@ spring:
         exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
   session:
     store-type: redis
-
+logging:
+  config: classpath:log-spring.xml
 

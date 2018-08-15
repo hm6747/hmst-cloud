@@ -13,9 +13,6 @@ import org.springframework.http.converter.support.AllEncompassingFormHttpMessage
 
 import java.util.List;
 
-/**
- * Created by Jason on 5/11/16.
- */
 @Configuration
 public class HttpMessageConverterConfiguration {
   @Bean
@@ -25,7 +22,7 @@ public class HttpMessageConverterConfiguration {
             new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ").create());
     final List<HttpMessageConverter<?>> converters = Lists.newArrayList(
             new ByteArrayHttpMessageConverter(), new StringHttpMessageConverter(),
-            new AllEncompassingFormHttpMessageConverter(), null);
+            new AllEncompassingFormHttpMessageConverter(), gsonHttpMessageConverter);
     return new HttpMessageConverters() {
       @Override
       public List<HttpMessageConverter<?>> getConverters() {

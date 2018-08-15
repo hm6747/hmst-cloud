@@ -9,7 +9,5 @@ ctrip:
   
 server:
   port: 8090
-  
 logging:
-  level:
-    com.ctrip: INFO  
+  config: classpath:log-spring.xml

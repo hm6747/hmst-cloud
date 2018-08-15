@@ -15,13 +15,11 @@
         <github.path>${project.artifactId}</github.path>
     </properties>
     <dependencies>
-        <!-- apollo -->
         <dependency>
             <groupId>com.syscloud</groupId>
             <artifactId>hmst-configure-core</artifactId>
             <version>1.0</version>
         </dependency>
-        <!-- end of apollo -->
         <!-- guice -->
         <dependency>
             <groupId>com.google.inject</groupId>

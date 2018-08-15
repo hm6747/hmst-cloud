@@ -9,7 +9,6 @@ ctrip:
   
 server:
   port: 8783
-  
 logging:
-  level:
-    com.ctrip: INFO  
+  config: classpath:log-spring.xml
+

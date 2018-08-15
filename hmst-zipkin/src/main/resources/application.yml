@@ -18,6 +18,8 @@ spring:
     sleuth:
       enabled: false
      #表示zipkin数据存储方式是mysql
+logging:
+  config: classpath:log-spring.xml
 zipkin:
   storage:
     type: mysql

@@ -54,3 +54,5 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
+logging:
+  config: classpath:log-spring.xml
