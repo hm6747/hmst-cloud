@@ -3,6 +3,7 @@ package com.syscloud.provider.user;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * Created by hm on 2018/6/21 0021.
@@ -10,6 +11,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  */
 @EnableEurekaClient
 @SpringBootApplication
+@EnableFeignClients
 public class HmstCloudCoreApplication {
     public static void main(String[] args) {
         SpringApplication.run(HmstCloudCoreApplication.class, args);

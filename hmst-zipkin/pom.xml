@@ -13,7 +13,7 @@
     </properties>
     <parent>
         <groupId>com.syscloud</groupId>
-        <artifactId>hmst-up2</artifactId>
+        <artifactId>hmst-syscloud</artifactId>
         <version>1.0</version>
     </parent>
     <repositories>

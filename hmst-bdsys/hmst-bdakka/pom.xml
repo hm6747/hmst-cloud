@@ -90,7 +90,7 @@
                                     <resource>reference.conf</resource>
                                 </transformer>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>cn.itcast.akkk.Master</mainClass>
+                                    <mainClass>com.scala.syscloud.Master</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
