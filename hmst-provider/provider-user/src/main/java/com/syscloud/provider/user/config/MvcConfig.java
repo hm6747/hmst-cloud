@@ -1,13 +1,10 @@
 package com.syscloud.provider.user.config;
 
 import com.syscloud.base.config.SwaggerConfiguration;
-import com.syscloud.provider.user.interceptor.LoginInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-
-import javax.annotation.Resource;
 
 
 /**
@@ -17,8 +14,8 @@ import javax.annotation.Resource;
 @Configuration
 @Import(SwaggerConfiguration.class)
 public class MvcConfig extends WebMvcConfigurerAdapter {
-   @Resource
-   LoginInterceptor loginInterceptor;
+//   @Resource
+//   LoginInterceptor loginInterceptor;
   @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
        registry.addResourceHandler("*//**")

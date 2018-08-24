@@ -25,7 +25,7 @@ public class AdminServiceAPI {
   public static class HealthAPI extends API {
 
     public Health health(Env env) {
-      return restTemplate.get(env, "/health", Health.class);
+      return restTemplate.get(env, "/actuator/health", Health.class);
     }
   }
 

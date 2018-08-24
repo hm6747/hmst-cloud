@@ -14,11 +14,11 @@
         </developer>
     </developers>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.9.RELEASE</version>
-    </parent>
+    <!--    <parent>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-parent</artifactId>
+            <version>1.5.9.RELEASE</version>
+        </parent>-->
 
     <modules>
         <module>hmst-common</module>
@@ -27,63 +27,132 @@
         <module>hmst-monitor</module>
         <module>hmst-configure</module>
         <module>hmst-zipkin</module>
-        <module>hmst-up</module>
         <module>hmst-gateway</module>
         <module>hmst-bdsys</module>
+        <module>hmst-up</module>
         <!--
                 <module>hmst-configure</module>
         -->
     </modules>
     <properties>
-        <spring-cloud.version>Camden.SR6</spring-cloud.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <springfox.version>2.6.1</springfox.version>
-        <commons-codec.version>1.10</commons-codec.version>
-        <jjwt.version>0.7.0</jjwt.version>
-        <codehaus-jackson.version>1.9.13</codehaus-jackson.version>
+        <spring-cloud.version>Finchley.RC1</spring-cloud.version>
+        <spring-boot.version>2.0.0.RELEASE</spring-boot.version>
+        <logstash.version>4.6</logstash.version>
+        <gson.version>2.8.2</gson.version>
+        <boot-admin.version>2.0.1-SNAPSHOT</boot-admin.version>
+        <hmst-client.version>1.0</hmst-client.version>
         <mybatis-starter-version>1.2.0</mybatis-starter-version>
         <mybatis.plus.version>2.0.7</mybatis.plus.version>
         <druid.version>1.0.29</druid.version>
         <mapper.version>3.4.0</mapper.version>
-        <springframework.version>4.3.8.RELEASE</springframework.version>
-        <elastic-job.version>2.1.5</elastic-job.version>
-        <curator.version>2.10.0</curator.version>
+        <springfox.version>2.6.1</springfox.version>
+        <commons-codec.version>1.10</commons-codec.version>
+        <jjwt.version>0.7.0</jjwt.version>
         <mysql.version>5.1.39</mysql.version>
-        <maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
-        <maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
-        <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
-        <guava.version>17.0</guava.version>
-        <boot.admin.version>1.5.6</boot.admin.version>
-        <httpclientutil.version>1.0</httpclientutil.version>
-        <feign.form.spring.version>3.0.3</feign.form.spring.version>
-        <spring.version>4.3.11.RELEASE</spring.version>
         <fastjson.version>1.2.29</fastjson.version>
         <modelmapper.version>1.1.2</modelmapper.version>
         <rocketmq.version>4.1.0-incubating</rocketmq.version>
+        <kotlin.version>1.1.51</kotlin.version>
+        <liquibase.version>3.5.3</liquibase.version>
+        <guava.version>17.0</guava.version>
+        <mapper-spring.version>1.1.1</mapper-spring.version>
+        <generator.version>1.3.5</generator.version>
+        <commons-lang3.version>3.5</commons-lang3.version>
+        <pagehelper.version>1.1.2</pagehelper.version>
+        <druid-boot.version>1.1.0</druid-boot.version>
+        <commons-collections.version>3.2.2</commons-collections.version>
+        <hibernate-validator.version>5.3.6.Final</hibernate-validator.version>
+        <codehaus-jackson.version>1.9.13</codehaus-jackson.version>
+        <!--
+
+
+      -->
+        <!--
+                <springframework.version>4.3.8.RELEASE</springframework.version>
+        -->
+        <!-- <elastic-job.version>2.1.5</elastic-job.version>
+         <curator.version>2.10.0</curator.version>
+
+         <maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
+         <maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
+         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
+
+         <boot.admin.version>1.5.6</boot.admin.version>
+         <httpclientutil.version>1.0</httpclientutil.version>
+         <feign.form.spring.version>3.0.3</feign.form.spring.version>
+         <spring.version>4.3.11.RELEASE</spring.version>
+        -->
+
     </properties>
+    <repositories>
+        <repository>
+            <id>oss</id>
+            <name>oss</name>
+            <url>https://oss.sonatype.org/content/groups/public</url>
+        </repository>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/libs-milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>sonatype-nexus-snapshots</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>io.spring.platform</groupId>
-                <artifactId>platform-bom</artifactId>
-                <version>Brussels-SR7</version>
-                <type>pom</type>
-                <scope>import</scope>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.14</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Edgware.RELEASE</version>
+                <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- google java lib -->
             <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>${guava.version}</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.logstash.logback</groupId>
+                <artifactId>logstash-logback-encoder</artifactId>
+                <version>${logstash.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-server</artifactId>
+                <version>${boot-admin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.syscloud</groupId>
+                <artifactId>hmst-configure-client</artifactId>
+                <version>${hmst-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-starter-version}</version>
             </dependency>
             <!-- swagger cloud start -->
             <dependency>
@@ -96,12 +165,20 @@
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${springfox.version}</version>
             </dependency>
-            <!-- swagger cloud end -->
-            <!--lombok-->
             <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>1.16.14</version>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-core</artifactId>
+                <version>${liquibase.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>${mapper-spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
             </dependency>
             <dependency>
                 <groupId>commons-codec</groupId>
@@ -111,12 +188,48 @@
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>3.5</version>
+                <version>${commons-lang3.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.jsonwebtoken</groupId>
-                <artifactId>jjwt</artifactId>
-                <version>${jjwt.version}</version>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>${commons-collections.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-core</artifactId>
+                <version>${generator.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.modelmapper</groupId>
+                <artifactId>modelmapper</artifactId>
+                <version>${modelmapper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate-validator.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.codehaus.jackson</groupId>
@@ -138,249 +251,239 @@
                 <artifactId>jackson-mapper-asl</artifactId>
                 <version>${codehaus-jackson.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-databind</artifactId>
-                <version>2.8.4</version>
-            </dependency>
-            <!--mybatis-->
-            <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${mybatis-starter-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>tk.mybatis</groupId>
-                <artifactId>mapper</artifactId>
-                <version>${mapper.version}</version>
-            </dependency>
-            <!--mapper-->
-            <dependency>
-                <groupId>tk.mybatis</groupId>
-                <artifactId>mapper-spring-boot-starter</artifactId>
-                <version>1.1.1</version>
-            </dependency>
-            <!--pagehelper-->
-            <dependency>
-                <groupId>com.github.pagehelper</groupId>
-                <artifactId>pagehelper-spring-boot-starter</artifactId>
-                <version>1.1.2</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid</artifactId>
-                <version>${druid.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid-spring-boot-starter</artifactId>
-                <version>1.1.0</version>
-            </dependency>
-            <dependency>
-                <groupId>org.mybatis.generator</groupId>
-                <artifactId>mybatis-generator-core</artifactId>
-                <version>1.3.5</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>joda-time</groupId>
-                <artifactId>joda-time</artifactId>
-                <version>2.9.6</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-context</artifactId>
-                <version>${springframework.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-web</artifactId>
-                <version>${springframework.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>eu.bitwalker</groupId>
-                <artifactId>UserAgentUtils</artifactId>
-                <version>1.20</version>
-            </dependency>
+            <!-- google java lib -->
+            <!--    -->
+            <!-- swagger cloud end -->
+            <!--lombok-->
+            <!-- <dependency>
+                 <groupId>org.projectlombok</groupId>
+                 <artifactId>lombok</artifactId>
+                 <version>1.16.14</version>
+             </dependency>
+
+             <dependency>
+                 <groupId>io.jsonwebtoken</groupId>
+                 <artifactId>jjwt</artifactId>
+                 <version>${jjwt.version}</version>
+             </dependency>
+
+             <dependency>
+                 <groupId>com.fasterxml.jackson.core</groupId>
+                 <artifactId>jackson-databind</artifactId>
+                 <version>2.8.4</version>
+             </dependency>
+             &lt;!&ndash;mybatis&ndash;&gt;
+             <dependency>
+                 <groupId>org.mybatis.spring.boot</groupId>
+                 <artifactId>mybatis-spring-boot-starter</artifactId>
+                 <version>${mybatis-starter-version}</version>
+             </dependency>
+             <dependency>
+                 <groupId>tk.mybatis</groupId>
+                 <artifactId>mapper</artifactId>
+                 <version>${mapper.version}</version>
+             </dependency>
+             &lt;!&ndash;mapper&ndash;&gt;
+             <dependency>
+                 <groupId>tk.mybatis</groupId>
+                 <artifactId>mapper-spring-boot-starter</artifactId>
+                 <version>1.1.1</version>
+             </dependency>
+             &lt;!&ndash;pagehelper&ndash;&gt;
+
+
+
+
+             <dependency>
+                 <groupId>joda-time</groupId>
+                 <artifactId>joda-time</artifactId>
+                 <version>2.9.6</version>
+             </dependency>-->
+            <!-- <dependency>
+                 <groupId>org.springframework</groupId>
+                 <artifactId>spring-context</artifactId>
+                 <version>${springframework.version}</version>
+             </dependency>
+             <dependency>
+                 <groupId>org.springframework</groupId>
+                 <artifactId>spring-web</artifactId>
+                 <version>${springframework.version}</version>
+             </dependency>-->
+            <!--   <dependency>
+                   <groupId>eu.bitwalker</groupId>
+                   <artifactId>UserAgentUtils</artifactId>
+                   <version>1.20</version>
+               </dependency>-->
             <!-- http://www.hutool.cn/ -->
-            <dependency>
-                <groupId>com.xiaoleilu</groupId>
-                <artifactId>hutool-all</artifactId>
-                <version>3.0.7</version>
-            </dependency>
-            <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis</artifactId>
-                <version>3.4.2</version>
-            </dependency>
+            <!--  <dependency>
+                  <groupId>com.xiaoleilu</groupId>
+                  <artifactId>hutool-all</artifactId>
+                  <version>3.0.7</version>
+              </dependency>-->
+            <!--    <dependency>
+                    <groupId>org.mybatis</groupId>
+                    <artifactId>mybatis</artifactId>
+                    <version>3.4.2</version>
+                </dependency>-->
 
-            <dependency>
-                <groupId>com.aliyun</groupId>
-                <artifactId>aliyun-java-sdk-core</artifactId>
-                <version>3.2.2</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aliyun</groupId>
-                <artifactId>aliyun-java-sdk-dysmsapi</artifactId>
-                <version>1.0.0-SANPSHOT</version>
-            </dependency>
+            <!--      <dependency>
+                      <groupId>com.aliyun</groupId>
+                      <artifactId>aliyun-java-sdk-core</artifactId>
+                      <version>3.2.2</version>
+                  </dependency>
+                  <dependency>
+                      <groupId>com.aliyun</groupId>
+                      <artifactId>aliyun-java-sdk-dysmsapi</artifactId>
+                      <version>1.0.0-SANPSHOT</version>
+                  </dependency>-->
             <!-- https://mvnrepository.com/artifact/com.aliyun.mns/aliyun-sdk-mns -->
-            <dependency>
-                <groupId>com.aliyun.mns</groupId>
-                <artifactId>aliyun-sdk-mns</artifactId>
-                <version>1.1.8.4</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aliyun.mns</groupId>
-                <artifactId>alicom-mns-receive-sdk</artifactId>
-                <version>1.0</version>
-            </dependency>
+            <!--   <dependency>
+                   <groupId>com.aliyun.mns</groupId>
+                   <artifactId>aliyun-sdk-mns</artifactId>
+                   <version>1.1.8.4</version>
+               </dependency>
+               <dependency>
+                   <groupId>com.aliyun.mns</groupId>
+                   <artifactId>alicom-mns-receive-sdk</artifactId>
+                   <version>1.0</version>
+               </dependency>-->
 
-            <dependency>
-                <groupId>org.apache.rocketmq</groupId>
-                <artifactId>rocketmq-client</artifactId>
-                <version>${rocketmq.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.qiniu</groupId>
-                <artifactId>qiniu-java-sdk</artifactId>
-                <version>[7.0.0, 7.2.99]</version>
-            </dependency>
-            <!-- alipay start-->
-            <dependency>
-                <groupId>com.alipay</groupId>
-                <artifactId>alipay-sdk-java</artifactId>
-                <version>20170725114550</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alipay</groupId>
-                <artifactId>alipay-trade-sdk</artifactId>
-                <version>20161215</version>
-            </dependency>
+            <!--    <dependency>
+                    <groupId>org.apache.rocketmq</groupId>
+                    <artifactId>rocketmq-client</artifactId>
+                    <version>${rocketmq.version}</version>
+                </dependency>-->
+            <!--    <dependency>
+                    <groupId>com.qiniu</groupId>
+                    <artifactId>qiniu-java-sdk</artifactId>
+                    <version>[7.0.0, 7.2.99]</version>
+                </dependency>
+                &lt;!&ndash; alipay start&ndash;&gt;
+                <dependency>
+                    <groupId>com.alipay</groupId>
+                    <artifactId>alipay-sdk-java</artifactId>
+                    <version>20170725114550</version>
+                </dependency>
+                <dependency>
+                    <groupId>com.alipay</groupId>
+                    <artifactId>alipay-trade-sdk</artifactId>
+                    <version>20161215</version>
+                </dependency>-->
             <!-- alipay end-->
-            <dependency>
-                <groupId>org.modelmapper</groupId>
-                <artifactId>modelmapper</artifactId>
-                <version>${modelmapper.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>de.codecentric</groupId>
-                <artifactId>spring-boot-admin-server-ui-login</artifactId>
-                <version>${boot.admin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>de.codecentric</groupId>
-                <artifactId>spring-boot-admin-server</artifactId>
-                <version>${boot.admin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>de.codecentric</groupId>
-                <artifactId>spring-boot-admin-server-ui</artifactId>
-                <version>${boot.admin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>de.codecentric</groupId>
-                <artifactId>spring-boot-admin-starter-client</artifactId>
-                <version>${boot.admin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>de.codecentric</groupId>
-                <artifactId>spring-boot-admin-server-ui-hystrix</artifactId>
-                <version>${boot.admin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>de.codecentric</groupId>
-                <artifactId>spring-boot-admin-server-ui-activiti</artifactId>
-                <version>${boot.admin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>de.codecentric</groupId>
-                <artifactId>spring-boot-admin-server-ui-turbine</artifactId>
-                <version>${boot.admin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.penggle</groupId>
-                <artifactId>kaptcha</artifactId>
-                <version>2.3.2</version>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>javax.servlet-api</artifactId>
-                        <groupId>javax.servlet</groupId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
+            <!--   -->
+            <!-- <dependency>
+                 <groupId>de.codecentric</groupId>
+                 <artifactId>spring-boot-admin-server-ui-login</artifactId>
+                 <version>${boot.admin.version}</version>
+             </dependency>
+             <dependency>
+                 <groupId>de.codecentric</groupId>
+                 <artifactId>spring-boot-admin-server</artifactId>
+                 <version>${boot.admin.version}</version>
+             </dependency>
+             <dependency>
+                 <groupId>de.codecentric</groupId>
+                 <artifactId>spring-boot-admin-server-ui</artifactId>
+                 <version>${boot.admin.version}</version>
+             </dependency>
+             <dependency>
+                 <groupId>de.codecentric</groupId>
+                 <artifactId>spring-boot-admin-starter-client</artifactId>
+                 <version>${boot.admin.version}</version>
+             </dependency>
+             <dependency>
+                 <groupId>de.codecentric</groupId>
+                 <artifactId>spring-boot-admin-server-ui-hystrix</artifactId>
+                 <version>${boot.admin.version}</version>
+             </dependency>
+             <dependency>
+                 <groupId>de.codecentric</groupId>
+                 <artifactId>spring-boot-admin-server-ui-activiti</artifactId>
+                 <version>${boot.admin.version}</version>
+             </dependency>
+             <dependency>
+                 <groupId>de.codecentric</groupId>
+                 <artifactId>spring-boot-admin-server-ui-turbine</artifactId>
+                 <version>${boot.admin.version}</version>
+             </dependency>-->
+            <!--  <dependency>
+                  <groupId>com.github.penggle</groupId>
+                  <artifactId>kaptcha</artifactId>
+                  <version>2.3.2</version>
+                  <exclusions>
+                      <exclusion>
+                          <artifactId>javax.servlet-api</artifactId>
+                          <groupId>javax.servlet</groupId>
+                      </exclusion>
+                  </exclusions>
+              </dependency>-->
 
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>${mysql.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.arronlong.httpclientutil</groupId>
-                <artifactId>httpclientutil</artifactId>
-                <version>${httpclientutil.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.curator</groupId>
-                <artifactId>curator-client</artifactId>
-                <version>${curator.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.curator</groupId>
-                <artifactId>curator-recipes</artifactId>
-                <version>${curator.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.curator</groupId>
-                <artifactId>curator-framework</artifactId>
-                <version>${curator.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.openfeign.form</groupId>
-                <artifactId>feign-form</artifactId>
-                <version>${feign.form.spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.openfeign.form</groupId>
-                <artifactId>feign-form-spring</artifactId>
-                <version>${feign.form.spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-tx</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
-            </dependency>
+            <!--  <dependency>
+                  <groupId>mysql</groupId>
+                  <artifactId>mysql-connector-java</artifactId>
+                  <version>${mysql.version}</version>
+              </dependency>
+              <dependency>
+                  <groupId>com.arronlong.httpclientutil</groupId>
+                  <artifactId>httpclientutil</artifactId>
+                  <version>${httpclientutil.version}</version>
+              </dependency>
+              <dependency>
+                  <groupId>org.apache.curator</groupId>
+                  <artifactId>curator-client</artifactId>
+                  <version>${curator.version}</version>
+              </dependency>
+              <dependency>
+                  <groupId>org.apache.curator</groupId>
+                  <artifactId>curator-recipes</artifactId>
+                  <version>${curator.version}</version>
+              </dependency>
+              <dependency>
+                  <groupId>org.apache.curator</groupId>
+                  <artifactId>curator-framework</artifactId>
+                  <version>${curator.version}</version>
+              </dependency>
+              <dependency>
+                  <groupId>io.github.openfeign.form</groupId>
+                  <artifactId>feign-form</artifactId>
+                  <version>${feign.form.spring.version}</version>
+              </dependency>
+              <dependency>
+                  <groupId>io.github.openfeign.form</groupId>
+                  <artifactId>feign-form-spring</artifactId>
+                  <version>${feign.form.spring.version}</version>
+              </dependency>
+              <dependency>
+                  <groupId>org.springframework</groupId>
+                  <artifactId>spring-tx</artifactId>
+                  <version>${spring.version}</version>
+              </dependency>
+              &lt;!&ndash; https://mvnrepository.com/artifact/com.alibaba/fastjson &ndash;&gt;
 
-            <dependency>
-                <groupId>org.springframework.session</groupId>
-                <artifactId>spring-session</artifactId>
-                <version>1.3.1.RELEASE</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-thymeleaf</artifactId>
-                <version>1.4.3.RELEASE</version>
-            </dependency>
-            <dependency>
-                <groupId>net.sourceforge.nekohtml</groupId>
-                <artifactId>nekohtml</artifactId>
-                <version>1.9.22</version>
-            </dependency>
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>1.16.14</version>
-                <scope>provided</scope>
-            </dependency>
+
+              <dependency>
+                  <groupId>org.springframework.session</groupId>
+                  <artifactId>spring-session</artifactId>
+                  <version>1.3.1.RELEASE</version>
+              </dependency>
+              <dependency>
+                  <groupId>org.springframework.boot</groupId>
+                  <artifactId>spring-boot-starter-thymeleaf</artifactId>
+                  <version>1.4.3.RELEASE</version>
+              </dependency>
+              <dependency>
+                  <groupId>net.sourceforge.nekohtml</groupId>
+                  <artifactId>nekohtml</artifactId>
+                  <version>1.9.22</version>
+              </dependency>
+              <dependency>
+                  <groupId>org.projectlombok</groupId>
+                  <artifactId>lombok</artifactId>
+                  <version>1.16.14</version>
+                  <scope>provided</scope>
+              </dependency>-->
         </dependencies>
     </dependencyManagement>
-
     <build>
         <plugins>
             <plugin>
@@ -413,5 +516,4 @@
             </activation>
         </profile>
     </profiles>
-
 </project>

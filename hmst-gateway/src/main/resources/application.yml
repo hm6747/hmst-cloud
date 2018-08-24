@@ -46,7 +46,7 @@ spring:
               uri: lb://provider-user
               order: 8000
               predicates:
-              - Path=/userapi/**
+              - Path=/user-service/**
               filters:
               - StripPrefix=1
 logging:

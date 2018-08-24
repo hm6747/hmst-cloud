@@ -18,8 +18,6 @@ spring:
     sleuth:
       enabled: false
      #表示zipkin数据存储方式是mysql
-logging:
-  config: classpath:log-spring.xml
 zipkin:
   storage:
     type: mysql
@@ -39,6 +37,8 @@ eureka:
        healthCheckUrlPath: /actuator/health
   client:
     registryFetchIntervalSeconds: 5
+    healthcheck:
+      enabled: true #使用health端点来代替心跳表明服务是否可用，反应到eureka server ui上服务的UP还是DOWN
     service-url:
       defaultZone: http://hm:123456@localhost:8761/eureka/
 
@@ -55,3 +55,5 @@ management:
   security:
     enabled: false
   context-path: /actuator
+logging:
+  config: classpath:log-spring.xml

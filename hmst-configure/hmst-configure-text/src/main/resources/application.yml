@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: hmst-configure-text
+  profiles:
+    active: dev
+
+ctrip:
+  appid: 100003172
+  
+server:
+  port: 8012
+logging:
+  config: classpath:log-spring.xml

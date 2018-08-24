@@ -1,3 +1,4 @@
+/*
 package com.ctrip.framework.apollo.configservice;
 
 import com.ctrip.framework.apollo.biz.service.AppService;
@@ -29,3 +30,4 @@ public class ConfigServiceHealthIndicator implements HealthIndicator {
   }
 
 }
+*/

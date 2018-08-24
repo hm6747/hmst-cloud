@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableEurekaServer
 @SpringBootApplication
 public class HmstCloudEurekaApplication {
+
 	/**
 	 * CSRF保护默认是开启的，可以禁用掉即可
 	 */

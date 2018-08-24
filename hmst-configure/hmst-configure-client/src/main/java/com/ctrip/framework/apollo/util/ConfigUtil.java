@@ -102,8 +102,7 @@ public class ConfigUtil {
   public Env getApolloEnv() {
     Env env = EnvUtils.transformEnv(Foundation.server().getEnvType());
     if (env == null) {
-      String path = isOSWindows() ? "C:\\opt\\settings\\server.properties" :
-          "/opt/settings/server.properties";
+      String path =  ConfigUtil.class.getClassLoader().getResource("config-client.properties").getFile();
       String message = String.format("env is not set, please make sure it is set in %s!", path);
       logger.error(message);
       throw new ApolloConfigException(message);

@@ -20,7 +20,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  *
  * @author Jason Song(song_s@ctrip.com)
  */
-
 @EnableEurekaClient
 @EnableAspectJAutoProxy
 @EnableAutoConfiguration // (exclude = EurekaClientConfigBean.class)

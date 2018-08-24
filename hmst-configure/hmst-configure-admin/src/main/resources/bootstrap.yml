@@ -2,11 +2,18 @@ eureka:
   instance:
     hostname: ${spring.cloud.client.ipAddress}
     preferIpAddress: true
+    health-check-url-path: /actuator/health
+    metadata-map:
+       user.name: "hm"
+       user.password: "123456"
+       statusPageUrlPath: /actuator/info
+       healthCheckUrlPath: /actuator/health
+    status-page-url-path:  /actuator/info
   client:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
-    healthcheck:
-      enabled: true
+#    healthcheck:
+#      enabled: true
     eurekaServiceUrlPollIntervalSeconds: 60
 spring:
     datasource:
@@ -25,4 +32,5 @@ management:
     enabled: false
   health:
     status:
-      order: DOWN, OUT_OF_SERVICE, UNKNOWN, UP 
+      order: DOWN, OUT_OF_SERVICE, UNKNOWN, UP
+  context-path: /actuator

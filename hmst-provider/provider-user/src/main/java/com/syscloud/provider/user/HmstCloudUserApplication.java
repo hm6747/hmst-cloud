@@ -31,6 +31,7 @@ public class HmstCloudUserApplication {
 
 		springLiquibase.setDataSource(dataSource);
 		springLiquibase.setChangeLog("classpath:/liquibase/index.xml");
+		springLiquibase.setShouldRun(true);
 		return springLiquibase;
 	}
 

@@ -11,10 +11,10 @@ public abstract class RefreshablePropertySource extends MapPropertySource {
     super(name, source);
   }
 
-  @Override
+ /* @Override
   public Object getProperty(String name) {
     return this.source.get(name);
-  }
+  }*/
 
   /**
    * refresh property

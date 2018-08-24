@@ -1,3 +1,4 @@
+/*
 package com.ctrip.framework.apollo.common.controller;
 
 import com.google.common.collect.Lists;
@@ -31,3 +32,4 @@ public class HttpMessageConverterConfiguration {
     };
   }
 }
+*/

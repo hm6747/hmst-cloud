@@ -1,5 +1,6 @@
 package com.syscloud.gateway.filter;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.context.annotation.Configuration;
@@ -13,6 +14,7 @@ import reactor.core.publisher.Mono;
  * Created by hm on 2018/7/20 0020.
  */
 @Configuration
+@Slf4j
 public class GlobalRouteFilter implements GlobalFilter {
 
     private String startWith ;
@@ -21,6 +23,8 @@ public class GlobalRouteFilter implements GlobalFilter {
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         ServerHttpRequest.Builder builder = exchange.getRequest().mutate();
         ServerHttpRequest request = exchange.getRequest();
+        String requestUri = request.getPath().pathWithinApplication().value();
+       log.info("网关接收请求",requestUri);
 /*        SysUser user = (SysUser)request.getCookies().getAttribute("user");
         if(user == null){
             String path = "http://47.98.170.17/html/login.html";
@@ -28,7 +32,6 @@ public class GlobalRouteFilter implements GlobalFilter {
             return  false;
         }
         return true;*/
-        String requestUri = request.getPath().pathWithinApplication().value();
   /*      LinkedHashSet requiredAttribute = serverWebExchange.getRequiredAttribute(ServerWebExchangeUtils.GATEWAY_ORIGINAL_REQUEST_URL_ATTR);
         ServerHttpRequest request = serverWebExchange.getRequest();
         String requestUri = request.getPath().pathWithinApplication().value();

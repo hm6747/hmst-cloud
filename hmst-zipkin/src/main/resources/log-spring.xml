@@ -36,7 +36,7 @@
     </appender>
     ​
     <!-- Appender to log to file in a JSON format -->
-    <appender name="logstash"
+   <!-- <appender name="logstash"
               class="net.logstash.logback.appender.LogstashTcpSocketAppender">
         <destination>47.106.140.208:9250</destination>
         <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
@@ -62,7 +62,7 @@
                 </pattern>
             </providers>
         </encoder>
-    </appender>
+    </appender>-->
 
     <appender name="MyBatisStatistics" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -78,7 +78,7 @@
         <appender-ref ref="MyBatisStatistics" />
     </logger>-->
     ​
-    <root level="INFO">
+    <root level="DEBUG">
         <appender-ref ref="console"/>
       <!--  <appender-ref ref="logstash"/>-->
         <appender-ref ref="flatfile"/>

@@ -1,3 +1,4 @@
+/*
 package com.ctrip.framework.apollo.common.controller;
 
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
@@ -38,3 +39,4 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter implements EmbeddedSer
     container.setMimeMappings(mappings );
   }
 }
+*/

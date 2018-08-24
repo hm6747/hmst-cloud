@@ -13,70 +13,6 @@
     <dependencies>
 
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>joda-time</groupId>
-            <artifactId>joda-time</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>tk.mybatis</groupId>
-            <artifactId>mapper-spring-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper-spring-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid-spring-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>net.sourceforge.nekohtml</groupId>
-            <artifactId>nekohtml</artifactId>
-        </dependency>
-        <!-- springboot - Redis -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-        <!--spring session 与redis应用基本环境配置,需要开启redis后才可以使用，不然启动Spring boot会报错 -->
-        <dependency>
-            <groupId>org.springframework.session</groupId>
-            <artifactId>spring-session-data-redis</artifactId>
-        </dependency>
-        <!-- spring boot admin config -->
-        <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-server</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-server-ui</artifactId>
-        </dependency>
-        <!--      <dependency>
-                  <groupId>org.springframework.cloud</groupId>
-                  <artifactId>spring-cloud-starter-zipkin</artifactId>
-              </dependency-->
-        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
@@ -84,70 +20,9 @@
             <groupId>org.springframework.amqp</groupId>
             <artifactId>spring-rabbit</artifactId>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.rocketmq/rocketmq-client -->
-        <!--   <dependency>
-               <groupId>org.apache.rocketmq</groupId>
-               <artifactId>rocketmq-client</artifactId>
-               <version>4.1.0-incubating</version>
-           </dependency>
-           <dependency>
-               <groupId>de.codecentric</groupId>
-               <artifactId>spring-boot-admin-starter-client</artifactId>
-           </dependency>
-           <dependency>
-               <groupId>org.springframework.boot</groupId>
-               <artifactId>spring-boot-starter-freemarker</artifactId>
-           </dependency>
-           <dependency>
-               <groupId>org.springframework.cloud</groupId>
-               <artifactId>spring-cloud-starter-feign</artifactId>
-           </dependency>
-           <dependency>
-               <groupId>com.github.penggle</groupId>
-               <artifactId>kaptcha</artifactId>
-           </dependency>-->
-
-        <!--  <dependency>
-              <groupId>org.springframework.cloud</groupId>
-              <artifactId>spring-cloud-starter-oauth2</artifactId>
-          </dependency>
-
-          <dependency>
-              <groupId>org.springframework.social</groupId>
-              <artifactId>spring-social-config</artifactId>
-          </dependency>
-          <dependency>
-              <groupId>org.springframework.social</groupId>
-              <artifactId>spring-social-core</artifactId>
-          </dependency>
-          <dependency>
-              <groupId>org.springframework.social</groupId>
-              <artifactId>spring-social-security</artifactId>
-          </dependency>
-          <dependency>
-              <groupId>org.springframework.social</groupId>
-              <artifactId>spring-social-web</artifactId>
-          </dependency>-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <!-- servlet依赖. -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-
-            <artifactId>javax.servlet-api</artifactId>
-
-            <scope>provided</scope>
-
-        </dependency>
     </dependencies>
     <build>
         <plugins>
-            <!--    <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
