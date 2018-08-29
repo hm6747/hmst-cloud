@@ -1,10 +1,12 @@
 package com.syscloud.provider.user;
 
+import com.syscloud.base.config.SwaggerConfiguration;
 import liquibase.integration.spring.SpringLiquibase;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Import;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -19,6 +21,7 @@ import javax.sql.DataSource;
  */
 @EnableEurekaClient
 @SpringBootApplication
+@Import(SwaggerConfiguration.class)
 public class HmstCloudUserApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HmstCloudUserApplication.class, args);

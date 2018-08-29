@@ -13,11 +13,11 @@ import org.springframework.core.type.AnnotationMetadata;
 /**
  * @author Jason Song(song_s@ctrip.com)
  */
-public class ApolloConfigRegistrar implements ImportBeanDefinitionRegistrar {
+public class HmstConfigRegistrar implements ImportBeanDefinitionRegistrar {
   @Override
   public void registerBeanDefinitions(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry) {
     AnnotationAttributes attributes = AnnotationAttributes.fromMap(importingClassMetadata
-        .getAnnotationAttributes(EnableApolloConfig.class.getName()));
+        .getAnnotationAttributes(EnableHmstConfig.class.getName()));
     String[] namespaces = attributes.getStringArray("value");
     int order = attributes.getNumber("order");
     PropertySourcesProcessor.addNamespaces(Lists.newArrayList(namespaces), order);

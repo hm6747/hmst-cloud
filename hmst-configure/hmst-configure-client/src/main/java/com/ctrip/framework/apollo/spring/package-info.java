@@ -7,7 +7,7 @@
  * </ul>
  * <p>2. Support Spring Java based configuration</p>
  * <ul>
- *   <li>@EnableApolloConfig(namespaces={"someNamespace"}) to inject configurations from Apollo into Spring Property
+ *   <li>@EnableHmstConfig(namespaces={"someNamespace"}) to inject configurations from Apollo into Spring Property
  *   Sources so that placeholders like ${someProperty} and @Value("someProperty") are supported.</li>
  * </ul>
  *

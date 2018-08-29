@@ -1,6 +1,5 @@
 server:
   port: 8762
-
 eureka:
     instance:
         statusPageUrlPath: /actuator/info
@@ -10,7 +9,7 @@ eureka:
 #        ip-address: 127.0.0.1
     client:
         serviceUrl:
-           defaultZone: http://localhost:8761/eureka/
+           defaultZone: http://hm:123456@localhost:8761/eureka/
                     # docker 部署开启
             #defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka/
 management:
@@ -38,16 +37,51 @@ spring:
     store-type: redis
   cloud:
     gateway:
-      locator:
-        enabled: true
       routes:
         # =====================================
-            - id: provider-user
-              uri: lb://provider-user
-              order: 8000
-              predicates:
-              - Path=/user-service/**
-              filters:
-              - StripPrefix=1
+      - id: provider-user
+        uri: lb://provider-user
+        order: 8003
+        predicates:
+        - Path=/user-service/**
+        filters:
+        - StripPrefix=1
+      - id: hmst-monitor
+        uri: lb://hmst-monitor
+        order: 8001
+        predicates:
+        - Path=/monitor-service/**
+        filters:
+        - StripPrefix=1
+      - id: hmst-eureka
+        uri: lb://hmst-eureka
+        order: 8000
+        predicates:
+        - Path=/eureka-service/**
+        filters:
+        - StripPrefix=1
+#
+#      - id: hmst-zipkin
+#        uri: lb://hmst-zipkin
+#        order: 8002
+#        predicates:
+#        - Path=/zipkin-service/**
+#        filters:
+#        - StripPrefix=1
+#      - id: hmst-configure-admin
+#        uri: lb://hmst-configure-admin
+#        order: 8004
+#        predicates:
+#        - Path=/configure-admin-service/**
+#        filters:
+#        - StripPrefix=1
+#      - id: hmst-configure-service
+#        uri: lb://hmst-configure-service
+#        order: 8004
+#        predicates:
+#        - Path=/configure-admin-service/**
+#        filters:
+#        - StripPrefix=1
+
 logging:
   config: classpath:log-spring.xml

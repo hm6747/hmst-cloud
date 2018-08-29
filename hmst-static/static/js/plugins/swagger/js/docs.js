@@ -17,7 +17,7 @@ function getContextPath() {
 
 $(function(){
     $.ajax({
-        url : path+"/v2/api-docs.json",
+        url : path+"/v2/api-docs",
 // 	        url : "http://petstore.swagger.io/v2/swagger.json",
         dataType : "json",
         type : "get",

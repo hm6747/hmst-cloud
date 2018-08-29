@@ -3,6 +3,7 @@ package com.ctrip.framework.apollo.spring.config;
 import com.ctrip.framework.apollo.Config;
 import com.ctrip.framework.apollo.ConfigService;
 import com.ctrip.framework.apollo.build.ApolloInjector;
+import com.ctrip.framework.apollo.spring.annotation.HmstConfigRegistrar;
 import com.google.common.collect.ImmutableSortedSet;
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
@@ -25,7 +26,7 @@ import java.util.Iterator;
  * The reason why PropertySourcesProcessor implements {@link BeanFactoryPostProcessor} instead of
  * {@link org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor} is that lower versions of
  * Spring (e.g. 3.1.1) doesn't support registering BeanDefinitionRegistryPostProcessor in ImportBeanDefinitionRegistrar
- * - {@link com.ctrip.framework.apollo.spring.annotation.ApolloConfigRegistrar}
+ * - {@link HmstConfigRegistrar}
  *
  * @author Jason Song(song_s@ctrip.com)
  */

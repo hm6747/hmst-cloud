@@ -9,13 +9,17 @@ spring:
     user:
       name: "hm"
       password: "123456"
-  mail:
-    host:
-    username: 13548668976@163.com
-    password: hm1986
-    protocol: smtp
-    test-connection: true
-    default-encoding: utf-8
+  boot:
+      admin:
+        discovery:
+          ignored-services: hmst-zipkin,hmst-configservice,hmst-configureadmin
+#  mail:
+#    host:
+#    username: 13548668976@163.com
+#    password: hm1986
+#    protocol: smtp
+#    test-connection: true
+#    default-encoding: utf-8
 #    properties:
 #      mail:
 #        debug: true
@@ -29,12 +33,12 @@ spring:
 #          starttls:
 #            enable: true
 #            required: true
-  boot:
-    admin:
-      notify:
-        mail:
-          to: 674703614@qq.com
-          from: 13548668976@163.com
+#  boot:
+#    admin:
+#      notify:
+#        mail:
+#          to: 674703614@qq.com
+#          from: 13548668976@163.com
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10
@@ -43,8 +47,6 @@ eureka:
        user.name: "hm"
        user.password: "123456"
   client:
-    registerWithEureka: false
-    fetchRegistry: false
     registryFetchIntervalSeconds: 5
     service-url:
       defaultZone: http://hm:123456@localhost:8761/eureka/

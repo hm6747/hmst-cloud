@@ -4,21 +4,30 @@ import java.util.UUID
 
 import akka.actor.{Actor, ActorSelection, ActorSystem, Props}
 import com.typesafe.config.ConfigFactory
+import scala.concurrent.duration._
 
 /**
   * Created by Administrator on 2018/8/23 0023.
   */
-class Worker(val masterHost:String,val masterPort:Int,memory:Int,cores:Int) extends Actor{
+class Worker(val host:String , val port:Int,val masterHost:String,val masterPort:Int,memory:Int,cores:Int) extends Actor{
   var master : ActorSelection = _
   val workerId = UUID.randomUUID().toString
+  val HEATBEAT_INTERVAL = 10000
   override def receive: Receive = {
-    case "reply" => {
-      println("a reply from master")
+    case RegisteredWorker(masterUrl) => {
+      println(masterUrl)
+      import context.dispatcher
+      context.system.scheduler.schedule(0 millis,HEATBEAT_INTERVAL millis,self,SendHeartbeat)
+    }
+
+    case SendHeartbeat => {
+      println("send heartbeat to master")
+      master ! Heartbeat (workerId)
     }
   }
 
   override def preStart(): Unit = {
-    val master = context.actorSelection(s"akka.tcp://MasterSystem@${masterHost}:${masterPort}/user/Master")
+    master = context.actorSelection(s"akka.tcp://MasterSystem@${masterHost}:${masterPort}/user/Master")
     master ! RegisterWorker(workerId,memory,cores)
   }
 }
@@ -38,7 +47,7 @@ object Worker {
          |akka.remote.netty.tcp.port = "$port"
          """.stripMargin
     val actorSystem = ActorSystem("MasterSystem",ConfigFactory.parseString(configStr))
-    actorSystem.actorOf(Props(new Worker(masterHost,masterPort,memory,cores)),"Worker")
+    actorSystem.actorOf(Props(new Worker(host,port,masterHost,masterPort,memory,cores)),"Worker")
     actorSystem.awaitTermination()
   }
 }

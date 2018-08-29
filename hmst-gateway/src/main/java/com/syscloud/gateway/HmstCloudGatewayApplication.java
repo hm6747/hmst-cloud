@@ -1,7 +1,6 @@
 package com.syscloud.gateway;
 
 
-import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -13,11 +12,11 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  */
 @SpringBootApplication
 @EnableEurekaClient
-@EnableApolloConfig
 public class HmstCloudGatewayApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HmstCloudGatewayApplication.class, args);
 	}
+
 	/**
 	 *
 	 * attention:简单跨域就是GET，HEAD和POST请求，但是POST请求的"Content-Type"只能是application/x-www-form-urlencoded, multipart/form-data 或 text/plain

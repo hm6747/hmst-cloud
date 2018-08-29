@@ -25,15 +25,15 @@ public class HmstCloudMonitorApplication {
 	}
 
 
-	@Profile("insecure")
-	@Configuration
-	public static class SecurityPermitAllConfig extends WebSecurityConfigurerAdapter {
-		@Override
-		protected void configure(HttpSecurity http) throws Exception {
-			http.authorizeRequests().anyRequest().permitAll()//
-					.and().csrf().disable();
-		}
-	}
+//	@Profile("insecure")
+//	@Configuration
+//	public static class SecurityPermitAllConfig extends WebSecurityConfigurerAdapter {
+//		@Override
+//		protected void configure(HttpSecurity http) throws Exception {
+//			http.authorizeRequests().anyRequest().permitAll()//
+//					.and().csrf().disable();
+//		}
+//	}
 
 	@Profile("dev")
 	@Configuration
@@ -58,7 +58,8 @@ public class HmstCloudMonitorApplication {
 					.formLogin().loginPage(adminContextPath + "/login").successHandler(successHandler).and()
 					.logout().logoutUrl(adminContextPath + "/logout").and()
 					.httpBasic().and()
-					.csrf().disable();
+					.csrf().disable()
+					.headers().frameOptions().disable();
 			// @formatter:on
 		}
 	}

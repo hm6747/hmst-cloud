@@ -3,7 +3,6 @@ spring:
     name: hmst-configureadmin
   profiles:
     active: ${apollo_profile}
-
 ctrip:
   appid: 100003172
   

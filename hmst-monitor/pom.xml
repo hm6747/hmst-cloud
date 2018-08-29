@@ -70,7 +70,7 @@
                     </archive>
                     <excludes>
                         <exclude>mapper/**</exclude>
-                        <exclude>static/**</exclude>
+                        <exclude>assets/**</exclude>
                         <exclude>templates/**</exclude>
                         <exclude>*.txt</exclude>
                         <exclude>*.xml</exclude>

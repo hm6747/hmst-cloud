@@ -1,14 +1,18 @@
 package com.syscloud.gateway.filter;
 
+import com.syscloud.gateway.model.SysUser;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
+import org.springframework.cloud.gateway.support.ServerWebExchangeUtils;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
+
+import java.util.LinkedHashSet;
 
 /**
  * Created by hm on 2018/7/20 0020.
@@ -20,30 +24,29 @@ public class GlobalRouteFilter implements GlobalFilter {
     private String startWith ;
     private RestTemplate restTemplate;
 
+    @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         ServerHttpRequest.Builder builder = exchange.getRequest().mutate();
         ServerHttpRequest request = exchange.getRequest();
         String requestUri = request.getPath().pathWithinApplication().value();
-       log.info("网关接收请求",requestUri);
-/*        SysUser user = (SysUser)request.getCookies().getAttribute("user");
+       log.info("网关接收请求地址为:{}",requestUri);
+       SysUser user = (SysUser)request.getCookies().get("user");
         if(user == null){
             String path = "http://47.98.170.17/html/login.html";
-            response.sendRedirect(path);
-            return  false;
         }
-        return true;*/
-  /*      LinkedHashSet requiredAttribute = serverWebExchange.getRequiredAttribute(ServerWebExchangeUtils.GATEWAY_ORIGINAL_REQUEST_URL_ATTR);
-        ServerHttpRequest request = serverWebExchange.getRequest();
-        String requestUri = request.getPath().pathWithinApplication().value();
-        if (requiredAttribute != null) {
-            Iterator<URI> iterator = requiredAttribute.iterator();
-            while (iterator.hasNext()){
-                URI next = iterator.next();
-                if(next.getPath().startsWith(GATE_WAY_PREFIX)){
-                    requestUri = next.getPath().substring(GATE_WAY_PREFIX.length());
-                }
-            }
-        }
+
+        LinkedHashSet requiredAttribute = exchange.getRequiredAttribute(ServerWebExchangeUtils.GATEWAY_ORIGINAL_REQUEST_URL_ATTR);
+//        if (requiredAttribute != null) {
+//            Iterator<URI> iterator = requiredAttribute.iterator();
+//            while (iterator.hasNext()){
+//                URI next = iterator.next();
+//                if(next.getPath().startsWith(GATE_WAY_PREFIX)){
+//                    requestUri = next.getPath().substring(GATE_WAY_PREFIX.length());
+//                }
+//            }
+//        }
+
+  /*
         final String method = request.getMethod().toString();
         BaseContextHandler.setToken(null);
         ServerHttpRequest.Builder mutate = request.mutate();

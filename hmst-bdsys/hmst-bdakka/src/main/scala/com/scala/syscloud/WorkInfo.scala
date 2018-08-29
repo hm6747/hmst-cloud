@@ -5,4 +5,5 @@ package com.scala.syscloud
   */
 class WorkInfo(val id:String ,val memory:Int,val cores:Int) extends Serializable{
   //TODO
+  var lastHeartbeatTimes :Long = _
 }

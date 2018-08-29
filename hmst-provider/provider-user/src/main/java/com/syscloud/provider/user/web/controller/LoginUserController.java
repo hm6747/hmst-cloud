@@ -26,7 +26,7 @@ import java.util.Map;
  */
 @Controller
 @Slf4j
-@Api(value = "Web - LoginUserController", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@Api(value = "签名与登录", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class LoginUserController {
     private static final String PROVITE_KEY = "PROVITE_KEY";
     @Autowired

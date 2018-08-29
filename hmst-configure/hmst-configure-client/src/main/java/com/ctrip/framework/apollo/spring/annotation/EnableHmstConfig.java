@@ -12,7 +12,7 @@ import java.lang.annotation.*;
  * <p>Configuration example:</p>
  * <pre class="code">
  * &#064;Configuration
- * &#064;EnableApolloConfig({"someNamespace","anotherNamespace"})
+ * &#064;EnableHmstConfig({"someNamespace","anotherNamespace"})
  * public class AppConfig {
  *
  * }
@@ -23,8 +23,8 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 @Documented
-@Import(ApolloConfigRegistrar.class)
-public @interface EnableApolloConfig {
+@Import(HmstConfigRegistrar.class)
+public @interface EnableHmstConfig {
   /**
    * Apollo namespaces to inject configuration into Spring Property Sources.
    */
