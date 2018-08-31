@@ -11,6 +11,8 @@
 		<module>provider-user</module>
 		<module>provider-core</module>
 		<module>provider-code</module>
+		<module>provider-flow</module>
+		<module>provider-good</module>
 	</modules>
 	<parent>
 		<groupId>com.syscloud</groupId>
@@ -109,10 +111,6 @@
 			<artifactId>hmst-common</artifactId>
 			<version>1.0</version>
 		</dependency>
-	<!--	<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-		</dependency>-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>

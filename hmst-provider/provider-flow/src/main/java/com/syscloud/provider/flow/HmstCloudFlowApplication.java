@@ -1,10 +1,12 @@
-package com.syscloud.provider.code;
+package com.syscloud.provider.flow;
 
 import liquibase.integration.spring.SpringLiquibase;
+import org.activiti.spring.boot.SecurityAutoConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 
 import javax.sql.DataSource;
 
@@ -14,12 +16,18 @@ import javax.sql.DataSource;
  * @author paascloud.net@gmail.com
  */
 @EnableEurekaClient
-@SpringBootApplication
-public class HmstCloudCodeApplication {
+@SpringBootApplication(exclude = SecurityAutoConfiguration.class)
+public class HmstCloudFlowApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(HmstCloudCodeApplication.class, args);
+		SpringApplication.run(HmstCloudFlowApplication.class, args);
 	}
 
+	@Bean
+	public ReloadableResourceBundleMessageSource messageSource() {
+		ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
+		messageSource.setBasename("classpath:org/springframework/security/messages_zh_CN");
+		return messageSource;
+	}
 	@Bean
 	public SpringLiquibase springLiquibase(DataSource dataSource) {
 		SpringLiquibase springLiquibase = new SpringLiquibase();
@@ -27,4 +35,5 @@ public class HmstCloudCodeApplication {
 		springLiquibase.setChangeLog("classpath:/liquibase/index.xml");
 		return springLiquibase;
 	}
+
 }

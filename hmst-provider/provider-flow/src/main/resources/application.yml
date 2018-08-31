@@ -1,0 +1,32 @@
+server:
+  port: ${hmstcloud.server.provider.user.port:8774}
+spring:
+  application:
+    name: provider-flow
+  profiles:
+    active: dev
+  rabbitmq:
+    host: 47.98.170.17
+    port: 5672
+    username: hm
+    password: 123456
+  zipkin:
+    rabbitmq:
+      queue: zipkin
+  redis:
+    host: 47.98.170.17
+    port: 6379
+    password: Hm123456
+    timeout: 2000
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.98.170.17:3306/flow?characterEncoding=utf-8
+    username: root
+    password: Hm123456
+    druid:
+      web-stat-filter:
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+logging:
+  config: classpath:log-spring.xml
+
+

@@ -1,222 +1,741 @@
-[2m2018-08-20 12:51:22.252[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.c.f.a.c.ConfigServiceApplication      [0;39m [2m:[0;39m The following profiles are active: ${apollo_profile}
-[2m2018-08-20 12:51:22.351[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mationConfigEmbeddedWebApplicationContext[0;39m [2m:[0;39m Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@49b07ee3: startup date [Mon Aug 20 12:51:22 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@babafc2
-[2m2018-08-20 12:51:30.290[0;39m [33m WARN[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.c.a.ConfigurationClassPostProcessor [0;39m [2m:[0;39m Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
-[2m2018-08-20 12:51:30.556[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.cloud.context.scope.GenericScope    [0;39m [2m:[0;39m BeanFactory id=46cf4ae3-e998-3d4c-87cb-eab1a8e6ddff
-[2m2018-08-20 12:51:30.583[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mf.a.AutowiredAnnotationBeanPostProcessor[0;39m [2m:[0;39m JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-[2m2018-08-20 12:51:30.757[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$386bb5c6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2m2018-08-20 12:51:30.989[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [class org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$d1197e00] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2m2018-08-20 12:51:31.004[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'objectPostProcessor' of type [class org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2m2018-08-20 12:51:31.006[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@22ca1242' of type [class org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2m2018-08-20 12:51:31.019[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [class org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$f5ee20b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2m2018-08-20 12:51:31.037[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'methodSecurityMetadataSource' of type [class org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2m2018-08-20 12:51:31.054[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$5485b8c3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2m2018-08-20 12:51:31.070[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration$InfoEndpointAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration$InfoEndpointAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2m2018-08-20 12:51:31.595[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.c.f.a.c.c.TomcatContainerCustomizer   [0;39m [2m:[0;39m Setting tomcat accept count to 5000
-[2m2018-08-20 12:51:31.697[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.b.c.e.t.TomcatEmbeddedServletContainer[0;39m [2m:[0;39m Tomcat initialized with port(s): 8783 (http)
-[2m2018-08-20 12:51:31.718[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service Tomcat
-[2m2018-08-20 12:51:31.720[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.apache.catalina.core.StandardEngine [0;39m [2m:[0;39m Starting Servlet Engine: Apache Tomcat/8.0.37
-[2m2018-08-20 12:51:31.987[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
-[2m2018-08-20 12:51:31.988[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.web.context.ContextLoader           [0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 9637 ms
-[2m2018-08-20 12:51:32.647[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'metricsFilter' to: [/*]
-[2m2018-08-20 12:51:32.647[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'characterEncodingFilter' to: [/*]
-[2m2018-08-20 12:51:32.648[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-[2m2018-08-20 12:51:32.648[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'httpPutFormContentFilter' to: [/*]
-[2m2018-08-20 12:51:32.648[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'requestContextFilter' to: [/*]
-[2m2018-08-20 12:51:32.650[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36m.e.DelegatingFilterProxyRegistrationBean[0;39m [2m:[0;39m Mapping filter: 'springSecurityFilterChain' to: [/*]
-[2m2018-08-20 12:51:32.650[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'webRequestLoggingFilter' to: [/*]
-[2m2018-08-20 12:51:32.650[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'encodingFilter' to urls: [/*]
-[2m2018-08-20 12:51:32.650[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'applicationContextIdFilter' to: [/*]
-[2m2018-08-20 12:51:32.650[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.e.ServletRegistrationBean       [0;39m [2m:[0;39m Mapping servlet: 'dispatcherServlet' to [/]
-[2m2018-08-20 12:51:33.349[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.s.web.DefaultSecurityFilterChain    [0;39m [2m:[0;39m Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error'], org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@70876822]], []
-[2m2018-08-20 12:51:33.431[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.s.web.DefaultSecurityFilterChain    [0;39m [2m:[0;39m Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18460705, org.springframework.security.web.context.SecurityContextPersistenceFilter@6e2e4015, org.springframework.security.web.header.HeaderWriterFilter@5c4431f3, org.springframework.security.web.authentication.logout.LogoutFilter@790ee83a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@772fcd21, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e3686c0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44c7f605, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4d414c58, org.springframework.security.web.session.SessionManagementFilter@f95ad76, org.springframework.security.web.access.ExceptionTranslationFilter@69bdc9a]
-[2m2018-08-20 12:51:41.080[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Building JPA container EntityManagerFactory for persistence unit 'default'
-[2m2018-08-20 12:51:41.099[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [
+[2m2018-08-29 16:44:55.709[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.c.f.a.c.ConfigServiceApplication      [0;39m [2m:[0;39m The following profiles are active: ${apollo_profile}
+[2m2018-08-29 16:44:55.809[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mationConfigEmbeddedWebApplicationContext[0;39m [2m:[0;39m Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7cedfa63: startup date [Wed Aug 29 16:44:55 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@7fbdb894
+[2m2018-08-29 16:45:00.598[0;39m [33m WARN[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.c.a.ConfigurationClassPostProcessor [0;39m [2m:[0;39m Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[2m2018-08-29 16:45:00.879[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.cloud.context.scope.GenericScope    [0;39m [2m:[0;39m BeanFactory id=46cf4ae3-e998-3d4c-87cb-eab1a8e6ddff
+[2m2018-08-29 16:45:00.903[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mf.a.AutowiredAnnotationBeanPostProcessor[0;39m [2m:[0;39m JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2m2018-08-29 16:45:01.095[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4246cae4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:45:01.334[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [class org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$daf4931e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:45:01.351[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'objectPostProcessor' of type [class org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:45:01.354[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6029f2a4' of type [class org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:45:01.365[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [class org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$ffc935d0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:45:01.385[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'methodSecurityMetadataSource' of type [class org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:45:01.403[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$5e60cde1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:45:01.417[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration$InfoEndpointAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration$InfoEndpointAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:45:02.218[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.c.f.a.c.c.TomcatContainerCustomizer   [0;39m [2m:[0;39m Setting tomcat accept count to 5000
+[2m2018-08-29 16:45:02.896[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.b.c.e.t.TomcatEmbeddedServletContainer[0;39m [2m:[0;39m Tomcat initialized with port(s): 8783 (http)
+[2m2018-08-29 16:45:02.916[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service Tomcat
+[2m2018-08-29 16:45:02.918[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.apache.catalina.core.StandardEngine [0;39m [2m:[0;39m Starting Servlet Engine: Apache Tomcat/8.0.37
+[2m2018-08-29 16:45:03.301[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2018-08-29 16:45:03.301[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.web.context.ContextLoader           [0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 7492 ms
+[2m2018-08-29 16:45:07.200[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'metricsFilter' to: [/*]
+[2m2018-08-29 16:45:07.202[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'characterEncodingFilter' to: [/*]
+[2m2018-08-29 16:45:07.202[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2m2018-08-29 16:45:07.202[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2m2018-08-29 16:45:07.202[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'requestContextFilter' to: [/*]
+[2m2018-08-29 16:45:07.208[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36m.e.DelegatingFilterProxyRegistrationBean[0;39m [2m:[0;39m Mapping filter: 'springSecurityFilterChain' to: [/*]
+[2m2018-08-29 16:45:07.208[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'webRequestLoggingFilter' to: [/*]
+[2m2018-08-29 16:45:07.208[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'encodingFilter' to urls: [/*]
+[2m2018-08-29 16:45:07.208[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'applicationContextIdFilter' to: [/*]
+[2m2018-08-29 16:45:07.208[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.e.ServletRegistrationBean       [0;39m [2m:[0;39m Mapping servlet: 'dispatcherServlet' to [/]
+[2m2018-08-29 16:45:13.365[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.s.web.DefaultSecurityFilterChain    [0;39m [2m:[0;39m Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error'], org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@7bf26f38]], []
+[2m2018-08-29 16:45:13.450[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.s.web.DefaultSecurityFilterChain    [0;39m [2m:[0;39m Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e6c2b8b, org.springframework.security.web.context.SecurityContextPersistenceFilter@31e9aa2e, org.springframework.security.web.header.HeaderWriterFilter@471291d, org.springframework.security.web.authentication.logout.LogoutFilter@2ddc8ec8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7153b49, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5c1acf37, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64dc1ce2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2be37fb6, org.springframework.security.web.session.SessionManagementFilter@16cb2709, org.springframework.security.web.access.ExceptionTranslationFilter@220753c4]
+[2m2018-08-29 16:45:15.859[0;39m [31mERROR[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.a.tomcat.jdbc.pool.ConnectionPool     [0;39m [2m:[0;39m Unable to create initial connections of pool.
+
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:988)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2251)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2284)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2083)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:806)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:410)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:328)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:307)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:200)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:711)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:645)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:466)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:143)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:115)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:102)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:126)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:338)
+	at org.springframework.boot.autoconfigure.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:139)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties$Hibernate.getDefaultDdlAuto(JpaProperties.java:198)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties$Hibernate.getOrDeduceDdlAuto(JpaProperties.java:186)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties$Hibernate.getAdditionalProperties(JpaProperties.java:165)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties$Hibernate.access$000(JpaProperties.java:126)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.getHibernateProperties(JpaProperties.java:123)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration.getVendorProperties(HibernateJpaAutoConfiguration.java:99)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:115)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$abcd2f04.CGLIB$entityManagerFactory$5(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$abcd2f04$$FastClassBySpringCGLIB$$4d9cd1f8.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$abcd2f04.entityManagerFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1022)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1054)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:829)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:760)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at com.ctrip.framework.apollo.configservice.ConfigServiceApplication.main(ConfigServiceApplication.java:37)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 60 common frames omitted
+
+[2m2018-08-29 16:45:15.915[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Building JPA container EntityManagerFactory for persistence unit 'default'
+[2m2018-08-29 16:45:15.936[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-[2m2018-08-20 12:51:41.215[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate Core {4.3.11.Final}
-[2m2018-08-20 12:51:41.217[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.cfg.Environment           [0;39m [2m:[0;39m HHH000206: hibernate.properties not found
-[2m2018-08-20 12:51:41.220[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.cfg.Environment           [0;39m [2m:[0;39m HHH000021: Bytecode provider name : javassist
-[2m2018-08-20 12:51:41.531[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.hibernate.annotations.common.Version  [0;39m [2m:[0;39m HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-[2m2018-08-20 12:51:41.629[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.dialect.Dialect           [0;39m [2m:[0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-[2m2018-08-20 12:51:41.838[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.h.h.i.ast.ASTQueryTranslatorFactory   [0;39m [2m:[0;39m HHH000397: Using ASTQueryTranslatorFactory
-[2m2018-08-20 12:51:43.801[0;39m [33m WARN[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.c.f.f.i.p.DefaultApplicationProvider  [0;39m [2m:[0;39m app.id is not available from System Property and config-client.properties. It is set to null
-[2m2018-08-20 12:51:43.820[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.c.f.f.i.p.DefaultServerProvider       [0;39m [2m:[0;39m Loading G:\hm\codes\hmst-syscloud\hmst-configure\hmst-configure-service\target\classes\config-client.properties
-[2m2018-08-20 12:51:43.821[0;39m [33m WARN[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.c.f.f.i.p.DefaultServerProvider       [0;39m [2m:[0;39m Environment is set to null. Because it is not available in either (1) JVM system property 'env', (2) OS env variable 'ENV' nor (3) property 'env' from the properties InputStream.
-[2m2018-08-20 12:51:43.821[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.c.f.a.biz.service.BizDBPropertySource [0;39m [2m:[0;39m Load config from DB : item.value.length.limit = 20000
-[2m2018-08-20 12:51:43.821[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.c.f.a.biz.service.BizDBPropertySource [0;39m [2m:[0;39m Load config from DB : item.key.length.limit = 128
-[2m2018-08-20 12:51:43.821[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.c.f.a.biz.service.BizDBPropertySource [0;39m [2m:[0;39m Load config from DB : eureka.service.url = http://localhost:8761/eureka/
-[2m2018-08-20 12:51:43.821[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.c.f.a.biz.service.BizDBPropertySource [0;39m [2m:[0;39m Load config from DB : namespace.lock.switch = false
-[2m2018-08-20 12:51:43.821[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.c.f.a.biz.service.BizDBPropertySource [0;39m [2m:[0;39m Load config from DB : config-service.cache.enabled = false
-[2m2018-08-20 12:51:45.269[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.c.f.a.c.s.AppNamespaceServiceWithCache[0;39m [2m:[0;39m Loaded 3 new app namespaces with startId 3
-[2m2018-08-20 12:51:45.354[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.f.a.c.s.ReleaseMessageServiceWithCache[0;39m [2m:[0;39m Loaded 2 release messages with startId 15
-[2m2018-08-20 12:51:46.170[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerAdapter[0;39m [2m:[0;39m Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@49b07ee3: startup date [Mon Aug 20 12:51:22 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@babafc2
-[2m2018-08-20 12:51:46.401[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped "{[/apollo/version]}" onto public java.lang.String com.ctrip.framework.apollo.common.controller.ApolloInfoController.getVersion()
-[2m2018-08-20 12:51:46.402[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped "{[/apollo/server]}" onto public java.lang.String com.ctrip.framework.apollo.common.controller.ApolloInfoController.getServer()
-[2m2018-08-20 12:51:46.402[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped "{[/apollo/app]}" onto public java.lang.String com.ctrip.framework.apollo.common.controller.ApolloInfoController.getApp()
-[2m2018-08-20 12:51:46.403[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped "{[/apollo/net]}" onto public java.lang.String com.ctrip.framework.apollo.common.controller.ApolloInfoController.getNet()
-[2m2018-08-20 12:51:46.404[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped "{[/configs/{appId}/{clusterName}/{namespace:.+}],methods=[GET]}" onto public com.ctrip.framework.apollo.core.dto.ApolloConfig com.ctrip.framework.apollo.configservice.controller.ConfigController.queryConfig(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
-[2m2018-08-20 12:51:46.406[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped "{[/configfiles/{appId}/{clusterName}/{namespace:.+}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.ctrip.framework.apollo.configservice.controller.ConfigFileController.queryConfigAsProperties(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
-[2m2018-08-20 12:51:46.406[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped "{[/configfiles/json/{appId}/{clusterName}/{namespace:.+}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.ctrip.framework.apollo.configservice.controller.ConfigFileController.queryConfigAsJson(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
-[2m2018-08-20 12:51:46.949[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped "{[/notifications],methods=[GET]}" onto public org.springframework.web.context.request.async.DeferredResult<org.springframework.http.ResponseEntity<com.ctrip.framework.apollo.core.dto.ApolloConfigNotification>> com.ctrip.framework.apollo.configservice.controller.NotificationController.pollNotification(java.lang.String,java.lang.String,java.lang.String,java.lang.String,long,java.lang.String)
-[2m2018-08-20 12:51:46.950[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped "{[/notifications/v2],methods=[GET]}" onto public org.springframework.web.context.request.async.DeferredResult<org.springframework.http.ResponseEntity<java.util.List<com.ctrip.framework.apollo.core.dto.ApolloConfigNotification>>> com.ctrip.framework.apollo.configservice.controller.NotificationControllerV2.pollNotification(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
-[2m2018-08-20 12:51:46.954[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped "{[/services/config]}" onto public java.util.List<com.ctrip.framework.apollo.core.dto.ServiceDTO> com.ctrip.framework.apollo.metaservice.controller.ServiceController.getConfigService(java.lang.String,java.lang.String)
-[2m2018-08-20 12:51:46.954[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped "{[/services/meta]}" onto public java.util.List<com.ctrip.framework.apollo.core.dto.ServiceDTO> com.ctrip.framework.apollo.metaservice.controller.ServiceController.getMetaService()
-[2m2018-08-20 12:51:46.954[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped "{[/services/admin]}" onto public java.util.List<com.ctrip.framework.apollo.core.dto.ServiceDTO> com.ctrip.framework.apollo.metaservice.controller.ServiceController.getAdminService()
-[2m2018-08-20 12:51:46.958[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-[2m2018-08-20 12:51:46.960[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-[2m2018-08-20 12:51:47.045[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.w.s.handler.SimpleUrlHandlerMapping [0;39m [2m:[0;39m Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-[2m2018-08-20 12:51:47.045[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.w.s.handler.SimpleUrlHandlerMapping [0;39m [2m:[0;39m Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-[2m2018-08-20 12:51:47.082[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36m.m.m.a.ExceptionHandlerExceptionResolver[0;39m [2m:[0;39m Detected @ExceptionHandler methods in globalDefaultExceptionHandler
-[2m2018-08-20 12:51:47.127[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.w.s.handler.SimpleUrlHandlerMapping [0;39m [2m:[0;39m Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-[2m2018-08-20 12:51:48.139[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/resume || /resume.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
-[2m2018-08-20 12:51:48.141[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-[2m2018-08-20 12:51:48.142[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-[2m2018-08-20 12:51:48.144[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/features || /features.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-[2m2018-08-20 12:51:48.145[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/pause || /pause.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
-[2m2018-08-20 12:51:48.146[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-[2m2018-08-20 12:51:48.146[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-[2m2018-08-20 12:51:48.147[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-[2m2018-08-20 12:51:48.147[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/restart || /restart.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke()
-[2m2018-08-20 12:51:48.149[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-[2m2018-08-20 12:51:48.150[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
-[2m2018-08-20 12:51:48.159[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-[2m2018-08-20 12:51:48.160[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
-[2m2018-08-20 12:51:48.161[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
-[2m2018-08-20 12:51:48.162[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
-[2m2018-08-20 12:51:48.162[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/archaius || /archaius.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-[2m2018-08-20 12:51:48.163[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
-[2m2018-08-20 12:51:48.163[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-[2m2018-08-20 12:51:48.163[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
-[2m2018-08-20 12:51:48.164[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-[2m2018-08-20 12:51:48.412[0;39m [33m WARN[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.c.sources.URLConfigurationSource    [0;39m [2m:[0;39m No URLs will be polled as dynamic configuration sources.
-[2m2018-08-20 12:51:48.412[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.c.sources.URLConfigurationSource    [0;39m [2m:[0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-[2m2018-08-20 12:51:48.428[0;39m [33m WARN[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.c.sources.URLConfigurationSource    [0;39m [2m:[0;39m No URLs will be polled as dynamic configuration sources.
-[2m2018-08-20 12:51:48.429[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.c.sources.URLConfigurationSource    [0;39m [2m:[0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-[2m2018-08-20 12:51:48.617[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Registering beans for JMX exposure on startup
-[2m2018-08-20 12:51:48.631[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Bean with name 'refreshScope' has been autodetected for JMX exposure
-[2m2018-08-20 12:51:48.632[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Bean with name 'environmentManager' has been autodetected for JMX exposure
-[2m2018-08-20 12:51:48.642[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
-[2m2018-08-20 12:51:48.644[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
-[2m2018-08-20 12:51:48.646[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Bean with name 'restartEndpoint' has been autodetected for JMX exposure
-[2m2018-08-20 12:51:48.651[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
-[2m2018-08-20 12:51:48.667[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Located managed bean 'restartEndpoint': registering with JMX server as MBean [org.springframework.cloud.context.restart:name=restartEndpoint,type=RestartEndpoint]
-[2m2018-08-20 12:51:48.684[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
-[2m2018-08-20 12:51:48.694[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=49b07ee3,type=ConfigurationPropertiesRebinder]
-[2m2018-08-20 12:51:48.702[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
-[2m2018-08-20 12:51:48.984[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.c.support.DefaultLifecycleProcessor [0;39m [2m:[0;39m Starting beans in phase 0
-[2m2018-08-20 12:51:48.997[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.c.n.eureka.InstanceInfoFactory      [0;39m [2m:[0;39m Setting initial instance status as: STARTING
-[2m2018-08-20 12:51:49.358[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.d.provider.DiscoveryJerseyProvider  [0;39m [2m:[0;39m Using JSON encoding codec LegacyJacksonJson
-[2m2018-08-20 12:51:49.358[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.d.provider.DiscoveryJerseyProvider  [0;39m [2m:[0;39m Using JSON decoding codec LegacyJacksonJson
-[2m2018-08-20 12:51:49.557[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.d.provider.DiscoveryJerseyProvider  [0;39m [2m:[0;39m Using XML encoding codec XStreamXml
-[2m2018-08-20 12:51:49.558[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.d.provider.DiscoveryJerseyProvider  [0;39m [2m:[0;39m Using XML decoding codec XStreamXml
-[2m2018-08-20 12:51:49.934[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
-[2m2018-08-20 12:51:50.032[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Disable delta property : false
-[2m2018-08-20 12:51:50.032[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Single vip registry refresh property : null
-[2m2018-08-20 12:51:50.033[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Force full registry fetch : false
-[2m2018-08-20 12:51:50.033[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Application is null : false
-[2m2018-08-20 12:51:50.033[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Registered Applications size is zero : true
-[2m2018-08-20 12:51:50.033[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Application version is -1: true
-[2m2018-08-20 12:51:50.033[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Getting all instance registry info from the eureka server
-[2m2018-08-20 12:51:50.325[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m The response status is 200
-[2m2018-08-20 12:51:50.327[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Starting heartbeat executor: renew interval is: 10
-[2m2018-08-20 12:51:50.330[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.discovery.InstanceInfoReplicator    [0;39m [2m:[0;39m InstanceInfoReplicator onDemand update allowed rate per min is 4
-[2m2018-08-20 12:51:50.333[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Discovery Client initialized at timestamp 1534740710333 with initial instances count: 4
-[2m2018-08-20 12:51:50.374[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.e.EurekaDiscoveryClientConfiguration[0;39m [2m:[0;39m Registering application hmst-configservice with eureka with status UP
-[2m2018-08-20 12:51:50.376[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Saw local status change event StatusChangeEvent [timestamp=1534740710375, current=UP, previous=STARTING]
-[2m2018-08-20 12:51:50.411[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[nfoReplicator-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m DiscoveryClient_HMST-CONFIGSERVICE/1GIB6TSCX00VUJ9:hmst-configservice:8783: registering service...
-[2m2018-08-20 12:51:50.525[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[nfoReplicator-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m DiscoveryClient_HMST-CONFIGSERVICE/1GIB6TSCX00VUJ9:hmst-configservice:8783 - registration status: 204
-[2m2018-08-20 12:51:50.611[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.b.c.e.t.TomcatEmbeddedServletContainer[0;39m [2m:[0;39m Tomcat started on port(s): 8783 (http)
-[2m2018-08-20 12:51:50.612[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.e.EurekaDiscoveryClientConfiguration[0;39m [2m:[0;39m Updating port to 8783
-[2m2018-08-20 12:51:50.631[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.c.f.a.c.ConfigServiceApplication      [0;39m [2m:[0;39m Started ConfigServiceApplication in 31.641 seconds (JVM running for 32.988)
-[2m2018-08-20 12:51:51.092[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[nio-8783-exec-1][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring FrameworkServlet 'dispatcherServlet'
-[2m2018-08-20 12:51:51.092[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[nio-8783-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m FrameworkServlet 'dispatcherServlet': initialization started
-[2m2018-08-20 12:51:51.124[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[nio-8783-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
-[2m2018-08-20 12:51:51.247[0;39m [33m WARN[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[nio-8783-exec-1][0;39m [36mcom.netflix.spectator.api.Spectator     [0;39m [2m:[0;39m no config impl found in classpath, using default
-[2m2018-08-20 12:52:04.544[0;39m [31mERROR[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[nio-8783-exec-3][0;39m [36m.c.f.a.c.c.GlobalDefaultExceptionHandler[0;39m [2m:[0;39m Could not find acceptable representation
+[2m2018-08-29 16:45:18.267[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate Core {4.3.11.Final}
+[2m2018-08-29 16:45:18.269[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.cfg.Environment           [0;39m [2m:[0;39m HHH000206: hibernate.properties not found
+[2m2018-08-29 16:45:18.271[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.cfg.Environment           [0;39m [2m:[0;39m HHH000021: Bytecode provider name : javassist
+[2m2018-08-29 16:45:18.712[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.hibernate.annotations.common.Version  [0;39m [2m:[0;39m HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+[2m2018-08-29 16:45:19.829[0;39m [31mERROR[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.a.tomcat.jdbc.pool.ConnectionPool     [0;39m [2m:[0;39m Unable to create initial connections of pool.
 
-org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acceptable representation
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:235)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:371)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:311)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:60)
-	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:352)
-	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1123)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:934)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:895)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:967)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:858)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:843)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:292)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
-	at org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$ApplicationContextHeaderFilter.doFilterInternal(EndpointWebMvcAutoConfiguration.java:281)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
-	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:115)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:207)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:176)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
-	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
-	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:103)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:528)
-	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1100)
-	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:687)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1520)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1476)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:745)
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
 
-[2m2018-08-20 12:56:50.044[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
-[2m2018-08-20 13:01:50.053[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
-[2m2018-08-20 13:06:50.061[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
-[2m2018-08-20 13:11:50.072[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
-[2m2018-08-20 13:16:50.080[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
-[2m2018-08-20 13:21:50.090[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
-[2m2018-08-20 13:26:50.098[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
-[2m2018-08-20 13:31:50.106[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
-[2m2018-08-20 13:36:50.114[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
-[2m2018-08-20 13:41:50.125[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
-[2m2018-08-20 13:46:50.133[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
-[2m2018-08-20 13:51:50.142[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
-[2m2018-08-20 13:56:50.151[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8260[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:988)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2251)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2284)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2083)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:806)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:410)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:328)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:307)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:200)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:711)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:645)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:466)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:143)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:115)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:102)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:126)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:139)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcServicesImpl.java:279)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:124)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:111)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:234)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:206)
+	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1887)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1845)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:857)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:850)
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.withTccl(ClassLoaderServiceImpl.java:425)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:849)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:340)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:319)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1641)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1054)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:829)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:760)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at com.ctrip.framework.apollo.configservice.ConfigServiceApplication.main(ConfigServiceApplication.java:37)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 53 common frames omitted
+
+[2m2018-08-29 16:45:19.838[0;39m [33m WARN[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.h.e.jdbc.internal.JdbcServicesImpl    [0;39m [2m:[0;39m HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2m2018-08-29 16:45:19.839[0;39m [33m WARN[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mationConfigEmbeddedWebApplicationContext[0;39m [2m:[0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+[2m2018-08-29 16:45:19.853[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Stopping service Tomcat
+[2m2018-08-29 16:45:19.892[0;39m [31mERROR[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.boot.SpringApplication              [0;39m [2m:[0;39m Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1054)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:829)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:760)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at com.ctrip.framework.apollo.configservice.ConfigServiceApplication.main(ConfigServiceApplication.java:37)
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:104)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:71)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:205)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:111)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:234)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:206)
+	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1887)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1845)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:857)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:850)
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.withTccl(ClassLoaderServiceImpl.java:425)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:849)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:340)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:319)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1641)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	... 15 common frames omitted
+
+[2m2018-08-29 16:45:19.904[0;39m [33m WARN[0;39m [33m[hmst-configservice,,,,][0;39m [35m8844[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.boot.SpringApplication              [0;39m [2m:[0;39m Error handling failed (Error creating bean with name 'delegatingApplicationListener' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'metaDataSourceAdvisor': Cannot resolve reference to bean 'methodSecurityMetadataSource' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'methodSecurityMetadataSource' defined in class path resource [org/springframework/security/config/annotation/method/configuration/GlobalMethodSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.access.method.MethodSecurityMetadataSource]: Factory method 'methodSecurityMetadataSource' threw exception; nested exception is java.lang.IllegalArgumentException: org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity is required)
+[2m2018-08-29 16:46:15.852[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.c.f.a.c.ConfigServiceApplication      [0;39m [2m:[0;39m The following profiles are active: ${apollo_profile}
+[2m2018-08-29 16:46:15.882[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mationConfigEmbeddedWebApplicationContext[0;39m [2m:[0;39m Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1f12e153: startup date [Wed Aug 29 16:46:15 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@7fbdb894
+[2m2018-08-29 16:46:21.274[0;39m [33m WARN[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.c.a.ConfigurationClassPostProcessor [0;39m [2m:[0;39m Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[2m2018-08-29 16:46:21.557[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.cloud.context.scope.GenericScope    [0;39m [2m:[0;39m BeanFactory id=46cf4ae3-e998-3d4c-87cb-eab1a8e6ddff
+[2m2018-08-29 16:46:21.586[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mf.a.AutowiredAnnotationBeanPostProcessor[0;39m [2m:[0;39m JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2m2018-08-29 16:46:22.968[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6ea8a107] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:46:23.520[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [class org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$7566941] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:46:23.537[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'objectPostProcessor' of type [class org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:46:23.540[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@bfe47a8' of type [class org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:46:23.556[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [class org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$2c2b0bf3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:46:23.581[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'methodSecurityMetadataSource' of type [class org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:46:23.600[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$8ac2a404] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:46:23.614[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration$InfoEndpointAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration$InfoEndpointAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:46:24.548[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.c.f.a.c.c.TomcatContainerCustomizer   [0;39m [2m:[0;39m Setting tomcat accept count to 5000
+[2m2018-08-29 16:46:25.197[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.b.c.e.t.TomcatEmbeddedServletContainer[0;39m [2m:[0;39m Tomcat initialized with port(s): 8783 (http)
+[2m2018-08-29 16:46:25.217[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service Tomcat
+[2m2018-08-29 16:46:25.218[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.apache.catalina.core.StandardEngine [0;39m [2m:[0;39m Starting Servlet Engine: Apache Tomcat/8.0.37
+[2m2018-08-29 16:46:25.428[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2018-08-29 16:46:25.428[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.web.context.ContextLoader           [0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 9546 ms
+[2m2018-08-29 16:46:26.073[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'metricsFilter' to: [/*]
+[2m2018-08-29 16:46:26.076[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'characterEncodingFilter' to: [/*]
+[2m2018-08-29 16:46:26.077[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2m2018-08-29 16:46:26.077[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2m2018-08-29 16:46:26.079[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'requestContextFilter' to: [/*]
+[2m2018-08-29 16:46:26.080[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36m.e.DelegatingFilterProxyRegistrationBean[0;39m [2m:[0;39m Mapping filter: 'springSecurityFilterChain' to: [/*]
+[2m2018-08-29 16:46:26.080[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'webRequestLoggingFilter' to: [/*]
+[2m2018-08-29 16:46:26.081[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'encodingFilter' to urls: [/*]
+[2m2018-08-29 16:46:26.081[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'applicationContextIdFilter' to: [/*]
+[2m2018-08-29 16:46:26.081[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.e.ServletRegistrationBean       [0;39m [2m:[0;39m Mapping servlet: 'dispatcherServlet' to [/]
+[2m2018-08-29 16:46:26.723[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.s.web.DefaultSecurityFilterChain    [0;39m [2m:[0;39m Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error'], org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@2e21e4ec]], []
+[2m2018-08-29 16:46:26.803[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.s.web.DefaultSecurityFilterChain    [0;39m [2m:[0;39m Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6a72d1d8, org.springframework.security.web.context.SecurityContextPersistenceFilter@6888016d, org.springframework.security.web.header.HeaderWriterFilter@6719827e, org.springframework.security.web.authentication.logout.LogoutFilter@588029e5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4115ebc1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f02170, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f5f76f6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@cb3225d, org.springframework.security.web.session.SessionManagementFilter@1c6f981b, org.springframework.security.web.access.ExceptionTranslationFilter@3491458c]
+[2m2018-08-29 16:46:29.324[0;39m [31mERROR[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.a.tomcat.jdbc.pool.ConnectionPool     [0;39m [2m:[0;39m Unable to create initial connections of pool.
+
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:988)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2251)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2284)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2083)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:806)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:410)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:328)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:307)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:200)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:711)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:645)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:466)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:143)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:115)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:102)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:126)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:338)
+	at org.springframework.boot.autoconfigure.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:139)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties$Hibernate.getDefaultDdlAuto(JpaProperties.java:198)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties$Hibernate.getOrDeduceDdlAuto(JpaProperties.java:186)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties$Hibernate.getAdditionalProperties(JpaProperties.java:165)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties$Hibernate.access$000(JpaProperties.java:126)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.getHibernateProperties(JpaProperties.java:123)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration.getVendorProperties(HibernateJpaAutoConfiguration.java:99)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:115)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$d82f0527.CGLIB$entityManagerFactory$7(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$d82f0527$$FastClassBySpringCGLIB$$83f7b810.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$d82f0527.entityManagerFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1022)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1054)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:829)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:760)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at com.ctrip.framework.apollo.configservice.ConfigServiceApplication.main(ConfigServiceApplication.java:37)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 60 common frames omitted
+
+[2m2018-08-29 16:46:29.756[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Building JPA container EntityManagerFactory for persistence unit 'default'
+[2m2018-08-29 16:46:29.881[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[2m2018-08-29 16:46:29.970[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate Core {4.3.11.Final}
+[2m2018-08-29 16:46:29.973[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.cfg.Environment           [0;39m [2m:[0;39m HHH000206: hibernate.properties not found
+[2m2018-08-29 16:46:29.975[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.cfg.Environment           [0;39m [2m:[0;39m HHH000021: Bytecode provider name : javassist
+[2m2018-08-29 16:46:31.785[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.hibernate.annotations.common.Version  [0;39m [2m:[0;39m HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+[2m2018-08-29 16:46:33.030[0;39m [31mERROR[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.a.tomcat.jdbc.pool.ConnectionPool     [0;39m [2m:[0;39m Unable to create initial connections of pool.
+
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:988)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2251)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2284)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2083)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:806)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:410)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:328)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:307)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:200)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:711)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:645)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:466)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:143)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:115)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:102)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:126)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:139)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcServicesImpl.java:279)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:124)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:111)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:234)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:206)
+	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1887)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1845)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:857)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:850)
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.withTccl(ClassLoaderServiceImpl.java:425)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:849)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:340)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:319)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1641)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1054)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:829)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:760)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at com.ctrip.framework.apollo.configservice.ConfigServiceApplication.main(ConfigServiceApplication.java:37)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 53 common frames omitted
+
+[2m2018-08-29 16:46:33.037[0;39m [33m WARN[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.h.e.jdbc.internal.JdbcServicesImpl    [0;39m [2m:[0;39m HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2m2018-08-29 16:46:33.039[0;39m [33m WARN[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mationConfigEmbeddedWebApplicationContext[0;39m [2m:[0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+[2m2018-08-29 16:46:33.057[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Stopping service Tomcat
+[2m2018-08-29 16:46:33.068[0;39m [31mERROR[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.boot.SpringApplication              [0;39m [2m:[0;39m Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1054)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:829)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:760)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at com.ctrip.framework.apollo.configservice.ConfigServiceApplication.main(ConfigServiceApplication.java:37)
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:104)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:71)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:205)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:111)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:234)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:206)
+	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1887)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1845)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:857)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:850)
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.withTccl(ClassLoaderServiceImpl.java:425)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:849)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:340)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:319)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1641)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	... 15 common frames omitted
+
+[2m2018-08-29 16:46:33.092[0;39m [33m WARN[0;39m [33m[hmst-configservice,,,,][0;39m [35m4500[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.boot.SpringApplication              [0;39m [2m:[0;39m Error handling failed (Error creating bean with name 'delegatingApplicationListener' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'metaDataSourceAdvisor': Cannot resolve reference to bean 'methodSecurityMetadataSource' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'methodSecurityMetadataSource' defined in class path resource [org/springframework/security/config/annotation/method/configuration/GlobalMethodSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.access.method.MethodSecurityMetadataSource]: Factory method 'methodSecurityMetadataSource' threw exception; nested exception is java.lang.IllegalArgumentException: org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity is required)
+[2m2018-08-29 16:48:14.630[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.c.f.a.c.ConfigServiceApplication      [0;39m [2m:[0;39m The following profiles are active: ${apollo_profile}
+[2m2018-08-29 16:48:14.777[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mationConfigEmbeddedWebApplicationContext[0;39m [2m:[0;39m Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1ee29c84: startup date [Wed Aug 29 16:48:14 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@68d279ec
+[2m2018-08-29 16:48:19.100[0;39m [33m WARN[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.c.a.ConfigurationClassPostProcessor [0;39m [2m:[0;39m Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[2m2018-08-29 16:48:19.852[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.cloud.context.scope.GenericScope    [0;39m [2m:[0;39m BeanFactory id=46cf4ae3-e998-3d4c-87cb-eab1a8e6ddff
+[2m2018-08-29 16:48:19.880[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mf.a.AutowiredAnnotationBeanPostProcessor[0;39m [2m:[0;39m JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2m2018-08-29 16:48:20.015[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f3c78889] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:48:20.206[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [class org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$8c7550c3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:48:20.233[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'objectPostProcessor' of type [class org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:48:20.235[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@37bda983' of type [class org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:48:20.240[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [class org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$b149f375] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:48:20.262[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'methodSecurityMetadataSource' of type [class org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:48:20.277[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$fe18b86] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:48:20.291[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration$InfoEndpointAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration$InfoEndpointAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-08-29 16:48:22.323[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.c.f.a.c.c.TomcatContainerCustomizer   [0;39m [2m:[0;39m Setting tomcat accept count to 5000
+[2m2018-08-29 16:48:22.978[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.b.c.e.t.TomcatEmbeddedServletContainer[0;39m [2m:[0;39m Tomcat initialized with port(s): 8783 (http)
+[2m2018-08-29 16:48:23.003[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service Tomcat
+[2m2018-08-29 16:48:23.005[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.apache.catalina.core.StandardEngine [0;39m [2m:[0;39m Starting Servlet Engine: Apache Tomcat/8.0.37
+[2m2018-08-29 16:48:23.266[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2018-08-29 16:48:23.266[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.web.context.ContextLoader           [0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 8489 ms
+[2m2018-08-29 16:48:23.850[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'metricsFilter' to: [/*]
+[2m2018-08-29 16:48:23.851[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'characterEncodingFilter' to: [/*]
+[2m2018-08-29 16:48:23.851[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2m2018-08-29 16:48:23.851[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2m2018-08-29 16:48:23.851[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'requestContextFilter' to: [/*]
+[2m2018-08-29 16:48:23.852[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36m.e.DelegatingFilterProxyRegistrationBean[0;39m [2m:[0;39m Mapping filter: 'springSecurityFilterChain' to: [/*]
+[2m2018-08-29 16:48:23.853[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'webRequestLoggingFilter' to: [/*]
+[2m2018-08-29 16:48:23.853[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'encodingFilter' to urls: [/*]
+[2m2018-08-29 16:48:23.853[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.embedded.FilterRegistrationBean [0;39m [2m:[0;39m Mapping filter: 'applicationContextIdFilter' to: [/*]
+[2m2018-08-29 16:48:23.853[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.c.e.ServletRegistrationBean       [0;39m [2m:[0;39m Mapping servlet: 'dispatcherServlet' to [/]
+[2m2018-08-29 16:48:25.632[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.s.web.DefaultSecurityFilterChain    [0;39m [2m:[0;39m Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error'], org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@37775f6c]], []
+[2m2018-08-29 16:48:26.982[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.s.web.DefaultSecurityFilterChain    [0;39m [2m:[0;39m Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ac3647d, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e0c9dd3, org.springframework.security.web.header.HeaderWriterFilter@40293772, org.springframework.security.web.authentication.logout.LogoutFilter@40a1284c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@637ed2e5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@49d3d574, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@326dfb8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b9f91b8, org.springframework.security.web.session.SessionManagementFilter@2a965811, org.springframework.security.web.access.ExceptionTranslationFilter@3e8bdfa2]
+[2m2018-08-29 16:48:29.043[0;39m [31mERROR[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.a.tomcat.jdbc.pool.ConnectionPool     [0;39m [2m:[0;39m Unable to create initial connections of pool.
+
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:988)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2251)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2284)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2083)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:806)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:410)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:328)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:307)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:200)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:711)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:645)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:466)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:143)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:115)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:102)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:126)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:338)
+	at org.springframework.boot.autoconfigure.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:139)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties$Hibernate.getDefaultDdlAuto(JpaProperties.java:198)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties$Hibernate.getOrDeduceDdlAuto(JpaProperties.java:186)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties$Hibernate.getAdditionalProperties(JpaProperties.java:165)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties$Hibernate.access$000(JpaProperties.java:126)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.getHibernateProperties(JpaProperties.java:123)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration.getVendorProperties(HibernateJpaAutoConfiguration.java:99)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:115)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$5d4deca9.CGLIB$entityManagerFactory$4(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$5d4deca9$$FastClassBySpringCGLIB$$8c98f693.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration$$EnhancerBySpringCGLIB$$5d4deca9.entityManagerFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1127)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1022)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1054)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:829)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:760)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at com.ctrip.framework.apollo.configservice.ConfigServiceApplication.main(ConfigServiceApplication.java:37)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 60 common frames omitted
+
+[2m2018-08-29 16:48:30.080[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Building JPA container EntityManagerFactory for persistence unit 'default'
+[2m2018-08-29 16:48:30.106[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[2m2018-08-29 16:48:30.203[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate Core {4.3.11.Final}
+[2m2018-08-29 16:48:30.206[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.cfg.Environment           [0;39m [2m:[0;39m HHH000206: hibernate.properties not found
+[2m2018-08-29 16:48:30.207[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.cfg.Environment           [0;39m [2m:[0;39m HHH000021: Bytecode provider name : javassist
+[2m2018-08-29 16:48:30.801[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.hibernate.annotations.common.Version  [0;39m [2m:[0;39m HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+[2m2018-08-29 16:48:32.077[0;39m [31mERROR[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.a.tomcat.jdbc.pool.ConnectionPool     [0;39m [2m:[0;39m Unable to create initial connections of pool.
+
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:988)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2251)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2284)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2083)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:806)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:410)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:328)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:307)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:200)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:711)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:645)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:466)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:143)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:115)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:102)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:126)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:139)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcServicesImpl.java:279)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:124)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:111)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:234)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:206)
+	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1887)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1845)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:857)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:850)
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.withTccl(ClassLoaderServiceImpl.java:425)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:849)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:340)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:319)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1641)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1054)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:829)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:760)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at com.ctrip.framework.apollo.configservice.ConfigServiceApplication.main(ConfigServiceApplication.java:37)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 53 common frames omitted
+
+[2m2018-08-29 16:48:32.612[0;39m [33m WARN[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.h.e.jdbc.internal.JdbcServicesImpl    [0;39m [2m:[0;39m HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2m2018-08-29 16:48:32.616[0;39m [33m WARN[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mationConfigEmbeddedWebApplicationContext[0;39m [2m:[0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+[2m2018-08-29 16:48:32.630[0;39m [32m INFO[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Stopping service Tomcat
+[2m2018-08-29 16:48:32.698[0;39m [31mERROR[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.boot.SpringApplication              [0;39m [2m:[0;39m Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1054)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:829)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:760)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at com.ctrip.framework.apollo.configservice.ConfigServiceApplication.main(ConfigServiceApplication.java:37)
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:104)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:71)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:205)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:111)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:234)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:206)
+	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1887)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1845)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:857)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:850)
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.withTccl(ClassLoaderServiceImpl.java:425)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:849)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:340)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:319)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1641)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	... 15 common frames omitted
+
+[2m2018-08-29 16:48:32.729[0;39m [33m WARN[0;39m [33m[hmst-configservice,,,,][0;39m [35m8428[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.boot.SpringApplication              [0;39m [2m:[0;39m Error handling failed (Error creating bean with name 'delegatingApplicationListener' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'metaDataSourceAdvisor': Cannot resolve reference to bean 'methodSecurityMetadataSource' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'methodSecurityMetadataSource' defined in class path resource [org/springframework/security/config/annotation/method/configuration/GlobalMethodSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.access.method.MethodSecurityMetadataSource]: Factory method 'methodSecurityMetadataSource' threw exception; nested exception is java.lang.IllegalArgumentException: org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity is required)
