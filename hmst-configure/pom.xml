@@ -18,7 +18,6 @@
         <module>hmst-configure-web</module>
         <module>hmst-configure-service</module>
         <module>hmst-configure-core</module>
-        <module>hmst-configure-text</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>

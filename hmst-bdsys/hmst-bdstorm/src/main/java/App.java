@@ -28,8 +28,8 @@ public class App {
         Configuration conf = new Configuration();
         conf.set("dfs.client.use.datanode.hostname","true");
         //本地调试模式
-       conf.set("mapreduce.framework.name","local");
-       conf.set("fs.defaultFS","file:///");
+        conf.set("mapreduce.framework.name","local");
+        conf.set("fs.defaultFS","file:///");
         String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
         if (otherArgs.length < 2) {
             System.err.println("Usage: wordcount <in> [<in>...] <out>");
@@ -52,7 +52,7 @@ public class App {
         job.setNumReduceTasks(0);*/
 
 
-      job.setMapperClass(ClickStreamThree.class);
+        job.setMapperClass(ClickStreamThree.class);
         job.setReducerClass(ClickReducer.class);
 
         job.setMapOutputKeyClass(Text.class);

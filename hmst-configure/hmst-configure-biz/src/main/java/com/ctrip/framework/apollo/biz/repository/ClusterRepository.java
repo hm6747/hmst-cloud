@@ -8,7 +8,6 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import java.util.List;
 
 public interface ClusterRepository extends PagingAndSortingRepository<Cluster, Long> {
-
   List<Cluster> findByAppIdAndParentClusterId(String appId, Long parentClusterId);
 
   List<Cluster> findByAppId(String appId);
@@ -16,4 +15,5 @@ public interface ClusterRepository extends PagingAndSortingRepository<Cluster, L
   Cluster findByAppIdAndName(String appId, String name);
 
   List<Cluster> findByParentClusterId(Long parentClusterId);
+
 }

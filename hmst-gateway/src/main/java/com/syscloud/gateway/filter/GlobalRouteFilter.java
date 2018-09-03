@@ -30,6 +30,7 @@ public class GlobalRouteFilter implements GlobalFilter {
         ServerHttpRequest request = exchange.getRequest();
         String requestUri = request.getPath().pathWithinApplication().value();
        log.info("网关接收请求地址为:{}",requestUri);
+
        SysUser user = (SysUser)request.getCookies().get("user");
         if(user == null){
             String path = "http://47.98.170.17/html/login.html";
