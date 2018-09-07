@@ -23,6 +23,7 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+/logs/
 ### log ###
 *.gz
 *.sql
