@@ -9,6 +9,7 @@ public class JWTInfo implements Serializable,IJWTInfo {
     private String userId;
     private String name;
     private List<Map<String,String>> sources;
+    private List<Map<String,String>> acls;
 
     public JWTInfo(String username, String userId, String name) {
         this.username = username;
@@ -42,6 +43,11 @@ public class JWTInfo implements Serializable,IJWTInfo {
     @Override
     public List<Map<String, String>> getSource() {
         return sources;
+    }
+
+    @Override
+    public List<Map<String, String>> getAcls() {
+        return acls;
     }
 
     public void setName(String name) {

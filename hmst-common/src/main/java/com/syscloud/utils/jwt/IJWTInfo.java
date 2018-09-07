@@ -23,7 +23,12 @@ public interface IJWTInfo {
     String getName();
 
     /**
-     * 获取资源信息
+     * 获取菜单信息
      */
     List<Map<String,String>> getSource();
+
+    /**
+     * 获取权限信息
+     */
+    List<Map<String,String>> getAcls();
 }

@@ -113,4 +113,9 @@ public class SysAclModuleServiceImpl implements SysAclModuleService {
         sysAclModuleMapper.deleteByPrimaryKey(aclModuleId);
     }
 
+    @Override
+    public List<SysAclModule> menu() throws ParamException {
+        return null;
+    }
+
 }

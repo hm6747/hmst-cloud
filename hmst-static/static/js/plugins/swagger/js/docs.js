@@ -26,14 +26,13 @@ function createApi(path) {
                 var $ = layui.jquery, layer = layui.layer, element = layui.element;
             });
             var jsonData = eval(data);
-            selectServiceName = jsonData.basePath
+            selectServiceName = path
             $("#title").html(jsonData.info.title);
             $("#body").html($("#template").render(jsonData));
             $("[name='a_path']").click(function(){
                 var path = $(this).attr("path");
                 var method = $(this).attr("method");
                 var operationId = $(this).attr("operationId");
-                console.log(gatewaypath)
                 $.each(jsonData.paths[path],function(i,d){
                     if(d.operationId == operationId){
                         d.path = path;
@@ -64,14 +63,24 @@ $(function(){
     //ajax预处理 后置处理
     jQuery(document).bind("ajaxSend", function(event, request, settings){
         var token =   window.localStorage.getItem("token");
-        console.log(token)
         if(token){
             var headers = settings.headers || {};
             headers["token"] = token;
             request.setRequestHeader("token", token);
             settings.headers = headers;
         }
-    })
+    }).bind("ajaxComplete", function(event, xhr, settings){
+        if(settings.url && (settings.dataType === 'JSON' || settings.dataType === 'json')){
+            if(xhr.status == 200 && xhr.responseText){
+                try{
+                    var reObj = JSON.parse(xhr.responseText);
+                    if(reObj.status==40301){
+                        window.location.href=loginUrl;
+                    }
+                }catch (e){console.error(e)}
+            }
+        }
+    });
     $.ajax({
         url: gatewaypath + "/swagger-resources",
         dataType: "json",
@@ -128,6 +137,7 @@ function getData(operationId){
            return false;
        }
    }
+    selectServiceName=selectServiceName.replace("v2/api-docs","");
    //发送请求
    $.ajax({
 	   type: $("[m_operationId='"+operationId+"']").attr("method"),

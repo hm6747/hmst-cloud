@@ -3,6 +3,7 @@ package com.syscloud.provider.user.service.impl;
 
 import com.syscloud.exception.ParamException;
 import com.syscloud.provider.user.mapper.LoginUserMapper;
+import com.syscloud.provider.user.mapper.SysAclMapper;
 import com.syscloud.provider.user.mapper.SysUserMapper;
 import com.syscloud.provider.user.model.dto.LoginUserDto;
 import com.syscloud.provider.user.model.vo.LoginUser;
@@ -12,6 +13,7 @@ import com.syscloud.provider.user.utils.JwtTokenUtil;
 import com.syscloud.utils.MD5Util;
 import com.syscloud.utils.jwt.JWTInfo;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -27,6 +29,8 @@ public class loginServiceImpl implements LoginService {
     private SysUserMapper sysUserMapper;
     @Resource
     private JwtTokenUtil jwtTokenUtil;
+    @Autowired
+    private SysAclMapper sysAclMapper;
     @Override
     public String LoginByUserNameAndPassword(String username, String password, Integer type) throws Exception {
         if (StringUtils.isBlank(username)) {
