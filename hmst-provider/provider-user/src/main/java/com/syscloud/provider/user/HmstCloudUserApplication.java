@@ -1,24 +1,25 @@
 package com.syscloud.provider.user;
 
-import com.syscloud.base.config.SwaggerConfiguration;
+import com.syscloud.base.properties.SwaggerConfiguration;
+import com.syscloud.provider.auth.EnableHmstAuthClient;
 import liquibase.integration.spring.SpringLiquibase;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 
 import javax.sql.DataSource;
 
-/**
- * The class Paas cloud uac application.
- *
- * @author paascloud.net@gmail.com
- */
 @EnableEurekaClient
 @SpringBootApplication
 @Import(SwaggerConfiguration.class)
+@ComponentScan({"com.syscloud.provider.user","com.syscloud.provider.auth"})
+@EnableHmstAuthClient
+@EnableFeignClients({"com.syscloud.provider.auth.feign"})
 public class HmstCloudUserApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HmstCloudUserApplication.class, args);

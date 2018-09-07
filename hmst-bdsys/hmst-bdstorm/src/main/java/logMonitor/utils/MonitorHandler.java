@@ -3,7 +3,6 @@ package logMonitor.utils;
 import logMonitor.dao.LogMonitorDao;
 import logMonitor.domain.*;
 import logMonitor.mail.MailInfo;
-import logMonitor.mail.MessageSender;
 import logMonitor.sms.SMSBase;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
@@ -278,7 +277,7 @@ public class MonitorHandler {
             String date = DateUtils.getDateTime();
             String content = "系统【" + message.getAppName() + "】在 " + date + " 触发规则 " + message.getRuleId() + " ，过滤关键字为：" + message.getKeyword() + "  错误内容：" + message.getLine();
             MailInfo mailInfo = new MailInfo("系统运行日志监控", content, receiver, null);
-            return MessageSender.sendMail(mailInfo);
+//            return MessageSender.sendMail(mailInfo);
         }
         return false;
     }

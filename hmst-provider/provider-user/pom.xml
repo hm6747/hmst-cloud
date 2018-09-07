@@ -2,21 +2,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>hmst-provider</artifactId>
-        <groupId>com.hmstcloud</groupId>
-        <version>1.0</version>
-    </parent>
     <packaging>jar</packaging>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>provider-user</artifactId>
-
+    <groupId>com.syscloud</groupId>
+    <version>1.0</version>
+    <parent>
+        <groupId>com.hmstcloud</groupId>
+        <artifactId>hmst-provider</artifactId>
+        <version>1.0</version>
+    </parent>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>com.syscloud</groupId>
+            <artifactId>provider-auth</artifactId>
+            <version>1.0</version>
+        </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -54,11 +60,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-        <!--spring session 与redis应用基本环境配置,需要开启redis后才可以使用，不然启动Spring boot会报错 -->
-        <dependency>
-            <groupId>org.springframework.session</groupId>
-            <artifactId>spring-session-data-redis</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>

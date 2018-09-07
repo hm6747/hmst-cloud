@@ -1,4 +1,29 @@
-
+//全局事件
+if(window.jQuery){
+    //ajax预处理 后置处理
+    jQuery(document).bind("ajaxSend", function(event, request, settings){
+        var token =   window.localStorage.getItem("token");
+        console.log(token)
+//config_contextPath 为需要设置token的 全局host,严格判断防止 token发送到其他站点被盗取
+        if(token){
+            var headers = settings.headers || {};
+            headers["token"] = token;
+            request.setRequestHeader("token", token);
+            settings.headers = headers;
+        }
+    }).bind("ajaxComplete", function(event, xhr, settings){
+        if(settings.url && (settings.dataType === 'JSON' || settings.dataType === 'json')){
+            if(xhr.status == 200 && xhr.responseText){
+                try{
+                    var reObj = JSON.parse(xhr.responseText);
+                    if(reObj.status==40301){
+                        window.location.href="../../hmst-static/html/login.html";
+                    }
+                }catch (e){console.error(e)}
+            }
+        }
+    });
+}
 //列表展示
 function getTableList(url,data,showPage,successCallback,failCallback) {
     var pageData = {

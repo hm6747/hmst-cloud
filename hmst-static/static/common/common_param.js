@@ -7,4 +7,5 @@ var pageSize = 10;
 /*
 var path = "http://47.98.170.17:80/";
 */
-var path = "http://localhost:8772";
+var path = "http://localhost:8762/user-service";
+var gatewaypath = "http://localhost:8762"

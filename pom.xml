@@ -28,7 +28,6 @@
         <module>hmst-configure</module>
         <module>hmst-zipkin</module>
         <module>hmst-gateway</module>
-        <module>hmst-bdsys</module>
         <module>hmst-up</module>
         <!--
                 <module>hmst-configure</module>
@@ -48,7 +47,7 @@
         <mybatis.plus.version>2.0.7</mybatis.plus.version>
         <druid.version>1.0.29</druid.version>
         <mapper.version>3.4.0</mapper.version>
-        <springfox.version>2.6.1</springfox.version>
+        <springfox.version>2.8.0</springfox.version>
         <commons-codec.version>1.10</commons-codec.version>
         <jjwt.version>0.7.0</jjwt.version>
         <mysql.version>5.1.39</mysql.version>
@@ -251,6 +250,16 @@
                 <artifactId>jackson-mapper-asl</artifactId>
                 <version>${codehaus-jackson.version}</version>
             </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>2.9.6</version>
+            </dependency>
             <!-- google java lib -->
             <!--    -->
             <!-- swagger cloud end -->
@@ -261,11 +270,6 @@
                  <version>1.16.14</version>
              </dependency>
 
-             <dependency>
-                 <groupId>io.jsonwebtoken</groupId>
-                 <artifactId>jjwt</artifactId>
-                 <version>${jjwt.version}</version>
-             </dependency>
 
              <dependency>
                  <groupId>com.fasterxml.jackson.core</groupId>
@@ -294,11 +298,7 @@
 
 
 
-             <dependency>
-                 <groupId>joda-time</groupId>
-                 <artifactId>joda-time</artifactId>
-                 <version>2.9.6</version>
-             </dependency>-->
+            -->
             <!-- <dependency>
                  <groupId>org.springframework</groupId>
                  <artifactId>spring-context</artifactId>

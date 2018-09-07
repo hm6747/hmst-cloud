@@ -20,6 +20,16 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
+gate:
+   ignoreUrl: /login.json
+#auth:
+#  serviceId: hmst-gateway
+#  user:
+#    token-header: Authorization
+#  client:
+#    token-header: x-client-token
+#    id: hmst-gateway  #不填则默认读取spring.application.name
+#    secret: 123456
 spring:
   application:
       name: hmst-gateway
@@ -33,8 +43,6 @@ spring:
     port: 6379
     password: Hm123456
     timeout: 2000
-  session:
-    store-type: redis
   cloud:
     gateway:
       routes:
@@ -45,6 +53,7 @@ spring:
         predicates:
         - Path=/user-service/**
         filters:
+        - SwaggerHeaderFilter
         - StripPrefix=1
       - id: hmst-monitor
         uri: lb://hmst-monitor

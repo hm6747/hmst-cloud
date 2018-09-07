@@ -1,18 +1,29 @@
 package com.syscloud.gateway.filter;
 
-import com.syscloud.gateway.model.SysUser;
+import com.alibaba.fastjson.JSONObject;
+import com.syscloud.base.auth.context.BaseContextHandler;
+import com.syscloud.base.auth.msg.TokenForbiddenResponse;
+import com.syscloud.provider.auth.jwt.UserAuthUtil;
+import com.syscloud.utils.jwt.IJWTInfo;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.cloud.gateway.support.ServerWebExchangeUtils;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ServerWebExchange;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.nio.charset.StandardCharsets;
 import java.util.LinkedHashSet;
+import java.util.List;
 
 /**
  * Created by hm on 2018/7/20 0020.
@@ -21,62 +32,34 @@ import java.util.LinkedHashSet;
 @Slf4j
 public class GlobalRouteFilter implements GlobalFilter {
 
-    private String startWith ;
+    @Value("${gate.ignoreUrl}")
+    private String startWith;
     private RestTemplate restTemplate;
-
+//
+   @Autowired
+   private UserAuthUtil userAuthUtil;
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         ServerHttpRequest.Builder builder = exchange.getRequest().mutate();
         ServerHttpRequest request = exchange.getRequest();
         String requestUri = request.getPath().pathWithinApplication().value();
-       log.info("网关接收请求地址为:{}",requestUri);
-
-       SysUser user = (SysUser)request.getCookies().get("user");
-        if(user == null){
-            String path = "http://47.98.170.17/html/login.html";
-        }
-
+        log.info("网关接收请求地址为:{}", requestUri);
         LinkedHashSet requiredAttribute = exchange.getRequiredAttribute(ServerWebExchangeUtils.GATEWAY_ORIGINAL_REQUEST_URL_ATTR);
-//        if (requiredAttribute != null) {
-//            Iterator<URI> iterator = requiredAttribute.iterator();
-//            while (iterator.hasNext()){
-//                URI next = iterator.next();
-//                if(next.getPath().startsWith(GATE_WAY_PREFIX)){
-//                    requestUri = next.getPath().substring(GATE_WAY_PREFIX.length());
-//                }
-//            }
-//        }
-
-  /*
         final String method = request.getMethod().toString();
-        BaseContextHandler.setToken(null);
         ServerHttpRequest.Builder mutate = request.mutate();
-        // 不进行拦截的地址
-        if (isStartWith(requestUri)) {
-            ServerHttpRequest build = mutate.build();
-            return gatewayFilterChain.filter(serverWebExchange.mutate().request(build).build());
-        }
+        List<String> token = request.getHeaders().get("token");
+      if (isStartWith(requestUri)) {
+           ServerHttpRequest build = mutate.build();
+           return chain.filter(exchange.mutate().request(build).build());
+       }
+        //校验登录token
         IJWTInfo user = null;
         try {
             user = getJWTUser(request, mutate);
         } catch (Exception e) {
             log.error("用户Token过期异常", e);
-            return getVoidMono(serverWebExchange, new TokenForbiddenResponse("User Token Forbidden or Expired!"));
+            return getVoidMono(exchange, new TokenForbiddenResponse("User Token Forbidden or Expired!"));
         }
-        List<PermissionInfo> permissionIfs = userService.getAllPermissionInfo();
-        // 判断资源是否启用权限约束
-        Stream<PermissionInfo> stream = getPermissionIfs(requestUri, method, permissionIfs);
-        List<PermissionInfo> result = stream.collect(Collectors.toList());
-        PermissionInfo[] permissions = result.toArray(new PermissionInfo[]{});
-        if (permissions.length > 0) {
-            if (checkUserPermission(permissions, serverWebExchange, user)) {
-                return getVoidMono(serverWebExchange, new TokenForbiddenResponse("User Forbidden!Does not has Permission!"));
-            }
-        }
-        // 申请客户端密钥头
-        mutate.header(serviceAuthConfig.getTokenHeader(), serviceAuthUtil.getClientToken());
-        ServerHttpRequest build = mutate.build();
-        return gatewayFilterChain.filter(serverWebExchange.mutate().request(build).build());*/
         return chain.filter(exchange.mutate().request(builder.build()).build());
     }
 
@@ -107,5 +90,41 @@ public class GlobalRouteFilter implements GlobalFilter {
         return serverWebExchange.getResponse().setComplete();
     }
 
+    /**
+     * 网关抛异常
+     *
+     * @param body
+     */
+    private Mono<Void> getVoidMono(ServerWebExchange serverWebExchange, TokenForbiddenResponse body) {
+        serverWebExchange.getResponse().setStatusCode(HttpStatus.OK);
+        byte[] bytes = JSONObject.toJSONString(body).getBytes(StandardCharsets.UTF_8);
+        DataBuffer buffer = serverWebExchange.getResponse().bufferFactory().wrap(bytes);
+        return serverWebExchange.getResponse().writeWith(Flux.just(buffer));
+    }
+
+
+    /**
+     * 返回session中的用户信息
+     *
+     * @param request
+     * @param ctx
+     * @return
+     */
+    private IJWTInfo getJWTUser(ServerHttpRequest request, ServerHttpRequest.Builder ctx) throws Exception {
+        List<String> strings = request.getHeaders().get("token");
+        String authToken = null;
+        if (strings != null) {
+            authToken = strings.get(0);
+        }
+        if (StringUtils.isBlank(authToken)) {
+            strings = request.getQueryParams().get("token");
+            if (strings != null) {
+                authToken = strings.get(0);
+            }
+        }
+        ctx.header("token", authToken);
+        BaseContextHandler.setToken(authToken);
+       return userAuthUtil.getInfoFromToken(authToken);
+    }
 
 }

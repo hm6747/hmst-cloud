@@ -9,14 +9,11 @@ import backtype.storm.tuple.Values;
 import orderMonitor.domain.PaymentInfo;
 import orderMonitor.utils.OrderMonitorHandler;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Describe: 解析订单信息
- * Author:   maoxiangyi
  * Domain:   www.itcast.cn
- * Data:     2015/11/23.
  */
 public class PaymentInfoParserBolt extends BaseBasicBolt {
 

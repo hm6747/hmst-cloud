@@ -8,11 +8,11 @@
     <meta http-equiv="refresh" content="0;ie.html"/>
     <![endif]-->
     <script type="text/javascript" charset="utf-8" src="../static/common/common_quote.js"></script>
-    <script>
-        if (window.top !== window.self) {
-            window.top.location = window.location;
-        }
+    <script language="JavaScript">
+        if (window != top)
+            top.location.href = location.href;
     </script>
+
 
 </head>
 
@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="col-sm-5">
-            <form method="get" id="loginForm">
+            <form id="loginForm">
                 <h4 class="no-margins">登录：</h4>
                 <!--           <p class="m-t-md">登录到后台</p>-->
                 <input type="text" class="form-control uname" placeholder="用户名" name="username" id="username"/>
@@ -56,28 +56,36 @@
 </body>
 <script>
     $("#login").click(function () {
-        $.post(path + "/sign.json", "", function (result) {
-            console.log(1);
-            var key = result.data;
-            var username = $("#username").val();
-            var password = $("#password").val();
-            var encrypt = new JSEncrypt();
-            encrypt.setPublicKey(key);
-            password = encrypt.encrypt(password);
-            var data = {
-                username:username,
-                password:password,
-                key:key,
-                type:1
+        var username = $("#username").val();
+        var password = $("#password").val();
+        var data = {
+            username: username,
+            password: password,
+            type: 1
+        }
+        $.post(path + "/login.json", data, function (result) {
+            if (result.ret) {
+                window.localStorage.setItem("token",result.data)
+                window.location.href = "index.html";
+            } else {
+                alert(result.msg)
             }
-            $.post(path + "/login.json", data, function (result) {
-                if (result.ret) {
-                    window.location.href = path + "/admin/index.page";
-                } else {
-                    alert(result.msg)
-                }
-            });
         });
+//        $.post(path + "/sign.json", "", function (result) {
+//            console.log(1);
+//            var key = result.data;
+//
+//            var encrypt = new JSEncrypt();
+//            encrypt.setPublicKey(key);
+//            password = encrypt.encrypt(password);
+//            var data = {
+//                username:username,
+//                password:password,
+//                key:key,
+//                type:1
+//            }
+//
+//        });
     })
 </script>
 </html>

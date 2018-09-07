@@ -24,14 +24,22 @@ spring:
       max-wait: -1
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://47.98.170.17:3306/user?characterEncoding=utf-8
+    url: jdbc:mysql://47.98.170.17:3306/user?characterEncoding=utf-8&useSSL=false
     username: root
     password: Hm123456
     druid:
       web-stat-filter:
         exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
-  session:
-    store-type: redis
+jwt:
+  token-header: Authorization
+  expire: 14400
+  rsa-secret: xx1WET12^%3^(WE45
+client:
+  id: hmst-auth
+  secret: 123456
+  token-header: x-client-token
+  expire: 14400
+  rsa-secret: x2318^^(*WRYQWR(QW&T
 logging:
   config: classpath:log-spring.xml
 

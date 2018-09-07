@@ -9,10 +9,7 @@ import java.util.Collection;
 
 /**
  * Describe: bloomFilter的java实现
- * 开源地址：https://github.com/maoxiangyi/Java-BloomFilter
- * Author:   maoxiangyi
  * Domain:   www.itcast.cn
- * Data:     2015/11/16.
  */
 public class BloomFilter<E> implements Serializable {
     private BitSet bitset;

@@ -2,9 +2,7 @@ package orderMonitor.constant;
 
 /**
  * Describe: 常见的指标
- * Author:   maoxiangyi
  * Domain:   www.itcast.cn
- * Data:     2015/11/23.
  */
 public class RuleField {
     //用户是否在常用IP下单

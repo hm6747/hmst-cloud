@@ -13,7 +13,6 @@ import java.util.List;
  * Describe: 请补充类描述
  * Author:   maoxiangyi
  * Domain:   www.itcast.cn
- * Data:     2015/11/23.
  */
 public class SaveInfo2DB extends BaseBasicBolt {
     @Override

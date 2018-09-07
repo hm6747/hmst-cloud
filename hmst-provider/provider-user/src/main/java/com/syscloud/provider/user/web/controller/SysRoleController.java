@@ -69,7 +69,7 @@ public class SysRoleController {
     @RequestMapping("/roleUserTree.json")
     @ResponseBody
     public JsonData roleUserTree(@RequestParam("userId") int selectUserId) {
-        int userId = 2;
+        int userId = 1;
         List<SysRoleDto> list = sysTreeService.roleUserTree(selectUserId,userId);
         return JsonData.success(list);
     }

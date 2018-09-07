@@ -71,8 +71,8 @@
 .layui-table th {font-weight: 600 !important;}
 .layui-side-scroll {width: 320px !important;}
 .layui-nav-tree {width: 300px !important;}
-.layui-layout-admin .layui-side {width: 300px !important;}
-.layui-body{left:300px}
+.layui-layout-admin .layui-side {width: 166px !important;}
+.layui-body{left:166px}
 .layui-this a cite{color:#fff !important; }
 /*继承layui - end*/
 

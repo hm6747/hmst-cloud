@@ -45,7 +45,7 @@ public class SysTreesServiceImpl implements SysTreesService {
 
     @Override
     public List<AclModuleLevelDto> roleTree(int roleId) {
-        int userId = 2;
+        int userId = 1;
         // 1、当前用户已分配的权限点
         List<SysAcl> userAclList = sysCoreService.getCurrentUserAclList(userId);
         // 2、当前角色分配的权限点

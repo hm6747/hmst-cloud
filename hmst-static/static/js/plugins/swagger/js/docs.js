@@ -2,7 +2,7 @@ $.views.settings.allowCode(true);
 $.views.converters("getResponseModelName", function(val) {
   return getResponseModelName(val);
 });
-
+var selectServiceName;
 var tempBody = $.templates('#temp_body');
 var tempBodyResponseModel = $.templates('#temp_body_response_model');
 
@@ -14,43 +14,41 @@ function getContextPath() {
   var result = pathName.substr(0,index+1);
   return result;
 }
-
-$(function(){
+function createApi(path) {
     $.ajax({
-        url : path+"/v2/api-docs",
-// 	        url : "http://petstore.swagger.io/v2/swagger.json",
+        url : gatewaypath+path,
         dataType : "json",
         type : "get",
         async : false,
         success : function(data) {
             //layui init
             layui.use([ 'layer','jquery', 'element' ], function() {
-	            var $ = layui.jquery, layer = layui.layer, element = layui.element;
-	        });
+                var $ = layui.jquery, layer = layui.layer, element = layui.element;
+            });
             var jsonData = eval(data);
-            
+            selectServiceName = jsonData.basePath
             $("#title").html(jsonData.info.title);
-            $("body").html($("#template").render(jsonData));
-            
+            $("#body").html($("#template").render(jsonData));
             $("[name='a_path']").click(function(){
-	            var path = $(this).attr("path");
-	            var method = $(this).attr("method");
-	            var operationId = $(this).attr("operationId");
-	            $.each(jsonData.paths[path],function(i,d){
-	              if(d.operationId == operationId){
-                      d.path = path;
-                      d.method = method;
-		              $("#path-body").html(tempBody.render(d));
-                      var modelName = getResponseModelName(d.responses["200"]["schema"]["$ref"]);
-                      if(modelName){
-                        $("#path-body-response-model").html(tempBodyResponseModel.render(jsonData.definitions[modelName]));
-                      }
-	              }
-	            });
-	        });
-	        
-	       //提交测试按钮
-	       $("[name='btn_submit']").click(function(){
+                var path = $(this).attr("path");
+                var method = $(this).attr("method");
+                var operationId = $(this).attr("operationId");
+                console.log(gatewaypath)
+                $.each(jsonData.paths[path],function(i,d){
+                    if(d.operationId == operationId){
+                        d.path = path;
+                        d.method = method;
+                        $("#path-body").html(tempBody.render(d));
+                        var modelName = getResponseModelName(d.responses["200"]["schema"]["$ref"]);
+                        if(modelName){
+                            $("#path-body-response-model").html(tempBodyResponseModel.render(jsonData.definitions[modelName]));
+                        }
+                    }
+                });
+            });
+
+            //提交测试按钮
+            $("[name='btn_submit']").click(function(){
                 var operationId = $(this).attr("operationId");
                 var parameterJson = {};
                 $("input[operationId='"+operationId+"']").each(function(index, domEle){
@@ -61,7 +59,31 @@ $(function(){
             });
         }
     });
-    
+}
+$(function(){
+    //ajax预处理 后置处理
+    jQuery(document).bind("ajaxSend", function(event, request, settings){
+        var token =   window.localStorage.getItem("token");
+        console.log(token)
+        if(token){
+            var headers = settings.headers || {};
+            headers["token"] = token;
+            request.setRequestHeader("token", token);
+            settings.headers = headers;
+        }
+    })
+    $.ajax({
+        url: gatewaypath + "/swagger-resources",
+        dataType: "json",
+        type: "get",
+        async: false,
+        success: function (data) {
+            var startUrl = data[0].url;
+            createApi(startUrl)
+        }
+    })
+
+
 });
 
 
@@ -74,7 +96,7 @@ function getResponseModelName(val){
 
 //测试按钮，获取数据
 function getData(operationId){
-   var pathName = contextPath + $("[m_operationId='"+operationId+"']").attr("path");
+   var pathName =  $("[m_operationId='"+operationId+"']").attr("path");
    //path 参数
    $("[p_operationId='"+operationId+"'][in='path']").each(function(index, domEle){
        var k = $(domEle).attr("name");
@@ -109,7 +131,7 @@ function getData(operationId){
    //发送请求
    $.ajax({
 	   type: $("[m_operationId='"+operationId+"']").attr("method"),
-	   url: path+pathName.replace("/html",""),
+	   url: gatewaypath+selectServiceName+pathName.replace("/html",""),
 	   data: parameterJson,
 	   dataType: 'json',
 	   success: function(data){

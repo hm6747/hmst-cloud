@@ -14,18 +14,19 @@
     <link rel="stylesheet" type="text/css" href="../static/js/plugins/swagger/css/json-viewer.css">
 </head>
 <body>
+<div id="body"></div>
 <script id="template" type="text/template">
     <div class="layui-layout layui-layout-admin"
          style="border-bottom: solid 3px #1aa094;">
-
         <div class="layui-side layui-bg-black" id="admin-side">
             <div class="layui-side-scroll" id="admin-navbar-side"
                  lay-filter="side">
                 <ul class="layui-nav layui-nav-tree beg-navbar">
                     {{for tags itemVar="~tag"}}
                     {{if name != "basic-error-controller"}}
-                    <li class="layui-nav-item"><a href="javascript:;"><i class="fa fa-cogs" aria-hidden="true" data-icon="fa-cogs"></i>
-                        <cite>{{:name}}</cite><span class="layui-nav-more"></span></a>
+                    <li class="layui-nav-item" ><a href="javascript:;"><i class="fa fa-cogs" aria-hidden="true"
+                                                                         data-icon="fa-cogs"></i>
+                        <cite>{{:description}}</cite><span class="layui-nav-more"></span></a>
                         <dl class="layui-nav-child">
                             {{!--获取tags下面对应的方法--}}
                             {{props ~root.paths itemVar="~path"}}
@@ -33,7 +34,14 @@
                             {{props prop}}
                             {{if prop.tags[0] == ~tag.name}}
                             <dd title="{{:key}} {{:prop.description}}">
-                                <a href="javascript:;" name="a_path" path="{{:~path.key}}" method="{{:key}}" operationId="{{:prop.operationId}}"><i class="fa fa-navicon" data-icon="fa-navicon"></i><cite class="">{{:~path.key}}</cite><cite class="{{:key}}_font pl10">{{:prop.summary}}</cite></a>
+                                <a href="javascript:;" name="a_path" path="{{:~path.key}}" method="{{:key}}"
+                                   operationId="{{:prop.operationId}}"><i class="fa fa-navicon"
+                                                                          data-icon="fa-navicon">
+
+                                </i>
+                                    <!--<cite class="">{{:~path.key}}</cite>-->
+                                    <cite
+                                            class="{{:key}}_font pl10">{{:prop.summary}}</cite></a>
                             </dd>
                             {{/if}}
                             {{/props}}
@@ -47,7 +55,7 @@
         </div>
         <div class="layui-body site-content" id="path-body"
              style="border-left: solid 2px #1AA094;">
-            {{!-- body 内容  $ref = temp_body --}}
+            {{!-- body 内容 $ref = temp_body --}}
         </div>
 
         {{if info.license}}
@@ -64,7 +72,9 @@
 <script id="temp_body" type="text/template">
     <div class="layui-tab layui-tab-brief">
         <ul class="layui-tab-title">
-            <li class="layui-this"><span class="method {{:method}}" m_operationId ="{{:operationId}}" path="{{:path}}" method = "{{:method}}">{{:method}}</span>{{:path}}</li>
+            <li class="layui-this"><span class="method {{:method}}" m_operationId="{{:operationId}}" path="{{:path}}"
+                                         method="{{:method}}">{{:method}}</span>{{:path}}
+            </li>
             <li>Debug</li>
         </ul>
         <div class="layui-tab-content" style="min-height: 150px; padding: 5px 0px 0px; height: 803px;">
@@ -97,7 +107,7 @@
                     </tr>
                     </tbody>
                 </table>
-                <fieldset class="layui-elem-field layui-field-title" >
+                <fieldset class="layui-elem-field layui-field-title">
                     <legend>Parameters</legend>
                 </fieldset>
                 <table class="layui-table">
@@ -126,7 +136,7 @@
                     {{/for}}
                     </tbody>
                 </table>
-                <fieldset class="layui-elem-field layui-field-title" >
+                <fieldset class="layui-elem-field layui-field-title">
                     <legend>Responses</legend>
                 </fieldset>
                 <table class="layui-table">
@@ -142,17 +152,23 @@
                 </table>
             </div>
             <div class="layui-tab-item">
-                <fieldset class="layui-elem-field layui-field-title" >
+                <fieldset class="layui-elem-field layui-field-title">
                     <legend>Parameters</legend>
                 </fieldset>
                 <div class="method-type">
-                    <lable>Parameter Type : </lable>
+                    <lable>Parameter Type :</lable>
                     <input type="hidden" id="content_type_{{:operationId}}" value="form">
-                    <button id="pt_form_{{:operationId}}" type="form" operationId = "{{:operationId}}" onclick="changeParameterType(this)" class="layui-btn layui-btn-small layui-btn-normal layui-btn-radius">Form</button>
-                    <button id="pt_json_{{:operationId}}" type="json" operationId = "{{:operationId}}" onclick="changeParameterType(this)" class="layui-btn layui-btn-small layui-btn-primary layui-btn-radius">Json</button>
+                    <button id="pt_form_{{:operationId}}" type="form" operationId="{{:operationId}}"
+                            onclick="changeParameterType(this)"
+                            class="layui-btn layui-btn-small layui-btn-normal layui-btn-radius">Form
+                    </button>
+                    <button id="pt_json_{{:operationId}}" type="json" operationId="{{:operationId}}"
+                            onclick="changeParameterType(this)"
+                            class="layui-btn layui-btn-small layui-btn-primary layui-btn-radius">Json
+                    </button>
                 </div>
                 <textarea class="parameter-text hide" rows="10" id="text_tp_{{:operationId}}"></textarea>
-                <table class="layui-table"  id="table_tp_{{:operationId}}">
+                <table class="layui-table" id="table_tp_{{:operationId}}">
                     <colgroup>
                         <col width="150">
                         <col>
@@ -177,9 +193,11 @@
                         <td>{{:name}}</td>
                         <td>
                             {{if required}}
-                            <input type="text" p_operationId="{{:~root.operationId}}" name="{{:name}}" in="{{:in}}" required="required" placeholder="required" autocomplete="off" class="layui-input">
+                            <input type="text" p_operationId="{{:~root.operationId}}" name="{{:name}}" in="{{:in}}"
+                                   required="required" placeholder="required" autocomplete="off" class="layui-input">
                             {{else}}
-                            <input type="text" p_operationId="{{:~root.operationId}}" name="{{:name}}" in="{{:in}}" autocomplete="off" class="layui-input">
+                            <input type="text" p_operationId="{{:~root.operationId}}" name="{{:name}}" in="{{:in}}"
+                                   autocomplete="off" class="layui-input">
                             {{/if}}
                         </td>
                         <td>{{:description}}</td>
@@ -195,12 +213,13 @@
                     </tbody>
                 </table>
                 <div>
-                    <button class="layui-btn" name="btn_submit" onclick="getData('{{:operationId}}')"> Submit </button>
+                    <button class="layui-btn" name="btn_submit" onclick="getData('{{:operationId}}')"> Submit</button>
                 </div>
-                <fieldset class="layui-elem-field layui-field-title" >
+                <fieldset class="layui-elem-field layui-field-title">
                     <legend>Responses</legend>
                 </fieldset>
-                <div class="responseJson"><pre id="json-response"></pre>
+                <div class="responseJson">
+                    <pre id="json-response"></pre>
                 </div>
             </div>
         </div>
@@ -217,6 +236,7 @@
 </body>
 <script src="../static/js/plugins/swagger/layui/layui.js"></script>
 <script src="../static/common/common_param.js"></script>
+<script src="../static/common/common_base.js"></script>
 <script src="../static/js/plugins/swagger/js/jquery.js"></script>
 <script src="../static/js/plugins/swagger/js/jsrender.min.js"></script>
 <script src="../static/js/plugins/swagger/js/json-viewer.js"></script>
