@@ -102,7 +102,7 @@ public interface SysAclMapper {
 
     int countByAclModuleId(@Param("aclModuleId") int aclModuleId);
 
-    List<SysAcl> getPageByAclModuleId(@Param("aclModuleId") int aclModuleId, @Param("page") PageQuery page, @Param("keyword") String keyword);
+    List<SysAcl> getPageByAclModuleId(@Param("aclModuleId") int aclModuleId, @Param("page") PageQuery page, @Param("keyword") String keyword,@Param("type") int type);
 
     int countByNameAndAclModuleId(@Param("aclModuleId") int aclModuleId, @Param("name") String name, @Param("id") Integer id);
 

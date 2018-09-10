@@ -2,7 +2,12 @@ package com.syscloud.gateway.filter;
 
 import com.alibaba.fastjson.JSONObject;
 import com.syscloud.base.auth.context.BaseContextHandler;
+import com.syscloud.base.auth.msg.NoPermissionResponse;
 import com.syscloud.base.auth.msg.TokenForbiddenResponse;
+import com.syscloud.pojo.JsonData;
+import com.syscloud.provider.auth.config.ServiceAuthConfig;
+import com.syscloud.provider.auth.feign.ServiceAuthFeign;
+import com.syscloud.provider.auth.jwt.ServiceAuthUtil;
 import com.syscloud.provider.auth.jwt.UserAuthUtil;
 import com.syscloud.utils.jwt.IJWTInfo;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +21,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -34,10 +38,15 @@ public class GlobalRouteFilter implements GlobalFilter {
 
     @Value("${gate.ignoreUrl}")
     private String startWith;
-    private RestTemplate restTemplate;
-//
-   @Autowired
-   private UserAuthUtil userAuthUtil;
+    @Autowired
+    private UserAuthUtil userAuthUtil;
+    @Autowired
+    private ServiceAuthFeign serviceAuthFeign;
+    @Autowired
+    private ServiceAuthUtil serviceAuthUtil;
+    @Autowired
+    private ServiceAuthConfig serviceAuthConfig;
+
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         ServerHttpRequest.Builder builder = exchange.getRequest().mutate();
@@ -48,19 +57,26 @@ public class GlobalRouteFilter implements GlobalFilter {
         final String method = request.getMethod().toString();
         ServerHttpRequest.Builder mutate = request.mutate();
         List<String> token = request.getHeaders().get("token");
-      if (isStartWith(requestUri)) {
-           ServerHttpRequest build = mutate.build();
-           return chain.filter(exchange.mutate().request(build).build());
-       }
+        if (isStartWith(requestUri)) {
+            ServerHttpRequest build = mutate.build();
+            return chain.filter(exchange.mutate().request(build).build());
+        }
         //校验登录token
         IJWTInfo user = null;
         try {
             user = getJWTUser(request, mutate);
         } catch (Exception e) {
             log.error("用户Token过期异常", e);
-            return getVoidMono(exchange, new TokenForbiddenResponse("User Token Forbidden or Expired!"));
+            return getVoidMono(exchange, new TokenForbiddenResponse("用户登录过期"));
         }
-        return chain.filter(exchange.mutate().request(builder.build()).build());
+        JsonData jsonData = serviceAuthFeign.hasPermission(requestUri,Integer.parseInt(user.getId()));
+        if(! Boolean.parseBoolean(jsonData.getData().toString())){
+            return getVoidMono(exchange, new NoPermissionResponse("无权限访问"));
+        }
+        // 申请客户端密钥头
+        mutate.header(serviceAuthConfig.getTokenHeader(), serviceAuthUtil.getClientToken());
+        ServerHttpRequest build = mutate.build();
+        return chain.filter(exchange.mutate().request(build).build());
     }
 
     /**
@@ -95,7 +111,7 @@ public class GlobalRouteFilter implements GlobalFilter {
      *
      * @param body
      */
-    private Mono<Void> getVoidMono(ServerWebExchange serverWebExchange, TokenForbiddenResponse body) {
+    private Mono<Void> getVoidMono(ServerWebExchange serverWebExchange, Object body) {
         serverWebExchange.getResponse().setStatusCode(HttpStatus.OK);
         byte[] bytes = JSONObject.toJSONString(body).getBytes(StandardCharsets.UTF_8);
         DataBuffer buffer = serverWebExchange.getResponse().bufferFactory().wrap(bytes);
@@ -124,7 +140,7 @@ public class GlobalRouteFilter implements GlobalFilter {
         }
         ctx.header("token", authToken);
         BaseContextHandler.setToken(authToken);
-       return userAuthUtil.getInfoFromToken(authToken);
+        return userAuthUtil.getInfoFromToken(authToken);
     }
 
 }

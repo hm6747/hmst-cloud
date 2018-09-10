@@ -172,6 +172,12 @@ public class SysTreesServiceImpl implements SysTreesService {
             AclModuleLevelDto dto = dtoList.get(i);
             String nextLevel = LevelUtil.calculateLevel(level, dto.getId());
             List<AclModuleLevelDto> tempList = (List<AclModuleLevelDto>) levelAclModuleMap.get(nextLevel);
+            List<SysAcl> aclList= sysAclMapper.getPageByAclModuleId(dto.getId(),null,null,1);
+            List<AclDto> aclDtoList= Lists.newArrayList();
+            for (SysAcl acl : aclList) {
+                aclDtoList.add(AclDto.adapt(acl));
+            }
+            dto.setAclList(aclDtoList);
             if (CollectionUtils.isNotEmpty(tempList)) {
                 dto.setAclModuleList(tempList);
                 transformAclModuleTree(tempList, nextLevel, levelAclModuleMap);

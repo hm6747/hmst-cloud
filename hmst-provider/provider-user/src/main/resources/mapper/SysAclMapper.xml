@@ -423,8 +423,13 @@
     <if test="keyword != null and keyword != ''" >
       AND (name like CONCAT('%',#{keyword,jdbcType=VARCHAR},'%' )
     </if>
+    <if test="type != null and type != -1" >
+      AND type = #{type}
+    </if>
     ORDER BY seq ASC, name ASC
-    limit #{page.offset}, #{page.pageSize}
+    <if test="page != null" >
+      limit #{page.offset}, #{page.pageSize}
+    </if>
   </select>
 
   <select id="getAll" resultMap="BaseResultMap">

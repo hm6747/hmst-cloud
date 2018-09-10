@@ -17,7 +17,8 @@ if(window.jQuery){
                 try{
                     var reObj = JSON.parse(xhr.responseText);
                     if(reObj.status==40301){
-                        window.location.href="../../hmst-static/html/login.html";
+                        alert("请登录")
+                        window.location.href="login.html";
                     }
                 }catch (e){console.error(e)}
             }

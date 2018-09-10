@@ -61,8 +61,8 @@ dynamicLoading.js("../static/js/plugins/layer/layer.min.js", "utf-8");
 dynamicLoading.js("../static/js/plugins/pace/pace.min.js", "utf-8");
 dynamicLoading.js("../static/js/plugins/ztree/jquery.ztree.all.min.js", "utf-8");
 //导航栏js
-dynamicLoading.js("../static/js/hplus.js?v=4.1.0", "utf-8");
-dynamicLoading.js("../static/js/contabs.js", "utf-8");
+// dynamicLoading.js("../static/js/hplus.js?v=4.1.0", "utf-8");
+// dynamicLoading.js("../static/js/contabs.js", "utf-8");
 
 //动态加载项目 CSS文件
 dynamicLoading.css("../static/css/bootstrap.min.css?v=3.3.6");

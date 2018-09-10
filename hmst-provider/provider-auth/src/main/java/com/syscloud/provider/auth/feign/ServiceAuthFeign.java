@@ -1,6 +1,7 @@
 package com.syscloud.provider.auth.feign;
 
 import com.syscloud.base.auth.pojo.ObjectRestResponse;
+import com.syscloud.pojo.JsonData;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,5 +19,6 @@ public interface ServiceAuthFeign {
     public ObjectRestResponse<byte[]> getServicePublicKey(@RequestParam("clientId") String clientId, @RequestParam("secret") String secret);
     @RequestMapping(value = "/client/userPubKey",method = RequestMethod.POST)
     public ObjectRestResponse<byte[]> getUserPublicKey(@RequestParam("clientId") String clientId, @RequestParam("secret") String secret);
-
+    @RequestMapping(value = "/sys/acl/hasPermission.json",method = RequestMethod.POST)
+    public JsonData hasPermission(@RequestParam("url") String url,@RequestParam("userId") int userId);
 }

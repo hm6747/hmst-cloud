@@ -74,7 +74,7 @@ public class SysAclServiceImpl implements SysAclService {
         BeanValidator.check(page);
         int count = sysAclMapper.countByAclModuleId(aclModuleId);
         if (count > 0) {
-            List<SysAcl> aclList = sysAclMapper.getPageByAclModuleId(aclModuleId, page,keyword);
+            List<SysAcl> aclList = sysAclMapper.getPageByAclModuleId(aclModuleId, page,keyword,-1);
             return PageResult.<SysAcl>builder().data(aclList).total(count).build();
         }
         return PageResult.<SysAcl>builder().build();

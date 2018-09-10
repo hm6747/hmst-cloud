@@ -15,4 +15,5 @@ public interface SysCoreService {
     public List<SysAcl> getRoleAclList(int roleId);
     public List<SysAcl> getUserAclList(int userId);
     public List<SysRole> getUserRoleList(int userId);
+    public boolean hasPermission(String ur,int userId);
 }

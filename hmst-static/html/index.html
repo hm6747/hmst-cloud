@@ -14,6 +14,56 @@
     <meta http-equiv="refresh" content="0;ie.html" />
     <![endif]-->
     <script type="text/javascript" charset="utf-8" src="../static/common/common_quote.js"></script>
+    <script>
+        var aclModel = "aclModel"
+        var aclMenu = "aclMenu"
+        $(function () {
+            $.ajax({
+                url: path+"/sys/aclModule/tree.json",
+                type: 'POST',
+                dataType:"json",
+                async:false,
+                success: function (result) {
+                    if (result.ret) {
+                        var menu = result.data;
+                        $.each(menu,function (index,value) {
+                            var li =
+                                    '<li id='+aclModel+value.id+'>'+
+                                    '<a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">'+value.name+'</span><span class="fa arrow"></span></a>'+
+                                    '</li> ';
+                            var aclList= value.aclList;
+                            var aclModuleList = value.aclModuleList;
+                            $("#side-menu").append(li);
+                           CreateModelTree(aclModuleList,aclList,value.id)
+                        })
+                    } else {
+
+                    }
+                }
+            });
+        })
+        function CreateModelTree(aclModuleList,aclList,id) {
+            if(aclModuleList && aclModuleList.length>0 || aclList && aclList.length>0 ){
+                var modela=""
+                var acla = ""
+                $.each(aclModuleList,function (index,value) {
+                     modela += '<li id='+aclModel+value.id+'><a href="#">'+value.name+'<span class="fa arrow"></span></a></li>';
+                    var aclList= value.aclList;
+                    var aclModuleList = value.aclModuleList;
+                    CreateModelTree(aclModuleList,aclList,value.id)
+                })
+                var ul = '<ul class="nav nav-second-level">'+modela+'</ul>';
+                $.each(aclList,function (index,value) {
+                 acla +=  '<li><a class="J_menuItem" href='+value.url+'>'+value.name+'</a> </li>';
+                })
+                var aclUl =  ' <ul class="nav nav-third-level">'+acla+'</ul>'
+                $("#aclModel"+id).append(ul);
+                $("#aclModel"+id).append(aclUl);
+            }
+        }
+    </script>
+    <script type="text/javascript" charset="utf-8" src="../static/js/contabs.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../static/js/hplus.js"></script>
 </head>
 
 <body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
@@ -51,10 +101,10 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#">
-                            <i class="fa fa-home"></i>
-                            <span class="nav-label">主页</span>
-                        </a>
+                        <!--<a href="#">-->
+                            <!--<i class="fa fa-home"></i>-->
+                            <!--<span class="nav-label">主页</span>-->
+                        <!--</a>-->
          <!--               <ul class="nav nav-second-level">
                             <li>
                                 <a class="J_menuItem" href="/table-font-list.html" data-index="0">主页示例一</a>
@@ -73,68 +123,53 @@
                             </li>
                         </ul>-->
 
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa fa-bar-chart-o"></i>
-                            <span class="nav-label">商品管理</span>
-                            <span class="fa arrow"></span>
-                        </a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a class="J_menuItem" href="http://localhost:8090/admin/item/item.page">商品管理</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="http://localhost:8090/html/item_add.html">类目管理</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <script id="addMenuListTemplate" type="x-tmpl-mustache">
-                                                        <ol class="dd-list">
-                                                                {{#addDeptTreeList}}
-                                                                <li class="dd-item dept-name" data-id="{{id}}" id="addDept_{{id}}">
-                                                                <div class="dd-handle dd-content" style="text-align: left;">
-                                                                    <span class="label label-info"><i class="fa fa-users"></i></span> {{name}}
-                                                                </div>
-                                                                </li>
-                                                             {{/addDeptTreeList}}
-                                                         </ol>
-
-
-
-                        </script>
-                    <li>
-                        <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">权限管理</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="dept.html">用户管理</a>
-                            </li>
-                            <li><a class="J_menuItem" href="role.html">角色管理</a>
-                            </li>
-                            <li><a class="J_menuItem" href="acl.html">权限管理</a>
-                            </li>
-                            <li><a class="J_menuItem" href="log.html">权限日志</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">API中心</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="api.html">API服务</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                    <li>
-                        <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">监控中心</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="http://47.106.140.208:5601/App/kibana#/discover?_g=()">日志监控</a>
-                            </li>
-                        </ul>
-                    <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="http://47.98.170.17:8781/">服务监控</a>
-                        </li>
-                    </ul>
-                    </li>
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="#">-->
+                            <!--<i class="fa fa fa-bar-chart-o"></i>-->
+                            <!--<span class="nav-label">商品管理</span>-->
+                            <!--<span class="fa arrow"></span>-->
+                        <!--</a>-->
+                        <!--<ul class="nav nav-second-level">-->
+                            <!--<li>-->
+                                <!--<a class="J_menuItem" href="http://localhost:8090/admin/item/item.page">商品管理</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a class="J_menuItem" href="http://localhost:8090/html/item_add.html">类目管理</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">权限管理</span><span class="fa arrow"></span></a>-->
+                        <!--<ul class="nav nav-second-level">-->
+                            <!--<li><a class="J_menuItem" href="dept.html">用户管理</a>-->
+                            <!--</li>-->
+                            <!--<li><a class="J_menuItem" href="role.html">角色管理</a>-->
+                            <!--</li>-->
+                            <!--<li><a class="J_menuItem" href="acl.html">权限管理</a>-->
+                            <!--</li>-->
+                            <!--<li><a class="J_menuItem" href="log.html">权限日志</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">API中心</span><span class="fa arrow"></span></a>-->
+                        <!--<ul class="nav nav-second-level">-->
+                            <!--<li><a class="J_menuItem" href="api.html">API服务</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">监控中心</span><span class="fa arrow"></span></a>-->
+                        <!--<ul class="nav nav-second-level">-->
+                            <!--<li><a class="J_menuItem" href="http://47.106.140.208:5601/App/kibana#/discover?_g=()">日志监控</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--<ul class="nav nav-second-level">-->
+                        <!--<li><a class="J_menuItem" href="http://47.98.170.17:8781/">服务监控</a>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                    <!--</li>-->
                 </ul>
             </div>
         </nav>
@@ -683,33 +718,4 @@
         <!--mini聊天窗口结束-->
     </div>
 </body>
-<script>
-    $(function () {
-        $.ajax({
-            url: path+"/sys/aclModule/tree.json",
-            type: 'POST',
-            success: function (result) {
-                if (result.ret) {
-                    console.log(result.data)
-                    var menu = result.data;
-                    var li =
-                    '<li>'+
-                        '<a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">API中心</span><span class="fa arrow"></span></a>'+
-                        '<ul class="nav nav-second-level">'+
-                            '<li><a class="J_menuItem" href="api.html">API服务</a>'+
-                            '</li>'+
-                        '</ul>'+
-                    '</li> ';
-
-                  $.each(menu,function (index,value) {
-                       console.log(value)
-                  })
-                } else {
-
-                }
-            }
-        });
-    })
-
-</script>
 </html>
