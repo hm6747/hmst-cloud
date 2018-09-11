@@ -1,5 +1,6 @@
 package com.syscloud.provider.user;
 
+import com.ctrip.framework.apollo.spring.annotation.EnableHmstConfig;
 import com.syscloud.base.properties.SwaggerConfiguration;
 import com.syscloud.provider.auth.EnableHmstAuthClient;
 import liquibase.integration.spring.SpringLiquibase;
@@ -20,6 +21,7 @@ import javax.sql.DataSource;
 @ComponentScan({"com.syscloud.provider.user","com.syscloud.provider.auth"})
 @EnableHmstAuthClient
 @EnableFeignClients({"com.syscloud.provider.auth.feign"})
+@EnableHmstConfig
 public class HmstCloudUserApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HmstCloudUserApplication.class, args);
